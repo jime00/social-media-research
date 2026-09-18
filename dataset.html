@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset & Methodology | Social Media Usage Project</title>
+    <meta name="description" content="Kaggle secondary student survey dataset, variable definitions, and methodology for investigating social media impact on students.">
+    
+    <!-- Modular External Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+    <!-- ====================================================================
+         1. STICKY TOP NAVIGATION BAR (MULTI-PAGE)
+         ==================================================================== -->
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">
+                    <span>📊</span> Social Media Research
+                </a>
+
+                <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    ☰
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="dataset.html" class="active">Dataset</a></li>
+                    <li><a href="analysis.html">Analysis</a></li>
+                    <li><a href="findings.html">Findings</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li>
+                        <a href="https://github.com/jime00/social-media-research" target="_blank" rel="noopener noreferrer" class="nav-cta">
+                            GitHub Repo ↗
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ====================================================================
+         2. PAGE HEADER BANNER
+         ==================================================================== -->
+    <div class="page-header">
+        <h1>Dataset & Methodology</h1>
+        <p>
+            Secondary student survey data sourced from Kaggle, variable classifications, and empirical data preparation.
+        </p>
+    </div>
+
+    <!-- ====================================================================
+         MAIN CONTENT CONTAINER
+         ==================================================================== -->
+    <main>
+
+        <!-- ================================================================
+             3. KAGGLE DATASET OVERVIEW
+             ================================================================ -->
+        <section class="card">
+            <h2>Kaggle Data Source</h2>
+            <p class="section-intro">
+                Our empirical investigation relies on secondary data sourced from Kaggle covering student social media usage metrics:
+            </p>
+
+            <div class="sub-card">
+                <h3>📁 Student Social Media & Academic Performance Dataset</h3>
+                <p>
+                    The research analysis is being developed around a comprehensive student survey dataset hosted on Kaggle. 
+                    The dataset contains observations covering demographic traits, estimated daily screen time, preferred social media 
+                    channels, sleep hours, stress indicators, and self-reported academic outcomes.
+                </p>
+                
+                <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+                    <a href="https://www.kaggle.com/datasets/mr101rror/student-social-media-academic-performance-dataset?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--navy-dark); color: white;">
+                        Explore Dataset on Kaggle ↗
+                    </a>
+                    <span style="font-size: 0.88rem; color: var(--text-muted);">
+                        Hosted by Kaggle Community • Open Academic Dataset
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             4. VARIABLE MAPPING & ATTRIBUTES
+             ================================================================ -->
+        <section class="card">
+            <h2>Variables Evaluated from Dataset</h2>
+            <p class="section-intro">
+                How the records in our Kaggle dataset map directly to our 8 core project variables:
+            </p>
+
+            <div class="split-grid">
+                <div class="sub-card">
+                    <h3>📱 Behavioral & Platform Variables</h3>
+                    <ul class="resume-list" style="margin-top: 8px;">
+                        <li><strong>Daily social media usage:</strong> Total self-reported hours per day on networking apps.</li>
+                        <li>
+                            <strong>Social media platforms used:</strong> Breakdown of usage across key networks (examples include, but are not limited to, Instagram, TikTok, Facebook, Twitter, Discord, YouTube, and others):
+                            <div class="platform-pills-row" style="margin-top: 8px;">
+                                <span class="platform-pill instagram" style="font-size: 0.8rem; padding: 4px 10px;">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#E1306C"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    <span>Instagram</span>
+                                </span>
+                                <span class="platform-pill tiktok" style="font-size: 0.8rem; padding: 4px 10px;">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#000000"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.29 6.29 0 0 0 1.87-4.49V8.65a8.28 8.28 0 0 0 4.9 1.58V6.78a4.85 4.85 0 0 1-1-.09z"/></svg>
+                                    <span>TikTok</span>
+                                </span>
+                                <span class="platform-pill facebook" style="font-size: 0.8rem; padding: 4px 10px;">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                    <span>Facebook</span>
+                                </span>
+                                <span class="platform-pill twitter" style="font-size: 0.8rem; padding: 4px 10px;">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#1DA1F2"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z"/></svg>
+                                    <span>Twitter / X</span>
+                                </span>
+                                <span class="platform-pill discord" style="font-size: 0.8rem; padding: 4px 10px;">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#5865F2"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                                    <span>Discord</span>
+                                </span>
+                                <span class="platform-pill youtube" style="font-size: 0.8rem; padding: 4px 10px;">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                    <span>YouTube</span>
+                                </span>
+                                <span class="platform-pill more" style="font-size: 0.8rem; padding: 4px 10px;">
+                                    <span>✨ &amp; Others</span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sub-card">
+                    <h3>👤 Demographic Traits</h3>
+                    <ul class="resume-list" style="margin-top: 8px;">
+                        <li><strong>Age:</strong> Chronological age distribution of student respondents.</li>
+                        <li><strong>Gender:</strong> Demographic subgroup categorization for comparative analysis.</li>
+                    </ul>
+                </div>
+
+                <div class="sub-card">
+                    <h3>🌙 Sleep & Physical Health</h3>
+                    <ul class="resume-list" style="margin-top: 8px;">
+                        <li><strong>Sleep problems:</strong> Indicators measuring sleep duration, bedtime delays, and sleep comfort.</li>
+                        <li><strong>Overall well-being:</strong> Self-rated scale evaluating energy, physical comfort, and general health.</li>
+                    </ul>
+                </div>
+
+                <div class="sub-card">
+                    <h3>📚 Academic & Mental Health</h3>
+                    <ul class="resume-list" style="margin-top: 8px;">
+                        <li><strong>Academic performance:</strong> GPA bands, reported study focus, and distraction frequency.</li>
+                        <li><strong>Stress and pressure:</strong> Reported emotional tension, academic workload stress, and coping habits.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             5. DATA METHODOLOGY & ETHICS
+             ================================================================ -->
+        <section class="card">
+            <h2>Methodology & Academic Integrity</h2>
+            
+            <div class="sub-card">
+                <h3>🛡️ Anonymization & Ethical Secondary Use</h3>
+                <p>
+                    Because this study utilizes open secondary research data, all personal student identifiers have been stripped 
+                    at the collection stage. No personally identifiable information (PII) is accessed, recorded, or published.
+                </p>
+                <p style="margin-bottom: 0;">
+                    Data processing will be conducted through standard exploratory data analysis (EDA) techniques in Python, 
+                    ensuring reproducibility and adherence to scientific research standards.
+                </p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 32px; flex-wrap: wrap; gap: 12px;">
+                <a href="research.html" class="btn btn-outline" style="color: var(--navy-dark); border-color: var(--border-color);">
+                    ← Back to Research Framework
+                </a>
+                <a href="analysis.html" class="btn btn-primary" style="background-color: var(--navy-dark); color: white;">
+                    Proceed to Analysis Page →
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====================================================================
+         6. FOOTER
+         ==================================================================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="dataset.html">Dataset</a>
+                <a href="analysis.html">Analysis</a>
+                <a href="findings.html">Findings</a>
+                <a href="resources.html">Resources</a>
+                <a href="resume.html" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+                <a href="#top">Back to Top ↑</a>
+            </div>
+            <p>Social Media Usage Research Project</p>
+            <p class="footer-copy">Built with HTML5, CSS3, and Vanilla JavaScript • Multi-Page Academic Research Website</p>
+        </div>
+    </footer>
+
+    <!-- Vanilla JavaScript File -->
+    <script src="js/main.js"></script>
+</body>
+</html>

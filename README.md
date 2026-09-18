@@ -69,11 +69,17 @@ Because this website uses pure HTML, CSS, and JavaScript, you can run a local pr
 
 ```
 social-media-research/
-├── index.html        # Main semantic HTML document containing all research sections
+├── index.html        # Home page (Executive Summary, Core Question, Portal Cards, About)
+├── research.html     # Research Framework (Topic Pillars, 5 Sub-Questions, 8 Variables, Hypotheses)
+├── dataset.html      # Kaggle Dataset details, variable dictionary, and methodology
+├── analysis.html     # Exploratory Data Analysis placeholders & analysis pipeline
+├── findings.html     # Hypotheses evaluation status (H1 & H2) and research milestones
+├── resources.html    # Presentation video embed, proposal documents, and references
+├── resume.html       # Standalone printable resume page for Jimena Bello
 ├── css/
 │   └── style.css     # CSS design tokens, responsive layout, and visual styles
 ├── js/
-│   └── main.js       # Vanilla JS for navbar scroll spies, mobile menu, & topic filters
+│   └── main.js       # Vanilla JS for multi-page active links, mobile menu, & topic filters
 ├── .gitignore        # Ignores macOS system files and IDE caches
 └── README.md         # Academic documentation and local setup instructions
 ```

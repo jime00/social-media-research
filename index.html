@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Usage | Academic Research Project</title>
+    <title>Home | Social Media Usage Research Project</title>
     <meta name="description" content="A research project investigating how social media usage associates with students' mental health, physical health, sleep, academic performance, and daily habits.">
     
     <!-- Modular External Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
 
     <!-- ====================================================================
-         1. STICKY TOP NAVIGATION BAR
+         1. STICKY TOP NAVIGATION BAR (MULTI-PAGE)
          ==================================================================== -->
     <header>
         <nav class="navbar" aria-label="Main Navigation">
             <div class="nav-container">
-                <a href="#home" class="nav-brand">
+                <a href="index.html" class="nav-brand">
                     <span>📊</span> Social Media Research
                 </a>
 
@@ -26,15 +26,12 @@
                 </button>
 
                 <ul class="nav-links">
-                    <li><a href="#overview" class="active">Overview</a></li>
-                    <li><a href="#questions">Questions</a></li>
-                    <li><a href="#variables">Variables</a></li>
-                    <li><a href="#hypotheses">Hypotheses</a></li>
-                    <li><a href="#dataset">Dataset</a></li>
-                    <li><a href="#analysis">Analysis</a></li>
-                    <li><a href="#video">Video</a></li>
-                    <li><a href="#paper">Paper</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="dataset.html">Dataset</a></li>
+                    <li><a href="analysis.html">Analysis</a></li>
+                    <li><a href="findings.html">Findings</a></li>
+                    <li><a href="resources.html">Resources</a></li>
                     <li>
                         <a href="https://github.com/jime00/social-media-research" target="_blank" rel="noopener noreferrer" class="nav-cta">
                             GitHub Repo ↗
@@ -48,7 +45,7 @@
     <!-- ====================================================================
          2. HERO / TITLE SECTION
          ==================================================================== -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="hero-content">
             <h1>Social Media Usage</h1>
             <p class="hero-subtitle">
@@ -62,8 +59,8 @@
             </div>
 
             <div class="hero-actions">
-                <a href="#overview" class="btn btn-primary">Explore Research Proposal ↓</a>
-                <a href="#dataset" class="btn btn-outline">View Dataset Source</a>
+                <a href="research.html" class="btn btn-primary">Explore Research Framework →</a>
+                <a href="dataset.html" class="btn btn-outline">View Dataset Source</a>
             </div>
         </div>
     </section>
@@ -76,7 +73,7 @@
         <!-- ================================================================
              3. RESEARCH PROPOSAL: PROBLEM & SIGNIFICANCE
              ================================================================ -->
-        <section class="card" id="overview">
+        <section class="card">
             <h2>Research Proposal</h2>
             <p class="section-intro">
                 An overview of the central research aims, foundational context, and real-world significance.
@@ -112,15 +109,14 @@
         </section>
 
         <!-- ================================================================
-             4. CORE QUESTION & SUB-QUESTIONS
+             4. PRIMARY RESEARCH QUESTION CALLOUT
              ================================================================ -->
-        <section class="card" id="questions">
-            <h2>Research Inquiries</h2>
+        <section class="card">
+            <h2>Core Research Question</h2>
             <p class="section-intro">
-                Our central research question and five guiding sub-questions targeting specific dimensions of student life.
+                The guiding inquiry driving our semester-long empirical study:
             </p>
 
-            <!-- Central Research Question Callout -->
             <div class="research-question-box">
                 <h3>Primary Research Question</h3>
                 <p class="research-question-text">
@@ -129,267 +125,77 @@
                 </p>
             </div>
 
-            <!-- Interactive Pillar Cards -->
-            <h3>Key Research Dimensions</h3>
-            <p class="section-intro" style="font-size: 0.95rem; margin-bottom: 12px;">
-                Click any research pillar below to highlight related variables across the project:
-            </p>
-            <div class="topic-cards-grid">
-                <div class="topic-card" data-topic="sleep">
-                    <span class="topic-icon">😴</span>
-                    <div class="topic-title">Sleep & Rest</div>
-                    <p>Duration & Comfort</p>
-                </div>
-                <div class="topic-card" data-topic="academics">
-                    <span class="topic-icon">📚</span>
-                    <div class="topic-title">Academics</div>
-                    <p>Grades & Focus</p>
-                </div>
-                <div class="topic-card" data-topic="mental">
-                    <span class="topic-icon">🧠</span>
-                    <div class="topic-title">Mental Health</div>
-                    <p>Stress & Well-Being</p>
-                </div>
-                <div class="topic-card" data-topic="physical">
-                    <span class="topic-icon">🏃</span>
-                    <div class="topic-title">Physical Health</div>
-                    <p>Habits & Activity</p>
-                </div>
-                <div class="topic-card" data-topic="platforms">
-                    <span class="topic-icon">📱</span>
-                    <div class="topic-title">Platforms</div>
-                    <p>App Usage & Traits</p>
-                </div>
-            </div>
-
-            <!-- 5 Sub-Questions -->
-            <h3>Sub-Questions</h3>
-            <ol class="sub-questions-list">
-                <li class="sub-question-item">
-                    <span class="sq-number">1</span>
-                    <p class="sq-text">How does time spent on social media affect students' sleep time and sleep comfort?</p>
-                </li>
-                <li class="sub-question-item">
-                    <span class="sq-number">2</span>
-                    <p class="sq-text">Does social media usage affect students' academic performance?</p>
-                </li>
-                <li class="sub-question-item">
-                    <span class="sq-number">3</span>
-                    <p class="sq-text">Does social media usage have different impacts on students based on individual traits?</p>
-                </li>
-                <li class="sub-question-item">
-                    <span class="sq-number">4</span>
-                    <p class="sq-text">Are certain social media platforms used more frequently than others?</p>
-                </li>
-                <li class="sub-question-item">
-                    <span class="sq-number">5</span>
-                    <p class="sq-text">Is heavier social media usage associated with lower mental or physical well-being?</p>
-                </li>
-            </ol>
-        </section>
-
-        <!-- ================================================================
-             5. POTENTIAL VARIABLES
-             ================================================================ -->
-        <section class="card" id="variables">
-            <h2>Potential Variables</h2>
-            <p class="section-intro">
-                Target variables identified for empirical evaluation and statistical modeling in our study.
-            </p>
-
-            <div class="variables-container">
-                <div class="variable-tag" data-topics="platforms habits">
-                    <span class="variable-dot"></span>
-                    <span>Daily social media usage</span>
-                </div>
-                <div class="variable-tag" data-topics="platforms traits">
-                    <span class="variable-dot"></span>
-                    <span>Age</span>
-                </div>
-                <div class="variable-tag" data-topics="platforms traits">
-                    <span class="variable-dot"></span>
-                    <span>Gender</span>
-                </div>
-                <div class="variable-tag" data-topics="platforms">
-                    <span class="variable-dot"></span>
-                    <span>Social media platforms used</span>
-                </div>
-                <div class="variable-tag" data-topics="sleep physical">
-                    <span class="variable-dot"></span>
-                    <span>Sleep problems</span>
-                </div>
-                <div class="variable-tag" data-topics="academics">
-                    <span class="variable-dot"></span>
-                    <span>Academic performance</span>
-                </div>
-                <div class="variable-tag" data-topics="mental physical">
-                    <span class="variable-dot"></span>
-                    <span>Overall well-being</span>
-                </div>
-                <div class="variable-tag" data-topics="mental">
-                    <span class="variable-dot"></span>
-                    <span>Stress and pressure</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================================
-             6. HYPOTHESES
-             ================================================================ -->
-        <section class="card" id="hypotheses">
-            <h2>Hypotheses</h2>
-            <p class="section-intro">
-                Formulated predictive statements to be evaluated through quantitative and exploratory data analysis.
-            </p>
-
-            <div class="hypotheses-grid">
-                <div class="hypothesis-card">
-                    <div class="hypothesis-header">
-                        <span class="hypothesis-badge">Hypothesis 1</span>
-                        <span class="hypothesis-status">Pending Data Analysis</span>
-                    </div>
-                    <p>
-                        <strong>H1:</strong> Students who spend more time on social media may be more
-                        likely to use it as a distraction from personal problems, which could interfere
-                        with their ability to focus on schoolwork and daily responsibilities.
-                    </p>
-                </div>
-
-                <div class="hypothesis-card">
-                    <div class="hypothesis-header">
-                        <span class="hypothesis-badge">Hypothesis 2</span>
-                        <span class="hypothesis-status">Pending Data Analysis</span>
-                    </div>
-                    <p>
-                        <strong>H2:</strong> Students who are easily distracted by social media may
-                        experience negative effects on their academic performance and sleep.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================================
-             7. KAGGLE DATASET & METHODOLOGY
-             ================================================================ -->
-        <section class="card" id="dataset">
-            <h2>Dataset & Methodology</h2>
-            <p class="section-intro">
-                Our empirical investigation relies on secondary data sourced from Kaggle covering student social media usage metrics.
-            </p>
-
-            <div class="sub-card">
-                <h3>Data Source Information</h3>
-                <p>
-                    The research analysis is being developed around a comprehensive student survey dataset hosted on Kaggle. 
-                    The dataset contains observations covering demographic traits, estimated daily screen time, preferred social media 
-                    channels, sleep hours, stress indicators, and self-reported academic outcomes.
-                </p>
-                <div style="margin-top: 15px;">
-                    <a href="https://www.kaggle.com/datasets/mr101rror/student-social-media-academic-performance-dataset?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--navy-dark); color: white;">
-                        Explore Dataset on Kaggle ↗
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================================
-             8. FUTURE ANALYSIS: KAGGLE DATASET EDA (COMING SOON)
-             ================================================================ -->
-        <section class="card" id="analysis">
-            <h2>Exploratory Data Analysis</h2>
-            
-            <!-- Clear academic transparency banner -->
-            <div class="future-banner">
-                <span class="future-banner-icon">⏳</span>
-                <div class="future-banner-text">
-                    <strong>Future Analysis / In Progress</strong>
-                    <p>
-                        These interactive data visualizations will present our actual statistical findings from the Kaggle dataset 
-                        once later analysis assignments are completed. No simulated or fictional data is displayed.
-                    </p>
-                </div>
-            </div>
-
-            <div class="future-charts-grid">
-                <div class="chart-placeholder-card">
-                    <div class="placeholder-icon">📊</div>
-                    <span class="placeholder-badge">Coming Soon</span>
-                    <h4>Platform Usage & Daily Hours</h4>
-                    <p>Distribution of time spent across Instagram, TikTok, YouTube, and other platforms.</p>
-                </div>
-
-                <div class="chart-placeholder-card">
-                    <div class="placeholder-icon">📉</div>
-                    <span class="placeholder-badge">Coming Soon</span>
-                    <h4>Screen Time vs. Sleep Comfort</h4>
-                    <p>Correlation between evening screen habits, total sleep duration, and reported sleep quality.</p>
-                </div>
-
-                <div class="chart-placeholder-card">
-                    <div class="placeholder-icon">📈</div>
-                    <span class="placeholder-badge">Coming Soon</span>
-                    <h4>Academic Impact & Distraction</h4>
-                    <p>Comparing self-reported distraction frequency with academic performance metrics.</p>
-                </div>
-
-                <div class="chart-placeholder-card">
-                    <div class="placeholder-icon">🧩</div>
-                    <span class="placeholder-badge">Coming Soon</span>
-                    <h4>Stress & Well-Being Assessment</h4>
-                    <p>Multivariate analysis evaluating stress and well-being levels across demographic groups.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================================
-             9. PRESENTATION VIDEO
-             ================================================================ -->
-        <section class="card" id="video">
-            <h2>Presentation Video</h2>
-            <p class="section-intro">
-                A video presentation walkthrough discussing the research project, methodology, and key inquiries.
-            </p>
-
-            <div class="video-responsive">
-                <iframe 
-                    src="https://www.youtube-nocookie.com/embed/Ewxe4pWOH-I" 
-                    title="Social Media Research Presentation" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-
-            <div style="text-align: center; margin-top: 18px;">
-                <a href="https://www.youtube.com/live/Ewxe4pWOH-I?si=BlBqDupl3bo3SRsN" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color: var(--navy-dark); border-color: var(--border-color);">
-                    Watch Directly on YouTube ↗
+            <div style="text-align: right; margin-top: 10px;">
+                <a href="research.html" class="btn btn-primary" style="background-color: var(--navy-dark); color: white;">
+                    View Sub-Questions, Variables & Hypotheses →
                 </a>
             </div>
         </section>
 
         <!-- ================================================================
-             10. RESEARCH PAPER & DRAFTS
+             5. PROJECT EXPLORATION PORTAL
              ================================================================ -->
-        <section class="card" id="paper">
-            <h2>Research Paper</h2>
+        <section class="card">
+            <h2>Project Navigation Portal</h2>
             <p class="section-intro">
-                Academic documentation, proposal drafts, and final manuscript.
+                Explore each dedicated component of our research project through the sections below:
             </p>
 
-            <div class="paper-card">
-                <div class="paper-info">
-                    <h4>Research Proposal (Draft)</h4>
-                    <p>Format: Academic Report • Topic: Social Media Usage on Students</p>
+            <div class="split-grid">
+                <div class="sub-card">
+                    <h3>🔬 Research Framework</h3>
+                    <p>
+                        Review the 5 guiding sub-questions, 8 evaluated variables, and foundational hypotheses (H1 & H2).
+                    </p>
+                    <a href="research.html" class="btn btn-outline" style="color: var(--primary-color); border-color: var(--primary-color); padding: 6px 14px; font-size: 0.88rem;">
+                        Open Research Page →
+                    </a>
                 </div>
-                <div>
-                    <a href="#overview" class="btn btn-outline" style="color: var(--navy-dark); border-color: var(--border-color);">
-                        View Proposal Content ↑
+
+                <div class="sub-card">
+                    <h3>📁 Kaggle Dataset</h3>
+                    <p>
+                        Examine the student survey dataset sourced from Kaggle, variable definitions, and data methodology.
+                    </p>
+                    <a href="dataset.html" class="btn btn-outline" style="color: var(--primary-color); border-color: var(--primary-color); padding: 6px 14px; font-size: 0.88rem;">
+                        Open Dataset Page →
+                    </a>
+                </div>
+
+                <div class="sub-card">
+                    <h3>📊 Future Analysis</h3>
+                    <p>
+                        Preview planned exploratory data analysis, chart placeholders, and upcoming statistical models.
+                    </p>
+                    <a href="analysis.html" class="btn btn-outline" style="color: var(--primary-color); border-color: var(--primary-color); padding: 6px 14px; font-size: 0.88rem;">
+                        Open Analysis Page →
+                    </a>
+                </div>
+
+                <div class="sub-card">
+                    <h3>🎯 Findings & Status</h3>
+                    <p>
+                        Track hypothesis validation progress and theoretical outcomes as dataset analysis proceeds.
+                    </p>
+                    <a href="findings.html" class="btn btn-outline" style="color: var(--primary-color); border-color: var(--primary-color); padding: 6px 14px; font-size: 0.88rem;">
+                        Open Findings Page →
+                    </a>
+                </div>
+
+                <div class="sub-card" style="grid-column: 1 / -1;">
+                    <h3>🎬 Resources & Presentation Video</h3>
+                    <p>
+                        Watch the research presentation recording on YouTube, review the proposal document draft, and access references.
+                    </p>
+                    <a href="resources.html" class="btn btn-outline" style="color: var(--primary-color); border-color: var(--primary-color); padding: 6px 14px; font-size: 0.88rem;">
+                        Open Resources Page →
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- ================================================================
-             10. ABOUT THE RESEARCHER & CONTACT
+             6. ABOUT THE RESEARCHER & CONTACT
              ================================================================ -->
         <section class="card" id="about">
             <h2>About the Researcher</h2>
@@ -397,15 +203,18 @@
             <div class="about-card">
                 <div class="about-avatar">💻</div>
                 <div class="about-details">
-                    <h3>Researcher</h3>
-                    <div class="about-role">Major: Information Technology (IT)</div>
+                    <h3>Jimena Bello</h3>
+                    <div class="about-role">Major: Information Technology (IT) • Kean University</div>
                     <p>
                         Information Technology student conducting research into digital media consumption patterns, mental health indicators, 
                         and academic outcomes among students.
                     </p>
-                    <div class="about-links">
-                        <a href="mailto:belloji@kean.edu" class="btn btn-primary" style="background-color: var(--primary-color); color: white;">
-                            ✉️ Contact Me: belloji@kean.edu
+                    <div class="about-links" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <a href="resume.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--navy-dark); color: white;">
+                            📄 View Resume ↗
+                        </a>
+                        <a href="mailto:Belloji@kean.edu" class="btn btn-primary" style="background-color: var(--primary-color); color: white;">
+                            ✉️ Contact Me: Belloji@kean.edu
                         </a>
                         <a href="https://github.com/jime00/social-media-research" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color: var(--navy-dark); border-color: var(--border-color);">
                             GitHub Profile ↗
@@ -418,24 +227,22 @@
     </main>
 
     <!-- ====================================================================
-         11. FOOTER
+         7. FOOTER
          ==================================================================== -->
     <footer>
         <div class="footer-content">
             <div class="footer-nav">
-                <a href="#overview">Proposal</a>
-                <a href="#questions">Questions</a>
-                <a href="#variables">Variables</a>
-                <a href="#hypotheses">Hypotheses</a>
-                <a href="#dataset">Dataset</a>
-                <a href="#analysis">Analysis</a>
-                <a href="#video">Video</a>
-                <a href="#paper">Paper</a>
-                <a href="#about">About</a>
-                <a href="#home">Back to Top ↑</a>
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="dataset.html">Dataset</a>
+                <a href="analysis.html">Analysis</a>
+                <a href="findings.html">Findings</a>
+                <a href="resources.html">Resources</a>
+                <a href="resume.html" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+                <a href="#top">Back to Top ↑</a>
             </div>
             <p>Social Media Usage Research Project</p>
-            <p class="footer-copy">Built with HTML5, CSS3, and Vanilla JavaScript • Designed for GitHub & Vercel Deployment</p>
+            <p class="footer-copy">Built with HTML5, CSS3, and Vanilla JavaScript • Multi-Page Academic Research Website</p>
         </div>
     </footer>
 

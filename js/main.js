@@ -1,8 +1,8 @@
 /**
  * ==========================================================================
  * SOCIAL MEDIA USAGE RESEARCH PROJECT - MAIN JAVASCRIPT
- * Description: Vanilla JavaScript for UI interactions, navigation, 
- *              and responsive controls. Zero dependencies.
+ * Description: Vanilla JavaScript for UI interactions, multi-page navigation, 
+ *              and responsive controls. Zero external dependencies.
  * ==========================================================================
  */
 
@@ -36,57 +36,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ----------------------------------------------------------------------
-       2. Active Navigation Highlighting on Scroll
-       Uses the modern browser IntersectionObserver API to detect which
-       section is currently in the viewport and update navbar links.
+       2. Active Page Highlighting for Multi-Page Navigation
+       Detects current page filename and applies the active class.
        ---------------------------------------------------------------------- */
-    const sections = document.querySelectorAll("section[id]");
+    const currentPath = window.location.pathname;
+    const currentFile = currentPath.substring(currentPath.lastIndexOf("/") + 1) || "index.html";
     const navItems = document.querySelectorAll(".nav-links a");
 
-    if ("IntersectionObserver" in window && sections.length > 0) {
-        const observerOptions = {
-            root: null,
-            rootMargin: "-20% 0px -60% 0px", // Trigger when section is in upper-mid viewport
-            threshold: 0
-        };
-
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const currentId = entry.target.getAttribute("id");
-                    
-                    navItems.forEach(link => {
-                        if (link.getAttribute("href") === `#${currentId}`) {
-                            link.classList.add("active");
-                        } else {
-                            link.classList.remove("active");
-                        }
-                    });
-                }
-            });
-        }, observerOptions);
-
-        sections.forEach(section => sectionObserver.observe(section));
-    }
+    navItems.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href && !href.startsWith("http") && !href.startsWith("#")) {
+            const linkFile = href.split("#")[0];
+            if (linkFile === currentFile || (currentFile === "" && linkFile === "index.html")) {
+                link.classList.add("active");
+            }
+        }
+    });
 
     /* ----------------------------------------------------------------------
-       3. Interactive Topic Pillar Cards
-       Clicking a topic card toggles an active state and smoothly scrolls
-       the user to the corresponding research question and variables.
+       3. Interactive Topic Pillar Cards (Research Page)
+       Clicking a topic card toggles an active state and highlights
+       the corresponding potential variable tags.
        ---------------------------------------------------------------------- */
     const topicCards = document.querySelectorAll(".topic-card");
 
-    topicCards.forEach(card => {
-        card.addEventListener("click", () => {
-            // Remove active state from all cards, then activate clicked card
-            topicCards.forEach(c => c.classList.remove("active"));
-            card.classList.add("active");
+    if (topicCards.length > 0) {
+        topicCards.forEach(card => {
+            card.addEventListener("click", () => {
+                // Remove active state from all cards, then activate clicked card
+                topicCards.forEach(c => c.classList.remove("active"));
+                card.classList.add("active");
 
-            // Optional educational visual feedback: briefly pulse related variable tags
-            const topicType = card.getAttribute("data-topic");
-            highlightVariablesForTopic(topicType);
+                // Highlight corresponding variable badges
+                const topicType = card.getAttribute("data-topic");
+                highlightVariablesForTopic(topicType);
+            });
         });
-    });
+    }
 
     /**
      * Highlights corresponding variable badges when a topic card is selected.
@@ -110,5 +96,5 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ----------------------------------------------------------------------
        4. Log confirmation for development
        ---------------------------------------------------------------------- */
-    console.log("Research website loaded successfully. Running in local mode.");
+    console.log("Research website loaded successfully. Multi-page mode active.");
 });
