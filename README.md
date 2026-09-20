@@ -72,8 +72,8 @@ social-media-research/
 ├── index.html        # Home page (Executive Summary, Core Question, Portal Cards, About)
 ├── research.html     # Research Framework (Topic Pillars, 5 Sub-Questions, 8 Variables, Hypotheses)
 ├── dataset.html      # Kaggle Dataset details, variable dictionary, and methodology
-├── analysis.html     # Exploratory Data Analysis placeholders & analysis pipeline
-├── findings.html     # Hypotheses evaluation status (H1 & H2) and research milestones
+├── analysis.html     # Exploratory Data Analysis visualizations (histograms, bar charts, box plots, heatmaps)
+├── findings.html     # Hypotheses evaluation status (H1 & H2) and study phase
 ├── resources.html    # Presentation video embed, proposal documents, and references
 ├── resume.html       # Standalone printable resume page for Jimena Bello
 ├── css/
@@ -83,8 +83,3 @@ social-media-research/
 ├── .gitignore        # Ignores macOS system files and IDE caches
 └── README.md         # Academic documentation and local setup instructions
 ```
-
----
-
-## 📜 Ethics & Integrity
-All data utilized in this study consists of secondary anonymized survey data. No personal student identifiers are collected, processed, or displayed.

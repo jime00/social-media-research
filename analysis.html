@@ -58,89 +58,91 @@
     <main>
 
         <!-- ================================================================
-             3. TRANSPARENCY NOTICE & PLACEHOLDER CHARTS
+             3. EXPLORATORY DATA ANALYSIS CHARTS
              ================================================================ -->
         <section class="card">
-            <h2>Data Visualizations (In Progress)</h2>
+            <h2>Exploratory Data Analysis Visualizations</h2>
             
-            <!-- Clear academic transparency banner -->
-            <div class="future-banner">
-                <span class="future-banner-icon">⏳</span>
-                <div class="future-banner-text">
-                    <strong>Future Analysis / In Progress</strong>
+            <!-- Dataset exploratory analysis context banner -->
+            <div class="eda-banner">
+                <span class="eda-banner-icon">📊</span>
+                <div class="eda-banner-text">
+                    <strong>Empirical Dataset Visualizations</strong>
                     <p>
-                        These interactive data visualizations will present our actual statistical findings from the Kaggle dataset 
-                        once later analysis assignments are completed. No simulated or fictional data is displayed.
+                        The following exploratory data visualizations present empirical findings from our Kaggle student 
+                        social media survey dataset, illustrating response distributions, usage frequencies, academic impacts, 
+                        and focus dynamics measured across 1–5 response scales.
                     </p>
                 </div>
             </div>
 
-            <div class="future-charts-grid">
-                <div class="chart-placeholder-card">
-                    <div class="placeholder-icon">📊</div>
-                    <span class="placeholder-badge">Coming Soon</span>
-                    <h4>Platform Usage & Daily Hours</h4>
-                    <p>Distribution of time spent across Instagram, TikTok, YouTube, and other platforms.</p>
-                </div>
+            <div class="charts-grid">
+                <!-- 1. Time Spent on Social Media — Histogram -->
+                <figure class="chart-card">
+                    <div class="chart-card-header">
+                        <span class="chart-figure-label">Figure 1</span>
+                        <h3 class="chart-card-title">Time Spent on Social Media — Histogram</h3>
+                    </div>
+                    <div class="chart-img-container">
+                        <a href="images/time-spent-histogram.png" target="_blank" rel="noopener noreferrer" class="chart-img-link" title="Click to open full-resolution chart in a new tab">
+                            <img src="images/time-spent-histogram.png" alt="Time Spent on Social Media — Histogram showing distribution of responses on a 1–5 scale" class="chart-img" loading="lazy">
+                        </a>
+                    </div>
+                    <figcaption class="chart-caption">
+                        <strong>Caption:</strong> This histogram shows how respondents reported their time spent on social media using the dataset's 1–5 response scale.
+                    </figcaption>
+                </figure>
 
-                <div class="chart-placeholder-card">
-                    <div class="placeholder-icon">📉</div>
-                    <span class="placeholder-badge">Coming Soon</span>
-                    <h4>Screen Time vs. Sleep Comfort</h4>
-                    <p>Correlation between evening screen habits, total sleep duration, and reported sleep quality.</p>
-                </div>
+                <!-- 2. Frequency of Social Media Use — Bar Chart -->
+                <figure class="chart-card">
+                    <div class="chart-card-header">
+                        <span class="chart-figure-label">Figure 2</span>
+                        <h3 class="chart-card-title">Frequency of Social Media Use — Bar Chart</h3>
+                    </div>
+                    <div class="chart-img-container">
+                        <a href="images/frequency-use-barchart.png" target="_blank" rel="noopener noreferrer" class="chart-img-link" title="Click to open full-resolution chart in a new tab">
+                            <img src="images/frequency-use-barchart.png" alt="Frequency of Social Media Use — Bar Chart showing response frequencies on a 1–5 scale" class="chart-img" loading="lazy">
+                        </a>
+                    </div>
+                    <figcaption class="chart-caption">
+                        <strong>Caption:</strong> This bar chart shows how frequently respondents reported using social media on the dataset's 1–5 response scale.
+                    </figcaption>
+                </figure>
 
-                <div class="chart-placeholder-card">
-                    <div class="placeholder-icon">📈</div>
-                    <span class="placeholder-badge">Coming Soon</span>
-                    <h4>Academic Impact & Distraction</h4>
-                    <p>Comparing self-reported distraction frequency with academic performance metrics.</p>
-                </div>
+                <!-- 3. Reported Academic Impact by Frequency of Social Media Use — Box Plot -->
+                <figure class="chart-card">
+                    <div class="chart-card-header">
+                        <span class="chart-figure-label">Figure 3</span>
+                        <h3 class="chart-card-title">Reported Academic Impact by Frequency of Social Media Use — Box Plot</h3>
+                    </div>
+                    <div class="chart-img-container">
+                        <a href="images/academic-impact-boxplot.png" target="_blank" rel="noopener noreferrer" class="chart-img-link" title="Click to open full-resolution chart in a new tab">
+                            <img src="images/academic-impact-boxplot.png" alt="Reported Academic Impact by Frequency of Social Media Use — Box Plot comparing impact across frequency levels" class="chart-img" loading="lazy">
+                        </a>
+                    </div>
+                    <figcaption class="chart-caption">
+                        <strong>Caption:</strong> This box plot compares reported academic impact across different levels of social media use frequency.
+                    </figcaption>
+                </figure>
 
-                <div class="chart-placeholder-card">
-                    <div class="placeholder-icon">🧩</div>
-                    <span class="placeholder-badge">Coming Soon</span>
-                    <h4>Stress & Well-Being Assessment</h4>
-                    <p>Multivariate analysis evaluating stress and well-being levels across demographic groups.</p>
-                </div>
+                <!-- 4. Time Spent on Social Media vs. Difficulty Concentrating — Heatmap -->
+                <figure class="chart-card">
+                    <div class="chart-card-header">
+                        <span class="chart-figure-label">Figure 4</span>
+                        <h3 class="chart-card-title">Time Spent on Social Media vs. Difficulty Concentrating — Heatmap</h3>
+                    </div>
+                    <div class="chart-img-container">
+                        <a href="images/time-vs-concentration-heatmap.png" target="_blank" rel="noopener noreferrer" class="chart-img-link" title="Click to open full-resolution chart in a new tab">
+                            <img src="images/time-vs-concentration-heatmap.png" alt="Time Spent on Social Media vs. Difficulty Concentrating — Heatmap showing respondent counts by combination" class="chart-img" loading="lazy">
+                        </a>
+                    </div>
+                    <figcaption class="chart-caption">
+                        <strong>Caption:</strong> This heatmap shows how many respondents fall into each combination of social media time spent and difficulty concentrating on studies.
+                    </figcaption>
+                </figure>
             </div>
-        </section>
 
-        <!-- ================================================================
-             4. PLANNED ANALYTICAL PIPELINE
-             =============================================================== -->
-        <section class="card">
-            <h2>Analytical Pipeline & Tooling</h2>
-            <p class="section-intro">
-                The technical and statistical roadmap scheduled for executing empirical evaluations in upcoming assignments:
-            </p>
-
-            <div class="split-grid">
-                <div class="sub-card">
-                    <h3>🛠️ Technical Tools</h3>
-                    <p>
-                        Exploratory data analysis and data processing will be implemented using Python data science libraries:
-                    </p>
-                    <ul class="resume-list">
-                        <li><strong>Pandas & NumPy:</strong> Data cleaning, transformation, and tabular structuring.</li>
-                        <li><strong>Matplotlib & Seaborn:</strong> Distribution plots and correlation heatmaps.</li>
-                        <li><strong>Scipy / Statsmodels:</strong> Statistical significance testing.</li>
-                    </ul>
-                </div>
-
-                <div class="sub-card">
-                    <h3>📈 Evaluation Procedures</h3>
-                    <p>
-                        Step-by-step statistical methods planned for the dataset:
-                    </p>
-                    <ul class="resume-list">
-                        <li><strong>Univariate Statistics:</strong> Screen time histograms and normality checks.</li>
-                        <li><strong>Bivariate Correlations:</strong> Testing screen time against sleep and GPA.</li>
-                        <li><strong>Hypothesis Testing:</strong> Evaluating statistical support for H1 and H2.</li>
-                    </ul>
-                </div>
-            </div>
-
+            <!-- Page Navigation Controls -->
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 32px; flex-wrap: wrap; gap: 12px;">
                 <a href="dataset.html" class="btn btn-outline" style="color: var(--navy-dark); border-color: var(--border-color);">
                     ← Back to Dataset

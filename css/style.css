@@ -717,7 +717,7 @@ main {
 }
 
 /* --------------------------------------------------------------------------
-   12. Future Analysis / EDA Section (Placeholders)
+   12. Future Analysis / EDA Section (Placeholders & Charts)
    -------------------------------------------------------------------------- */
 .future-banner {
     background-color: #fff9db;
@@ -740,10 +740,132 @@ main {
     color: #744210;
 }
 
+.eda-banner {
+    background-color: #f0f7ff;
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 18px 22px;
+    margin-bottom: 26px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.eda-banner-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.eda-banner-text strong {
+    display: block;
+    color: var(--navy-dark);
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+}
+
+.eda-banner-text p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--text-main);
+    line-height: 1.55;
+}
+
+/* Charts Grid & Responsive Figure Cards */
+.charts-grid,
 .future-charts-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 26px;
+}
+
+.chart-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    margin: 0;
+}
+
+.chart-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-border);
+}
+
+.chart-card-header {
+    padding: 16px 20px 14px;
+    background-color: var(--bg-alt);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chart-figure-label {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.chart-card-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.chart-img-container {
+    padding: 16px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.chart-img-link {
+    display: block;
+    width: 100%;
+    cursor: zoom-in;
+    text-align: center;
+}
+
+.chart-img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: contain;
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.chart-img-link:hover .chart-img {
+    transform: scale(1.015);
+}
+
+.chart-caption {
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    background-color: var(--bg-alt);
+    border-top: 1px solid var(--border-color);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.chart-caption strong {
+    color: var(--navy-dark);
 }
 
 .chart-placeholder-card {
@@ -1065,7 +1187,8 @@ footer {
 @media (max-width: 860px) {
     .split-grid,
     .hypotheses-grid,
-    .future-charts-grid {
+    .future-charts-grid,
+    .charts-grid {
         grid-template-columns: 1fr;
     }
 
