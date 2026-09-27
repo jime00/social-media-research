@@ -71,11 +71,16 @@ Because this website uses pure HTML, CSS, and JavaScript, you can run a local pr
 social-media-research/
 ├── index.html        # Home page (Executive Summary, Core Question, Portal Cards, About)
 ├── research.html     # Research Framework (Topic Pillars, 5 Sub-Questions, 8 Variables, Hypotheses)
-├── dataset.html      # Kaggle Dataset details, variable dictionary, and methodology
+├── dataset.html      # Kaggle Dataset details, sample summary (N=405), and cleaning pipeline
 ├── analysis.html     # Exploratory Data Analysis visualizations (histograms, bar charts, box plots, heatmaps)
 ├── findings.html     # Hypotheses evaluation status (H1 & H2) and study phase
 ├── resources.html    # Presentation video embed, proposal documents, and references
 ├── resume.html       # Standalone printable resume page for Jimena Bello
+├── data/
+│   ├── social_media_data.csv         # Raw survey dataset (N=405 records)
+│   └── cleaned_social_media_data.csv # Standardized & cleaned dataset
+├── scripts/
+│   └── clean_data.py # 9-step Python data cleaning and feature engineering pipeline
 ├── css/
 │   └── style.css     # CSS design tokens, responsive layout, and visual styles
 ├── js/
