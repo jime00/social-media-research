@@ -161,19 +161,25 @@
         </section>
 
         <!-- ================================================================
-             5. SAMPLE CHARACTERISTICS & DATA CLEANING PIPELINE
+             5. DATA CLEANING & VALIDATION
              ================================================================ -->
         <section class="card">
-            <h2>Dataset Sample & Cleaning Pipeline</h2>
+            <h2>Data Cleaning & Validation</h2>
             <p class="section-intro">
-                Summary characteristics for our <em>N</em> = 405 survey respondents, alongside the 9-step data cleaning pipeline applied to standardize the raw inputs:
+                Before conducting our final exploratory and statistical analysis, the dataset was carefully checked, validated, 
+                and prepared. Systematic data cleaning ensures empirical integrity, resolves measurement discrepancies, 
+                and establishes a reliable foundation for evaluating the relationship between student social media habits and academic performance.
             </p>
 
-            <!-- Key Sample Metrics Summary -->
+            <!-- Cleaned Dataset Summary Cards -->
             <div class="stat-grid">
                 <div class="stat-card">
                     <div class="stat-number">405</div>
-                    <div class="stat-label">Total Respondents</div>
+                    <div class="stat-label">Total Valid Respondents</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">21 yrs</div>
+                    <div class="stat-label">Median Age (17–37)</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">3.5 hrs</div>
@@ -183,56 +189,190 @@
                     <div class="stat-number">3.0 hrs</div>
                     <div class="stat-label">Median Study Time</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">21 yrs</div>
-                    <div class="stat-label">Median Student Age</div>
-                </div>
             </div>
 
-            <!-- Two-column breakdown: Sample Distributions & 9-Step Cleaning Pipeline -->
+            <!-- Cleaned Dataset Summary Overview Cards -->
             <div class="split-grid">
                 <div class="sub-card">
-                    <h3>📊 Sample Demographics & Usage</h3>
+                    <h3>📋 Cleaned Dataset Summary</h3>
                     <ul class="resume-list">
-                        <li><strong>Gender Breakdown:</strong> 54.1% Male (219) • 45.9% Female (186).</li>
-                        <li><strong>Primary Platforms:</strong> Facebook (33.8%), Instagram (30.9%), YouTube (29.9%), Others (4.4%), TikTok (1.0%).</li>
-                        <li><strong>Usage Categories (Step 9):</strong>
-                            <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
-                                <div style="display: flex; justify-content: space-between; font-size: 0.88rem; padding: 6px 10px; background: white; border-radius: 6px; border: 1px solid var(--border-color);">
-                                    <span>🟢 Low Usage (&le; 3 hrs/day)</span>
-                                    <strong>187 students (46.2%)</strong>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; font-size: 0.88rem; padding: 6px 10px; background: white; border-radius: 6px; border: 1px solid var(--border-color);">
-                                    <span>🟡 Moderate Usage (3–7 hrs/day)</span>
-                                    <strong>176 students (43.5%)</strong>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; font-size: 0.88rem; padding: 6px 10px; background: white; border-radius: 6px; border: 1px solid var(--border-color);">
-                                    <span>🔴 High Usage (&gt; 7 hrs/day)</span>
-                                    <strong>42 students (10.4%)</strong>
-                                </div>
-                            </div>
-                        </li>
-                        <li style="margin-top: 10px;"><strong>Screen Time Dispersion:</strong> Q1 = 2.0 hrs, Q3 = 5.0 hrs, IQR Upper Capping Bound = 9.5 hrs.</li>
+                        <li><strong>Total valid respondents:</strong> 405 students</li>
+                        <li><strong>Male:</strong> 219 (54.1%)</li>
+                        <li><strong>Female:</strong> 186 (45.9%)</li>
+                        <li><strong>Median age:</strong> 21 years</li>
+                        <li><strong>Age range:</strong> 17–37 years</li>
+                        <li><strong>Median daily screen time:</strong> 3.5 hours</li>
+                        <li><strong>Q1 screen time:</strong> 2.0 hours</li>
+                        <li><strong>Q3 screen time:</strong> 5.0 hours</li>
+                        <li><strong>IQR upper capping bound:</strong> 9.5 hours/day</li>
+                        <li><strong>Median daily study time:</strong> 3.0 hours/day</li>
+                        <li><strong>Mean daily study time:</strong> 3.49 hours/day</li>
                     </ul>
                 </div>
 
                 <div class="sub-card">
-                    <h3>🧹 9-Step Data Cleaning Pipeline</h3>
+                    <h3>📱 Social Media Platforms</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">
-                        Implemented in Python (<code>scripts/clean_data.py</code>) to standardize the survey data:
+                        Distribution of primary networking platforms reported by participants (<em>N</em> = 405):
                     </p>
-                    <ol class="resume-list" style="padding-left: 20px;">
-                        <li><strong>Data Ingestion:</strong> Loaded raw CSV file into a Pandas DataFrame.</li>
-                        <li><strong>Duplicate Removal:</strong> Removed duplicate participant entries.</li>
-                        <li><strong>Data Type Coercion:</strong> Parsed strings and ranges (e.g. "6-7 hrs") into continuous numeric floats.</li>
-                        <li><strong>Median Imputation:</strong> Replaced missing numeric entries using median values.</li>
-                        <li><strong>Whitespace & Casing:</strong> Stripped whitespace and normalized text to lowercase.</li>
-                        <li><strong>Categorical Mapping:</strong> Normalized app aliases (e.g., "insta" &rarr; "instagram").</li>
-                        <li><strong>Range Filtering:</strong> Validated plausible logic (0 &le; hours &le; 24).</li>
-                        <li><strong>Outlier Winsorization:</strong> Capped extreme screen time using statistical IQR bounds (9.5 hrs).</li>
-                        <li><strong>Usage Binning:</strong> Discretized continuous screen time into Low, Moderate, and High buckets.</li>
-                    </ol>
+                    <ul class="resume-list">
+                        <li><strong>Facebook:</strong> 137 (33.8%)</li>
+                        <li><strong>Instagram:</strong> 125 (30.9%)</li>
+                        <li><strong>YouTube:</strong> 121 (29.9%)</li>
+                        <li><strong>Other:</strong> 18 (4.4%)</li>
+                        <li><strong>TikTok:</strong> 4 (1.0%)</li>
+                    </ul>
                 </div>
+            </div>
+
+            <!-- Usage Level Transformation & Visual Chart -->
+            <div class="sub-card" style="margin-top: 24px;">
+                <h3>📊 Usage Level Transformation</h3>
+                <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 14px;">
+                    Daily screen time was transformed into three standardized usage categories: <strong>Low</strong>, <strong>Moderate</strong>, and <strong>High</strong>.
+                </p>
+
+                <!-- Visual Bar Chart for the Three Usage Categories -->
+                <div class="usage-chart-box">
+                    <div class="usage-bar-row">
+                        <div class="usage-bar-label">
+                            <span class="usage-dot low"></span>
+                            <strong>Low (&le; 3 hours)</strong>
+                        </div>
+                        <div class="usage-bar-track" aria-label="Low usage: 46.2%">
+                            <div class="usage-bar-fill low" style="width: 46.2%;"></div>
+                        </div>
+                        <div class="usage-bar-value">187 students (46.2%)</div>
+                    </div>
+
+                    <div class="usage-bar-row">
+                        <div class="usage-bar-label">
+                            <span class="usage-dot moderate"></span>
+                            <strong>Moderate (3–7 hours)</strong>
+                        </div>
+                        <div class="usage-bar-track" aria-label="Moderate usage: 43.5%">
+                            <div class="usage-bar-fill moderate" style="width: 43.5%;"></div>
+                        </div>
+                        <div class="usage-bar-value">176 students (43.5%)</div>
+                    </div>
+
+                    <div class="usage-bar-row">
+                        <div class="usage-bar-label">
+                            <span class="usage-dot high"></span>
+                            <strong>High (&gt; 7 hours)</strong>
+                        </div>
+                        <div class="usage-bar-track" aria-label="High usage: 10.4%">
+                            <div class="usage-bar-fill high" style="width: 10.4%;"></div>
+                        </div>
+                        <div class="usage-bar-value">42 students (10.4%)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8 Required Cleaning & Validation Areas -->
+            <div style="margin-top: 32px;">
+                <h3>🧹 Eight Core Data Cleaning & Validation Areas</h3>
+                <p class="section-intro" style="margin-bottom: 8px;">
+                    The dataset was audited and processed across eight primary data quality dimensions:
+                </p>
+
+                <div class="cleaning-areas-grid">
+                    <!-- 1. Missing Values -->
+                    <div class="cleaning-area-card">
+                        <div class="cleaning-area-header">
+                            <span class="cleaning-area-num">1</span>
+                            <h4 class="cleaning-area-title">Missing Values</h4>
+                        </div>
+                        <p class="cleaning-area-desc">
+                            Missing numeric entries across survey responses (such as study hours and screen time) were identified during data inspection and addressed using median imputation. This preserves overall record completeness without distorting statistical distributions.
+                        </p>
+                    </div>
+
+                    <!-- 2. Duplicate Records -->
+                    <div class="cleaning-area-card">
+                        <div class="cleaning-area-header">
+                            <span class="cleaning-area-num">2</span>
+                            <h4 class="cleaning-area-title">Duplicate Records</h4>
+                        </div>
+                        <p class="cleaning-area-desc">
+                            Duplicate records and redundant submissions were checked during the cleaning process to verify that each survey respondent represents a distinct, individual participant record.
+                        </p>
+                    </div>
+
+                    <!-- 3. Incorrect Data Types -->
+                    <div class="cleaning-area-card">
+                        <div class="cleaning-area-header">
+                            <span class="cleaning-area-num">3</span>
+                            <h4 class="cleaning-area-title">Incorrect Data Types</h4>
+                        </div>
+                        <p class="cleaning-area-desc">
+                            Variables initially recorded as strings or object types—including screen time, study duration, and GPA values with descriptive text or units—were parsed and coerced into standardized numeric types (<code>float</code> and <code>int</code>) for statistical computation.
+                        </p>
+                    </div>
+
+                    <!-- 4. Inconsistent Formats -->
+                    <div class="cleaning-area-card">
+                        <div class="cleaning-area-header">
+                            <span class="cleaning-area-num">4</span>
+                            <h4 class="cleaning-area-title">Inconsistent Formats</h4>
+                        </div>
+                        <p class="cleaning-area-desc">
+                            Text fields and free-response strings were cleaned by stripping irregular leading and trailing whitespace, standardizing letter casing, and establishing uniform formatting across all survey responses.
+                        </p>
+                    </div>
+
+                    <!-- 5. Invalid Values -->
+                    <div class="cleaning-area-card">
+                        <div class="cleaning-area-header">
+                            <span class="cleaning-area-num">5</span>
+                            <h4 class="cleaning-area-title">Invalid Values</h4>
+                        </div>
+                        <p class="cleaning-area-desc">
+                            Logic checks were performed to filter out impossible logic and invalid values, such as reported daily activity hours exceeding the 24-hour limit in a single day, or non-numeric percentage values placed in time fields.
+                        </p>
+                    </div>
+
+                    <!-- 6. Outliers -->
+                    <div class="cleaning-area-card">
+                        <div class="cleaning-area-header">
+                            <span class="cleaning-area-num">6</span>
+                            <h4 class="cleaning-area-title">Outliers</h4>
+                        </div>
+                        <p class="cleaning-area-desc">
+                            Daily screen time was evaluated using the IQR method (Q1 = 2.0 hours, Q3 = 5.0 hours). The upper capping bound was determined to be <strong>9.5 hours/day</strong>. Values exceeding this threshold were capped (Winsorized) at 9.5 hours to mitigate the distortive effects of extreme outliers while retaining valid respondent participation.
+                        </p>
+                    </div>
+
+                    <!-- 7. Inconsistent Categorical Values -->
+                    <div class="cleaning-area-card">
+                        <div class="cleaning-area-header">
+                            <span class="cleaning-area-num">7</span>
+                            <h4 class="cleaning-area-title">Inconsistent Categorical Values</h4>
+                        </div>
+                        <p class="cleaning-area-desc">
+                            Categorical fields (including social media platform names, residence areas, and symptom classifications) were checked for typos, abbreviations, and variation (such as mapping informal app names to standardized platform identities) to maintain uniform groupings.
+                        </p>
+                    </div>
+
+                    <!-- 8. Data Transformations -->
+                    <div class="cleaning-area-card">
+                        <div class="cleaning-area-header">
+                            <span class="cleaning-area-num">8</span>
+                            <h4 class="cleaning-area-title">Data Transformations</h4>
+                        </div>
+                        <p class="cleaning-area-desc">
+                            Daily screen time was transformed into three usage categories for comparative analysis: <strong>Low</strong> (&le; 3 hours), <strong>Moderate</strong> (3–7 hours), and <strong>High</strong> (&gt; 7 hours), facilitating subgroup comparisons and categorical analysis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Connection Subsection -->
+            <div class="research-connection-card">
+                <h3>🔬 Research Connection</h3>
+                <p>
+                    Cleaning and validating the dataset helps make the analysis more reliable by reducing the effect of missing, duplicate, inconsistent, or invalid data. The cleaned dataset was then used for the analysis of student social media usage and academic performance.
+                </p>
             </div>
 
             <!-- Page Navigation Controls -->

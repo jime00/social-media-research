@@ -955,6 +955,344 @@ main {
 }
 
 /* --------------------------------------------------------------------------
+   12c. Data Cleaning & Validation Section Styles
+   -------------------------------------------------------------------------- */
+.cleaning-areas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.cleaning-area-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.cleaning-area-card:hover {
+    border-color: var(--primary-border);
+    box-shadow: var(--shadow-md);
+}
+
+.cleaning-area-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.cleaning-area-num {
+    background-color: var(--navy-dark);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cleaning-area-title {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin: 0;
+}
+
+.cleaning-area-desc {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Usage Level Visual Chart */
+.usage-chart-box {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-top: 14px;
+}
+
+.usage-bar-row {
+    display: grid;
+    grid-template-columns: 170px 1fr 120px;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.usage-bar-row:last-child {
+    margin-bottom: 0;
+}
+
+.usage-bar-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: var(--navy-dark);
+}
+
+.usage-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.usage-dot.low,
+.usage-bar-fill.low {
+    background-color: #2b8a3e;
+}
+
+.usage-dot.moderate,
+.usage-bar-fill.moderate {
+    background-color: #d97706;
+}
+
+.usage-dot.high,
+.usage-bar-fill.high {
+    background-color: #be185d;
+}
+
+.usage-bar-track {
+    background-color: #edf2f7;
+    border-radius: 10px;
+    height: 14px;
+    overflow: hidden;
+    position: relative;
+}
+
+.usage-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.usage-bar-value {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    text-align: right;
+}
+
+/* Research Connection Subsection */
+.research-connection-card {
+    background-color: #f7fafc;
+    border: 1px solid #cbd5e0;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin-top: 26px;
+}
+
+.research-connection-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.08rem;
+    color: var(--navy-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.research-connection-card p {
+    margin: 0;
+    font-size: 0.94rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   12d. SQL Relational Data Analysis Section Styles
+   -------------------------------------------------------------------------- */
+.sql-section-intro {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.sql-schema-box {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 22px;
+    margin-bottom: 26px;
+    box-shadow: var(--shadow-sm);
+}
+
+.relation-diagram-box {
+    background: var(--bg-alt);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.86rem;
+    overflow-x: auto;
+    color: var(--navy-dark);
+    line-height: 1.5;
+}
+
+.sql-code-block {
+    background-color: #1e293b;
+    color: #f8fafc;
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    overflow-x: auto;
+    margin: 12px 0;
+}
+
+.sql-code-block code {
+    color: #e2e8f0;
+    font-family: inherit;
+}
+
+.sql-query-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 22px 24px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.sql-query-card:hover {
+    border-color: var(--primary-border);
+    box-shadow: var(--shadow-md);
+}
+
+.sql-query-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.sql-query-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin: 0;
+}
+
+.sql-concept-badge {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sql-purpose {
+    font-size: 0.92rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.sql-explanation {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin: 8px 0 12px;
+    line-height: 1.5;
+}
+
+.sql-result-container {
+    background: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    margin-top: 10px;
+}
+
+.sql-result-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.sql-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+    margin-top: 6px;
+    background: white;
+}
+
+.sql-table th,
+.sql-table td {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.sql-table th {
+    background-color: #f1f5f9;
+    color: var(--navy-dark);
+    font-weight: 700;
+}
+
+.sql-table tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Visualization 1 Platform Bar Colors */
+.platform-dot.facebook,
+.platform-bar-fill.facebook {
+    background-color: #1877F2;
+}
+
+.platform-dot.instagram,
+.platform-bar-fill.instagram {
+    background-color: #E1306C;
+}
+
+.platform-dot.youtube,
+.platform-bar-fill.youtube {
+    background-color: #FF0000;
+}
+
+.platform-dot.other,
+.platform-bar-fill.other {
+    background-color: #64748B;
+}
+
+.platform-dot.tiktok,
+.platform-bar-fill.tiktok {
+    background-color: #010101;
+}
+
+/* --------------------------------------------------------------------------
    13. Project Timeline
    -------------------------------------------------------------------------- */
 .timeline {
@@ -1229,7 +1567,8 @@ footer {
     .split-grid,
     .hypotheses-grid,
     .future-charts-grid,
-    .charts-grid {
+    .charts-grid,
+    .cleaning-areas-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1267,6 +1606,22 @@ footer {
 
     .menu-toggle {
         display: block;
+    }
+
+    .usage-bar-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        margin-bottom: 16px;
+    }
+
+    .usage-bar-value {
+        text-align: left;
+    }
+}
+
+@media (max-width: 520px) {
+    .stat-grid {
+        grid-template-columns: 1fr;
     }
 
     .card {

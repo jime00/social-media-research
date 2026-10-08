@@ -141,17 +141,670 @@
                     </figcaption>
                 </figure>
             </div>
-
-            <!-- Page Navigation Controls -->
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 32px; flex-wrap: wrap; gap: 12px;">
-                <a href="dataset.html" class="btn btn-outline" style="color: var(--navy-dark); border-color: var(--border-color);">
-                    ← Back to Dataset
-                </a>
-                <a href="findings.html" class="btn btn-primary" style="background-color: var(--navy-dark); color: white;">
-                    Proceed to Findings →
-                </a>
-            </div>
         </section>
+
+        <!-- ================================================================
+             4. SQL RELATIONAL DATA ANALYSIS (ASSIGNMENT 4)
+             ================================================================ -->
+        <section class="card" id="sql-analysis">
+            <h2>SQL Relational Data Analysis</h2>
+            <p class="sql-section-intro">
+                The cleaned student survey dataset (<em>N</em> = 405) was organized into two related relational tables: 
+                <strong><code>Students</code></strong> and <strong><code>Social Media Platforms</code></strong>. 
+                Using Structured Query Language (SQL), we perform relational modeling, subgroup filtering, cohort grouping, 
+                and aggregate evaluations to analyze behavioral distributions, assess distraction dynamics, and test our research hypotheses.
+            </p>
+
+            <!-- ------------------------------------------------------------
+                 1. TWO RELATED SQL TABLES & SCHEMAS
+                 ------------------------------------------------------------ -->
+            <div class="sql-schema-box">
+                <h3 style="margin-top: 0; color: var(--navy-dark);">🗄️ Relational Database Schema: Two Related Tables</h3>
+                <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 16px;">
+                    Our database architecture organizes the 405 survey records into two relational tables:
+                </p>
+
+                <!-- Two Tables Attribute Lists -->
+                <div class="split-grid" style="margin-bottom: 22px;">
+                    <div class="sub-card" style="border-left: 4px solid var(--primary-color);">
+                        <h4 style="margin-top: 0; color: var(--navy-dark);">1. Students</h4>
+                        <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 10px;">
+                            Main entity table storing individual survey responses (405 student records):
+                        </p>
+                        <ul style="font-size: 0.88rem; line-height: 1.6; margin-left: 20px; color: var(--text-main);">
+                            <li><code>student_id</code> (Primary Key)</li>
+                            <li><code>age</code></li>
+                            <li><code>gender</code></li>
+                            <li><code>screen_time_hours</code></li>
+                            <li><code>study_time_hours</code></li>
+                            <li><code>platform_id</code> (Foreign Key)</li>
+                            <li><code>academic_distraction_scale</code></li>
+                            <li><code>gpa</code></li>
+                            <li><code>usage_level</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-card" style="border-left: 4px solid var(--navy-medium);">
+                        <h4 style="margin-top: 0; color: var(--navy-dark);">2. Social Media Platforms</h4>
+                        <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 10px;">
+                            Lookup reference table storing platform metadata and content types:
+                        </p>
+                        <ul style="font-size: 0.88rem; line-height: 1.6; margin-left: 20px; color: var(--text-main);">
+                            <li><code>platform_id</code> (Primary Key)</li>
+                            <li><code>platform_name</code></li>
+                            <li><code>category_type</code></li>
+                            <li><code>primary_format</code></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Detailed Table Specifications -->
+                <div class="split-grid">
+                    <!-- Table 1 Detailed -->
+                    <div class="sub-card">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                            <h4 style="margin: 0; color: var(--navy-dark);">Table Structure: Students</h4>
+                            <span class="sql-concept-badge">Main Entity</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>Column Name</th>
+                                        <th>Data Type</th>
+                                        <th>Key / Constraint</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code>student_id</code></td><td>INT</td><td>PRIMARY KEY</td></tr>
+                                    <tr><td><code>age</code></td><td>INT</td><td>NOT NULL</td></tr>
+                                    <tr><td><code>gender</code></td><td>VARCHAR(10)</td><td>—</td></tr>
+                                    <tr><td><code>screen_time_hours</code></td><td>DECIMAL(4,2)</td><td>0.00 – 9.50 hrs</td></tr>
+                                    <tr><td><code>study_time_hours</code></td><td>DECIMAL(4,2)</td><td>0.00 – 12.00 hrs</td></tr>
+                                    <tr><td><code>platform_id</code></td><td>INT</td><td>FOREIGN KEY</td></tr>
+                                    <tr><td><code>academic_distraction_scale</code></td><td>INT</td><td>1 – 5 Scale</td></tr>
+                                    <tr><td><code>gpa</code></td><td>DECIMAL(3,2)</td><td>GPA / CGPA</td></tr>
+                                    <tr><td><code>usage_level</code></td><td>VARCHAR(15)</td><td>Low / Mod / High</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Table 2 Detailed -->
+                    <div class="sub-card">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                            <h4 style="margin: 0; color: var(--navy-dark);">Table Structure: Social Media Platforms</h4>
+                            <span class="sql-concept-badge">Lookup Entity</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>Column Name</th>
+                                        <th>Data Type</th>
+                                        <th>Key / Constraint</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code>platform_id</code></td><td>INT</td><td>PRIMARY KEY</td></tr>
+                                    <tr><td><code>platform_name</code></td><td>VARCHAR(50)</td><td>NOT NULL (Unique)</td></tr>
+                                    <tr><td><code>category_type</code></td><td>VARCHAR(50)</td><td>Platform Category</td></tr>
+                                    <tr><td><code>primary_format</code></td><td>VARCHAR(50)</td><td>Content Format</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Relational Relationship Explanation & Diagram -->
+                <div style="margin-top: 24px;">
+                    <h4 style="margin-bottom: 6px; color: var(--navy-dark);">🔗 Table Relationship</h4>
+                    <p style="font-size: 0.95rem; font-weight: 700; color: var(--navy-medium); margin-bottom: 8px;">
+                        Relationship: <code>Students.platform_id &rarr; Social Media Platforms.platform_id</code>
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 10px;">
+                        The tables are joined through <code>platform_id</code>. In the <strong>Students</strong> table, 
+                        <code>platform_id</code> is a Foreign Key referencing <code>platform_id</code> in the <strong>Social Media Platforms</strong> table. 
+                        This represents a <strong>One-to-Many (1:N)</strong> relationship: each platform can be associated with multiple student respondents, while each student reports one primary platform.
+                    </p>
+                    <div class="relation-diagram-box">
+[Students Table]                                 [Social Media Platforms Table]
+• student_id (PK)                                • platform_id (PK)
+• age                                     ───►   • platform_name
+• gender                                         • category_type
+• screen_time_hours                              • primary_format
+• study_time_hours
+• platform_id (FK) ────────────────────────┘
+• academic_distraction_scale
+• gpa
+• usage_level
+                    </div>
+                </div>
+
+                <!-- SQL DDL Statements -->
+                <div style="margin-top: 20px;">
+                    <h4 style="margin-bottom: 6px; color: var(--navy-dark);">💻 SQL Table Creation Statements (CREATE TABLE)</h4>
+                    <div class="sql-code-block">
+<code>-- Table 1: Create Social Media Platforms Reference Table
+CREATE TABLE social_media_platforms (
+    platform_id INT PRIMARY KEY,
+    platform_name VARCHAR(50) NOT NULL,
+    category_type VARCHAR(50),
+    primary_format VARCHAR(50)
+);
+
+-- Table 2: Create Students Main Entity Table with Foreign Key
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    age INT,
+    gender VARCHAR(10),
+    screen_time_hours DECIMAL(4,2),
+    study_time_hours DECIMAL(4,2),
+    platform_id INT,
+    academic_distraction_scale INT,
+    gpa DECIMAL(3,2),
+    usage_level VARCHAR(15),
+    FOREIGN KEY (platform_id) REFERENCES social_media_platforms(platform_id)
+);</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------
+                 2. AT LEAST 8 SEPARATE SQL QUERIES
+                 ------------------------------------------------------------ -->
+            <div style="margin-top: 36px;">
+                <h3>🔍 Analytical SQL Queries (Demonstrating Required Concepts)</h3>
+                <p class="section-intro" style="margin-bottom: 18px;">
+                    Eight structured SQL queries executed against our relational database, accompanied by their exact calculated results:
+                </p>
+
+                <!-- Query 1: Basic SELECT / FROM -->
+                <div class="sql-query-card">
+                    <div class="sql-query-header">
+                        <h4 class="sql-query-title">Query 1: Sample Record Inspection</h4>
+                        <span class="sql-concept-badge">SELECT • FROM</span>
+                    </div>
+                    <div class="sql-purpose">
+                        <strong>Purpose:</strong> Retrieve initial participant records showing student ID, gender, age, screen time hours, and study time hours to inspect baseline data structure.
+                    </div>
+                    <div class="sql-code-block">
+<code>SELECT student_id, gender, age, screen_time_hours, study_time_hours
+FROM students
+LIMIT 5;</code>
+                    </div>
+                    <div class="sql-explanation">
+                        <strong>Explanation:</strong> Uses the core <code>SELECT</code> clause to project specific attributes from the <code>students</code> table using <code>FROM</code>, restricted to 5 records for inspection.
+                    </div>
+                    <div class="sql-result-container">
+                        <div class="sql-result-label">Query Output (First 5 Rows):</div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>student_id</th>
+                                        <th>gender</th>
+                                        <th>age</th>
+                                        <th>screen_time_hours</th>
+                                        <th>study_time_hours</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>1</td><td>Male</td><td>28</td><td>4.00</td><td>2.00</td></tr>
+                                    <tr><td>2</td><td>Male</td><td>21</td><td>5.00</td><td>3.00</td></tr>
+                                    <tr><td>3</td><td>Female</td><td>17</td><td>2.00</td><td>6.50</td></tr>
+                                    <tr><td>4</td><td>Male</td><td>22</td><td>6.00</td><td>1.50</td></tr>
+                                    <tr><td>5</td><td>Male</td><td>26</td><td>5.00</td><td>2.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query 2: WHERE Filtering -->
+                <div class="sql-query-card">
+                    <div class="sql-query-header">
+                        <h4 class="sql-query-title">Query 2: High Screen Time Filtering</h4>
+                        <span class="sql-concept-badge">WHERE Filtering</span>
+                    </div>
+                    <div class="sql-purpose">
+                        <strong>Purpose:</strong> Filter student records to isolate high-intensity social media users who spend more than 7 hours per day on networking platforms.
+                    </div>
+                    <div class="sql-code-block">
+<code>SELECT student_id, age, gender, screen_time_hours, gpa
+FROM students
+WHERE screen_time_hours > 7.0
+LIMIT 5;</code>
+                    </div>
+                    <div class="sql-explanation">
+                        <strong>Explanation:</strong> The <code>WHERE</code> predicate filters the dataset to retain only rows where <code>screen_time_hours</code> exceeds 7.0, corresponding to the "High" usage bracket.
+                    </div>
+                    <div class="sql-result-container">
+                        <div class="sql-result-label">Query Output (Sample High-Usage Records):</div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>student_id</th>
+                                        <th>age</th>
+                                        <th>gender</th>
+                                        <th>screen_time_hours</th>
+                                        <th>gpa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>7</td><td>23</td><td>Male</td><td>8.00</td><td>3.91</td></tr>
+                                    <tr><td>12</td><td>22</td><td>Female</td><td>9.50</td><td>4.00</td></tr>
+                                    <tr><td>32</td><td>22</td><td>Female</td><td>8.00</td><td>3.64</td></tr>
+                                    <tr><td>44</td><td>23</td><td>Male</td><td>9.50</td><td>3.96</td></tr>
+                                    <tr><td>52</td><td>22</td><td>Female</td><td>9.50</td><td>3.25</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query 3: Multiple Conditions with WHERE (AND) -->
+                <div class="sql-query-card">
+                    <div class="sql-query-header">
+                        <h4 class="sql-query-title">Query 3: Heavy Usage & High Distraction Identification</h4>
+                        <span class="sql-concept-badge">WHERE • Multiple Conditions (AND)</span>
+                    </div>
+                    <div class="sql-purpose">
+                        <strong>Purpose:</strong> Identify the count of students who simultaneously report heavy daily screen time (&ge; 5 hours) and high self-reported academic distraction (&ge; 4 on a 1–5 scale).
+                    </div>
+                    <div class="sql-code-block">
+<code>SELECT COUNT(*) AS high_screen_and_distraction_count
+FROM students
+WHERE screen_time_hours >= 5.0 
+  AND academic_distraction_scale >= 4;</code>
+                    </div>
+                    <div class="sql-explanation">
+                        <strong>Explanation:</strong> Combines multiple boolean conditions using the logical <code>AND</code> operator to pinpoint students meeting both criteria.
+                    </div>
+                    <div class="sql-result-container">
+                        <div class="sql-result-label">Query Output:</div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>high_screen_and_distraction_count</th>
+                                        <th>Percentage of Total Sample</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>55 students</strong></td><td>13.6% of 405 respondents</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query 4: ORDER BY Sorting -->
+                <div class="sql-query-card">
+                    <div class="sql-query-header">
+                        <h4 class="sql-query-title">Query 4: Top Screen Time Ranking</h4>
+                        <span class="sql-concept-badge">ORDER BY Sorting</span>
+                    </div>
+                    <div class="sql-purpose">
+                        <strong>Purpose:</strong> Sort participants in descending order by daily screen time to inspect top screen time consumers, using study time as a secondary ascending sort.
+                    </div>
+                    <div class="sql-code-block">
+<code>SELECT student_id, screen_time_hours, study_time_hours, gpa, usage_level
+FROM students
+ORDER BY screen_time_hours DESC, study_time_hours ASC
+LIMIT 5;</code>
+                    </div>
+                    <div class="sql-explanation">
+                        <strong>Explanation:</strong> The <code>ORDER BY</code> clause sorts rows primarily by <code>screen_time_hours DESC</code> (highest first) and secondarily by <code>study_time_hours ASC</code>.
+                    </div>
+                    <div class="sql-result-container">
+                        <div class="sql-result-label">Query Output (Top 5 Screen Time Records):</div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>student_id</th>
+                                        <th>screen_time_hours</th>
+                                        <th>study_time_hours</th>
+                                        <th>gpa</th>
+                                        <th>usage_level</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>121</td><td>9.50 (Capped)</td><td>0.00</td><td>3.50</td><td>High</td></tr>
+                                    <tr><td>233</td><td>9.50 (Capped)</td><td>0.00</td><td>3.17</td><td>High</td></tr>
+                                    <tr><td>275</td><td>9.50 (Capped)</td><td>0.50</td><td>5.00</td><td>High</td></tr>
+                                    <tr><td>44</td><td>9.50 (Capped)</td><td>1.00</td><td>3.96</td><td>High</td></tr>
+                                    <tr><td>91</td><td>9.50 (Capped)</td><td>1.00</td><td>3.35</td><td>High</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query 5: Aggregation (COUNT, AVG, MIN, MAX) -->
+                <div class="sql-query-card">
+                    <div class="sql-query-header">
+                        <h4 class="sql-query-title">Query 5: Sample Summary Aggregation</h4>
+                        <span class="sql-concept-badge">COUNT / AVG Aggregation</span>
+                    </div>
+                    <div class="sql-purpose">
+                        <strong>Purpose:</strong> Calculate overall descriptive statistics across the entire sample of 405 students, including respondent count, average hours, and range bounds.
+                    </div>
+                    <div class="sql-code-block">
+<code>SELECT 
+    COUNT(*) AS total_students,
+    ROUND(AVG(screen_time_hours), 2) AS avg_screen_time,
+    ROUND(AVG(study_time_hours), 2) AS avg_study_time,
+    MIN(screen_time_hours) AS min_screen_time,
+    MAX(screen_time_hours) AS max_screen_time
+FROM students;</code>
+                    </div>
+                    <div class="sql-explanation">
+                        <strong>Explanation:</strong> Employs aggregate functions (<code>COUNT</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code>) combined with <code>ROUND()</code> to summarize the sample in a single row.
+                    </div>
+                    <div class="sql-result-container">
+                        <div class="sql-result-label">Query Output:</div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>total_students</th>
+                                        <th>avg_screen_time</th>
+                                        <th>avg_study_time</th>
+                                        <th>min_screen_time</th>
+                                        <th>max_screen_time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>405</td><td>3.96 hrs</td><td>3.48 hrs</td><td>0.17 hrs</td><td>9.50 hrs</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query 6: GROUP BY Comparison (Used for Graph 2) -->
+                <div class="sql-query-card">
+                    <div class="sql-query-header">
+                        <h4 class="sql-query-title">Query 6: Study Time by Usage Level (Source for Graph 2)</h4>
+                        <span class="sql-concept-badge">GROUP BY Comparison</span>
+                    </div>
+                    <div class="sql-purpose">
+                        <strong>Purpose:</strong> Group students by daily usage tier (Low, Moderate, High) to count participants per tier and compare average daily study hours.
+                    </div>
+                    <div class="sql-code-block">
+<code>SELECT 
+    usage_level,
+    COUNT(*) AS student_count,
+    ROUND(AVG(study_time_hours), 2) AS avg_study_hours
+FROM students
+GROUP BY usage_level
+ORDER BY student_count DESC;</code>
+                    </div>
+                    <div class="sql-explanation">
+                        <strong>Explanation:</strong> The <code>GROUP BY</code> clause partitions rows into the three discrete usage categories, aggregating student counts and average study hours for each group.
+                    </div>
+                    <div class="sql-result-container">
+                        <div class="sql-result-label">Query Output (Provides Data for Graph 2):</div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>usage_level</th>
+                                        <th>student_count</th>
+                                        <th>avg_study_hours</th>
+                                        <th>Key Academic Pattern</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Low</strong> (&le; 3 hrs)</td><td><strong>187</strong></td><td>3.84 hrs</td><td>Highest study dedication</td></tr>
+                                    <tr><td><strong>Moderate</strong> (3–7 hrs)</td><td><strong>176</strong></td><td>3.28 hrs</td><td>Moderate study time</td></tr>
+                                    <tr><td><strong>High</strong> (&gt; 7 hrs)</td><td><strong>42</strong></td><td>2.72 hrs</td><td>Lowest study time (1.12 hrs less than Low)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query 7: HAVING Clause -->
+                <div class="sql-query-card">
+                    <div class="sql-query-header">
+                        <h4 class="sql-query-title">Query 7: Major Age Cohort Screen Time Analysis</h4>
+                        <span class="sql-concept-badge">HAVING Clause</span>
+                    </div>
+                    <div class="sql-purpose">
+                        <strong>Purpose:</strong> Group participants by age and apply the HAVING clause to filter out smaller age brackets, displaying only age cohorts with at least 15 respondents.
+                    </div>
+                    <div class="sql-code-block">
+<code>SELECT 
+    age,
+    COUNT(*) AS student_count,
+    ROUND(AVG(screen_time_hours), 2) AS avg_screen_time
+FROM students
+GROUP BY age
+HAVING COUNT(*) >= 15
+ORDER BY student_count DESC;</code>
+                    </div>
+                    <div class="sql-explanation">
+                        <strong>Explanation:</strong> While <code>WHERE</code> filters individual rows before grouping, <code>HAVING</code> filters aggregated groups after the <code>GROUP BY</code> operation (here, retaining only groups where <code>COUNT(*) &ge; 15</code>).
+                    </div>
+                    <div class="sql-result-container">
+                        <div class="sql-result-label">Query Output:</div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>age</th>
+                                        <th>student_count</th>
+                                        <th>avg_screen_time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>20</td><td>91</td><td>3.66 hrs</td></tr>
+                                    <tr><td>21</td><td>78</td><td>4.10 hrs</td></tr>
+                                    <tr><td>22</td><td>70</td><td>4.22 hrs</td></tr>
+                                    <tr><td>19</td><td>67</td><td>3.80 hrs</td></tr>
+                                    <tr><td>23</td><td>53</td><td>4.23 hrs</td></tr>
+                                    <tr><td>24</td><td>18</td><td>3.81 hrs</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query 8: JOIN Between Two Tables (Used for Graph 1) -->
+                <div class="sql-query-card">
+                    <div class="sql-query-header">
+                        <h4 class="sql-query-title">Query 8: Multi-Table Platform Usage Aggregation (Source for Graph 1)</h4>
+                        <span class="sql-concept-badge">JOIN Between Two Tables</span>
+                    </div>
+                    <div class="sql-purpose">
+                        <strong>Purpose:</strong> Perform an INNER JOIN linking the Students table with the Social Media Platforms lookup table to calculate total student counts and average screen time by platform name and category.
+                    </div>
+                    <div class="sql-code-block">
+<code>SELECT 
+    p.platform_name,
+    p.category_type,
+    COUNT(s.student_id) AS student_count,
+    ROUND(AVG(s.screen_time_hours), 2) AS avg_screen_hours
+FROM students s
+JOIN social_media_platforms p ON s.platform_id = p.platform_id
+GROUP BY p.platform_id, p.platform_name, p.category_type
+ORDER BY student_count DESC;</code>
+                    </div>
+                    <div class="sql-explanation">
+                        <strong>Explanation:</strong> Combines rows from <code>students</code> and <code>social_media_platforms</code> where <code>s.platform_id = p.platform_id</code>, allowing platform descriptive attributes to be combined with individual student behaviors.
+                    </div>
+                    <div class="sql-result-container">
+                        <div class="sql-result-label">Query Output (Provides Data for Graph 1):</div>
+                        <div class="table-responsive">
+                            <table class="sql-table">
+                                <thead>
+                                    <tr>
+                                        <th>platform_name</th>
+                                        <th>category_type</th>
+                                        <th>student_count</th>
+                                        <th>avg_screen_hours</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Facebook</strong></td><td>Social Networking</td><td><strong>137</strong></td><td>4.03 hrs</td></tr>
+                                    <tr><td><strong>Instagram</strong></td><td>Visual & Media Sharing</td><td><strong>125</strong></td><td>4.39 hrs</td></tr>
+                                    <tr><td><strong>YouTube</strong></td><td>Video Streaming</td><td><strong>121</strong></td><td>3.60 hrs</td></tr>
+                                    <tr><td><strong>Other</strong></td><td>Alternative Platforms</td><td><strong>18</strong></td><td>2.79 hrs</td></tr>
+                                    <tr><td><strong>TikTok</strong></td><td>Short-Form Video</td><td><strong>4</strong></td><td>4.63 hrs</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------
+                 3. TWO VISUALIZATIONS DERIVED FROM SQL QUERY RESULTS
+                 (Placed UNDERNEATH the queries)
+                 ------------------------------------------------------------ -->
+            <div style="margin-top: 36px;">
+                <h3>📊 Visualizations Derived from SQL Query Results</h3>
+                <p class="section-intro" style="margin-bottom: 16px;">
+                    The following two charts visualize aggregate SQL query results directly computed from our cleaned dataset ($N = 405$):
+                </p>
+
+                <div class="split-grid">
+                    <!-- Visualization 1: Students by Social Media Platform (from Query 8 JOIN) -->
+                    <div class="sub-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h4 style="margin: 0; color: var(--navy-dark);">Students by Social Media Platform</h4>
+                            <span class="sql-concept-badge">SQL JOIN Query</span>
+                        </div>
+                        <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 14px;">
+                            Derived from <code>Query 8 (JOIN)</code> aggregating respondent counts by primary platform:
+                        </p>
+
+                        <div class="usage-chart-box" style="margin-top: 0; padding: 16px;">
+                            <div class="usage-bar-row">
+                                <div class="usage-bar-label">
+                                    <span class="platform-dot facebook"></span>
+                                    <strong>Facebook</strong>
+                                </div>
+                                <div class="usage-bar-track" aria-label="Facebook: 137 students">
+                                    <div class="platform-bar-fill facebook" style="width: 33.8%;"></div>
+                                </div>
+                                <div class="usage-bar-value">137</div>
+                            </div>
+
+                            <div class="usage-bar-row">
+                                <div class="usage-bar-label">
+                                    <span class="platform-dot instagram"></span>
+                                    <strong>Instagram</strong>
+                                </div>
+                                <div class="usage-bar-track" aria-label="Instagram: 125 students">
+                                    <div class="platform-bar-fill instagram" style="width: 30.9%;"></div>
+                                </div>
+                                <div class="usage-bar-value">125</div>
+                            </div>
+
+                            <div class="usage-bar-row">
+                                <div class="usage-bar-label">
+                                    <span class="platform-dot youtube"></span>
+                                    <strong>YouTube</strong>
+                                </div>
+                                <div class="usage-bar-track" aria-label="YouTube: 121 students">
+                                    <div class="platform-bar-fill youtube" style="width: 29.9%;"></div>
+                                </div>
+                                <div class="usage-bar-value">121</div>
+                            </div>
+
+                            <div class="usage-bar-row">
+                                <div class="usage-bar-label">
+                                    <span class="platform-dot other"></span>
+                                    <strong>Other</strong>
+                                </div>
+                                <div class="usage-bar-track" aria-label="Other: 18 students">
+                                    <div class="platform-bar-fill other" style="width: 4.4%;"></div>
+                                </div>
+                                <div class="usage-bar-value">18</div>
+                            </div>
+
+                            <div class="usage-bar-row">
+                                <div class="usage-bar-label">
+                                    <span class="platform-dot tiktok"></span>
+                                    <strong>TikTok</strong>
+                                </div>
+                                <div class="usage-bar-track" aria-label="TikTok: 4 students">
+                                    <div class="platform-bar-fill tiktok" style="width: 1.0%;"></div>
+                                </div>
+                                <div class="usage-bar-value">4</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visualization 2: Students by Usage Level (from Query 6 GROUP BY) -->
+                    <div class="sub-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h4 style="margin: 0; color: var(--navy-dark);">Students by Usage Level</h4>
+                            <span class="sql-concept-badge">SQL GROUP BY Query</span>
+                        </div>
+                        <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 14px;">
+                            Derived from <code>Query 6 (GROUP BY)</code> grouping respondents across daily screen time tiers:
+                        </p>
+
+                        <div class="usage-chart-box" style="margin-top: 0; padding: 16px;">
+                            <div class="usage-bar-row">
+                                <div class="usage-bar-label">
+                                    <span class="usage-dot low"></span>
+                                    <strong>Low (&le; 3 hrs)</strong>
+                                </div>
+                                <div class="usage-bar-track" aria-label="Low usage: 187 students">
+                                    <div class="usage-bar-fill low" style="width: 46.2%;"></div>
+                                </div>
+                                <div class="usage-bar-value">187</div>
+                            </div>
+
+                            <div class="usage-bar-row">
+                                <div class="usage-bar-label">
+                                    <span class="usage-dot moderate"></span>
+                                    <strong>Moderate (3–7 hrs)</strong>
+                                </div>
+                                <div class="usage-bar-track" aria-label="Moderate usage: 176 students">
+                                    <div class="usage-bar-fill moderate" style="width: 43.5%;"></div>
+                                </div>
+                                <div class="usage-bar-value">176</div>
+                            </div>
+
+                            <div class="usage-bar-row">
+                                <div class="usage-bar-label">
+                                    <span class="usage-dot high"></span>
+                                    <strong>High (&gt; 7 hrs)</strong>
+                                </div>
+                                <div class="usage-bar-track" aria-label="High usage: 42 students">
+                                    <div class="usage-bar-fill high" style="width: 10.4%;"></div>
+                                </div>
+                                <div class="usage-bar-value">42</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------
+                 4. RESEARCH CONNECTION SUBSECTION
+                 ------------------------------------------------------------ -->
+            <div class="research-connection-card">
+                <h3>🔬 Research Connection</h3>
+                <p>
+                    Relational SQL operations provide an efficient, transparent, and reproducible methodology to answer our core research questions:
+                </p>
+                <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.6; font-size: 0.92rem;">
+                    <li><strong>SQL Filtering (<code>WHERE</code> &amp; Multiple Conditions):</strong> Allows us to isolate high-risk behavioral cohorts. In Query 3, combining multiple conditions identified that <strong>55 students (13.6%)</strong> concurrently experience &ge; 5.0 hours of daily screen time and severe academic distraction (&ge; 4 on a 1–5 scale), evidencing active study interference (supporting <strong>Hypothesis 2</strong>).</li>
+                    <li><strong>SQL Grouping &amp; Aggregation (<code>GROUP BY</code>, <code>COUNT</code>, <code>AVG</code>):</strong> Enables empirical comparisons across usage tiers. In Query 6, aggregating average study hours reveals a continuous drop from <strong>3.84 hours</strong> for Low users down to <strong>3.28 hours</strong> for Moderate users and <strong>2.72 hours</strong> for High users—demonstrating a 1.12-hour daily study deficit and validating the time-displacement principle (supporting <strong>Hypothesis 1</strong>).</li>
+                    <li><strong>Relational Table <code>JOIN</code>s:</strong> Links individual student behavioral metrics with platform metadata (Query 8), demonstrating how screen time and engagement patterns vary systematically across specific social networking environments (Facebook 137, Instagram 125, YouTube 121, Other 18, TikTok 4).</li>
+                </ul>
+            </div>
+
+</section>
 
     </main>
 
