@@ -1293,6 +1293,204 @@ main {
 }
 
 /* --------------------------------------------------------------------------
+   12e. Exploratory Data Analysis (EDA) & Key Findings Styles
+   -------------------------------------------------------------------------- */
+.chart-analysis-breakdown {
+    background: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.analysis-part {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--text-main);
+}
+
+.analysis-part p {
+    margin: 0;
+}
+
+.analysis-part-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.observation-label {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+
+.interpretation-label {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.implication-label {
+    background: #fce7f3;
+    color: #9d174d;
+    border: 1px solid #fbcfe8;
+}
+
+/* EDA Data Audit & Methodology */
+.eda-audit-box {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin: 24px 0 28px;
+    box-shadow: var(--shadow-sm);
+}
+
+.eda-audit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.eda-audit-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    border-left: 4px solid var(--navy-medium);
+}
+
+.eda-audit-card.warning-border {
+    border-left-color: #d97706;
+}
+
+.eda-audit-card.accent-border {
+    border-left-color: var(--primary-color);
+}
+
+.eda-audit-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.eda-audit-desc {
+    font-size: 0.86rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Key Findings Section */
+.key-findings-section {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 26px;
+    margin: 36px 0 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.key-findings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.key-finding-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: var(--transition);
+}
+
+.key-finding-card:hover {
+    border-color: var(--primary-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.key-finding-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.key-finding-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #e0e7ff;
+    color: #3730a3;
+    white-space: nowrap;
+}
+
+.key-finding-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.key-finding-statement {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.key-finding-stat-box {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.86rem;
+    color: var(--navy-dark);
+    line-height: 1.5;
+}
+
+.key-finding-stat-box strong {
+    color: var(--primary-color);
+}
+
+.key-finding-relevance {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 10px;
+}
+
+/* --------------------------------------------------------------------------
    13. Project Timeline
    -------------------------------------------------------------------------- */
 .timeline {

@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="768" viewBox="0 0 1024 768">
+<rect width="1024" height="768" fill="#ffffff"/>
+<text x="512.0" y="44" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Correlation Matrix of Academic &amp; Psychological Indicators (N = 405)</text>
+<text x="148" y="123.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" fill="#1b2d42">Screen Time</text>
+<text x="207.125" y="712" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">Screen Time</text>
+<rect x="160.0" y="80.0" width="94.25" height="76.0" fill="rgb(185,28,28)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="207.125" y="123.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1.00</text>
+<rect x="254.25" y="80.0" width="94.25" height="76.0" fill="rgb(163,174,207)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="301.375" y="123.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">-0.20</text>
+<rect x="348.5" y="80.0" width="94.25" height="76.0" fill="rgb(236,196,196)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="395.625" y="123.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.16</text>
+<rect x="442.75" y="80.0" width="94.25" height="76.0" fill="rgb(234,187,187)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="489.875" y="123.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.18</text>
+<rect x="537.0" y="80.0" width="94.25" height="76.0" fill="rgb(236,196,196)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="584.125" y="123.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.15</text>
+<rect x="631.25" y="80.0" width="94.25" height="76.0" fill="rgb(242,215,215)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="678.375" y="123.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.10</text>
+<rect x="725.5" y="80.0" width="94.25" height="76.0" fill="rgb(237,198,198)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="772.625" y="123.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.15</text>
+<rect x="819.75" y="80.0" width="94.25" height="76.0" fill="rgb(198,205,225)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="866.875" y="123.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.13</text>
+<text x="148" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" fill="#1b2d42">Study Time</text>
+<text x="301.375" y="712" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">Study Time</text>
+<rect x="160.0" y="156.0" width="94.25" height="76.0" fill="rgb(163,174,207)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="207.125" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">-0.20</text>
+<rect x="254.25" y="156.0" width="94.25" height="76.0" fill="rgb(185,28,28)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="301.375" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1.00</text>
+<rect x="348.5" y="156.0" width="94.25" height="76.0" fill="rgb(193,201,222)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="395.625" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.14</text>
+<rect x="442.75" y="156.0" width="94.25" height="76.0" fill="rgb(230,233,242)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="489.875" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.05</text>
+<rect x="537.0" y="156.0" width="94.25" height="76.0" fill="rgb(207,213,230)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="584.125" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.11</text>
+<rect x="631.25" y="156.0" width="94.25" height="76.0" fill="rgb(230,233,242)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="678.375" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.06</text>
+<rect x="725.5" y="156.0" width="94.25" height="76.0" fill="rgb(167,178,209)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="772.625" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.19</text>
+<rect x="819.75" y="156.0" width="94.25" height="76.0" fill="rgb(219,140,140)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="866.875" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.30</text>
+<text x="148" y="275.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" fill="#1b2d42">Acad. Distraction</text>
+<text x="395.625" y="712" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">Acad. Distraction</text>
+<rect x="160.0" y="232.0" width="94.25" height="76.0" fill="rgb(236,196,196)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="207.125" y="275.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.16</text>
+<rect x="254.25" y="232.0" width="94.25" height="76.0" fill="rgb(193,201,222)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="301.375" y="275.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.14</text>
+<rect x="348.5" y="232.0" width="94.25" height="76.0" fill="rgb(185,28,28)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="395.625" y="275.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1.00</text>
+<rect x="442.75" y="232.0" width="94.25" height="76.0" fill="rgb(215,126,126)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="489.875" y="275.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.34</text>
+<rect x="537.0" y="232.0" width="94.25" height="76.0" fill="rgb(210,112,112)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="584.125" y="275.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">0.38</text>
+<rect x="631.25" y="232.0" width="94.25" height="76.0" fill="rgb(221,147,147)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="678.375" y="275.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.28</text>
+<rect x="725.5" y="232.0" width="94.25" height="76.0" fill="rgb(223,154,154)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="772.625" y="275.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.27</text>
+<rect x="819.75" y="232.0" width="94.25" height="76.0" fill="rgb(200,207,226)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="866.875" y="275.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.12</text>
+<text x="148" y="351.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" fill="#1b2d42">Sleep Disturbance</text>
+<text x="489.875" y="712" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">Sleep Disturbance</text>
+<rect x="160.0" y="308.0" width="94.25" height="76.0" fill="rgb(234,187,187)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="207.125" y="351.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.18</text>
+<rect x="254.25" y="308.0" width="94.25" height="76.0" fill="rgb(230,233,242)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="301.375" y="351.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.05</text>
+<rect x="348.5" y="308.0" width="94.25" height="76.0" fill="rgb(215,126,126)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="395.625" y="351.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.34</text>
+<rect x="442.75" y="308.0" width="94.25" height="76.0" fill="rgb(185,28,28)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="489.875" y="351.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1.00</text>
+<rect x="537.0" y="308.0" width="94.25" height="76.0" fill="rgb(210,110,110)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="584.125" y="351.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">0.38</text>
+<rect x="631.25" y="308.0" width="94.25" height="76.0" fill="rgb(223,151,151)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="678.375" y="351.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.27</text>
+<rect x="725.5" y="308.0" width="94.25" height="76.0" fill="rgb(233,185,185)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="772.625" y="351.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.18</text>
+<rect x="819.75" y="308.0" width="94.25" height="76.0" fill="rgb(215,220,234)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="866.875" y="351.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.09</text>
+<text x="148" y="427.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" fill="#1b2d42">Anxiety Scale</text>
+<text x="584.125" y="712" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">Anxiety Scale</text>
+<rect x="160.0" y="384.0" width="94.25" height="76.0" fill="rgb(236,196,196)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="207.125" y="427.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.15</text>
+<rect x="254.25" y="384.0" width="94.25" height="76.0" fill="rgb(207,213,230)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="301.375" y="427.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.11</text>
+<rect x="348.5" y="384.0" width="94.25" height="76.0" fill="rgb(210,112,112)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="395.625" y="427.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">0.38</text>
+<rect x="442.75" y="384.0" width="94.25" height="76.0" fill="rgb(210,110,110)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="489.875" y="427.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">0.38</text>
+<rect x="537.0" y="384.0" width="94.25" height="76.0" fill="rgb(185,28,28)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="584.125" y="427.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1.00</text>
+<rect x="631.25" y="384.0" width="94.25" height="76.0" fill="rgb(189,43,43)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="678.375" y="427.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">0.56</text>
+<rect x="725.5" y="384.0" width="94.25" height="76.0" fill="rgb(217,133,133)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="772.625" y="427.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.32</text>
+<rect x="819.75" y="384.0" width="94.25" height="76.0" fill="rgb(184,193,218)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="866.875" y="427.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.16</text>
+<text x="148" y="503.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" fill="#1b2d42">Depression Scale</text>
+<text x="678.375" y="712" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">Depression Scale</text>
+<rect x="160.0" y="460.0" width="94.25" height="76.0" fill="rgb(242,215,215)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="207.125" y="503.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.10</text>
+<rect x="254.25" y="460.0" width="94.25" height="76.0" fill="rgb(230,233,242)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="301.375" y="503.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.06</text>
+<rect x="348.5" y="460.0" width="94.25" height="76.0" fill="rgb(221,147,147)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="395.625" y="503.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.28</text>
+<rect x="442.75" y="460.0" width="94.25" height="76.0" fill="rgb(223,151,151)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="489.875" y="503.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.27</text>
+<rect x="537.0" y="460.0" width="94.25" height="76.0" fill="rgb(189,43,43)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="584.125" y="503.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">0.56</text>
+<rect x="631.25" y="460.0" width="94.25" height="76.0" fill="rgb(185,28,28)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="678.375" y="503.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1.00</text>
+<rect x="725.5" y="460.0" width="94.25" height="76.0" fill="rgb(218,135,135)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="772.625" y="503.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.32</text>
+<rect x="819.75" y="460.0" width="94.25" height="76.0" fill="rgb(233,236,244)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="866.875" y="503.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.05</text>
+<text x="148" y="579.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" fill="#1b2d42">Self-Esteem</text>
+<text x="772.625" y="712" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">Self-Esteem</text>
+<rect x="160.0" y="536.0" width="94.25" height="76.0" fill="rgb(237,198,198)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="207.125" y="579.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.15</text>
+<rect x="254.25" y="536.0" width="94.25" height="76.0" fill="rgb(167,178,209)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="301.375" y="579.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.19</text>
+<rect x="348.5" y="536.0" width="94.25" height="76.0" fill="rgb(223,154,154)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="395.625" y="579.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.27</text>
+<rect x="442.75" y="536.0" width="94.25" height="76.0" fill="rgb(233,185,185)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="489.875" y="579.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">0.18</text>
+<rect x="537.0" y="536.0" width="94.25" height="76.0" fill="rgb(217,133,133)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="584.125" y="579.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.32</text>
+<rect x="631.25" y="536.0" width="94.25" height="76.0" fill="rgb(218,135,135)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="678.375" y="579.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.32</text>
+<rect x="725.5" y="536.0" width="94.25" height="76.0" fill="rgb(185,28,28)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="772.625" y="579.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1.00</text>
+<rect x="819.75" y="536.0" width="94.25" height="76.0" fill="rgb(223,227,238)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="866.875" y="579.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.07</text>
+<text x="148" y="655.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" fill="#1b2d42">Academic GPA</text>
+<text x="866.875" y="712" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">Academic GPA</text>
+<rect x="160.0" y="612.0" width="94.25" height="76.0" fill="rgb(198,205,225)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="207.125" y="655.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.13</text>
+<rect x="254.25" y="612.0" width="94.25" height="76.0" fill="rgb(219,140,140)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="301.375" y="655.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">0.30</text>
+<rect x="348.5" y="612.0" width="94.25" height="76.0" fill="rgb(200,207,226)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="395.625" y="655.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.12</text>
+<rect x="442.75" y="612.0" width="94.25" height="76.0" fill="rgb(215,220,234)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="489.875" y="655.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.09</text>
+<rect x="537.0" y="612.0" width="94.25" height="76.0" fill="rgb(184,193,218)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="584.125" y="655.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.16</text>
+<rect x="631.25" y="612.0" width="94.25" height="76.0" fill="rgb(233,236,244)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="678.375" y="655.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.05</text>
+<rect x="725.5" y="612.0" width="94.25" height="76.0" fill="rgb(223,227,238)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="772.625" y="655.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#1b2d42">-0.07</text>
+<rect x="819.75" y="612.0" width="94.25" height="76.0" fill="rgb(185,28,28)" stroke="#ffffff" stroke-width="1.5"/>
+<text x="866.875" y="655.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">1.00</text>
+<rect x="939" y="80.0" width="18" height="15.7" fill="rgb(185,28,28)"/>
+<rect x="939" y="95.2" width="18" height="15.7" fill="rgb(188,38,38)"/>
+<rect x="939" y="110.4" width="18" height="15.7" fill="rgb(191,48,48)"/>
+<rect x="939" y="125.6" width="18" height="15.7" fill="rgb(194,59,59)"/>
+<rect x="939" y="140.8" width="18" height="15.7" fill="rgb(197,69,69)"/>
+<rect x="939" y="156.0" width="18" height="15.7" fill="rgb(201,80,80)"/>
+<rect x="939" y="171.2" width="18" height="15.7" fill="rgb(204,90,90)"/>
+<rect x="939" y="186.39999999999998" width="18" height="15.7" fill="rgb(207,100,100)"/>
+<rect x="939" y="201.6" width="18" height="15.7" fill="rgb(210,111,111)"/>
+<rect x="939" y="216.79999999999998" width="18" height="15.7" fill="rgb(213,121,121)"/>
+<rect x="939" y="232.0" width="18" height="15.7" fill="rgb(217,132,132)"/>
+<rect x="939" y="247.2" width="18" height="15.7" fill="rgb(220,142,142)"/>
+<rect x="939" y="262.4" width="18" height="15.7" fill="rgb(223,152,152)"/>
+<rect x="939" y="277.6" width="18" height="15.7" fill="rgb(226,163,163)"/>
+<rect x="939" y="292.79999999999995" width="18" height="15.7" fill="rgb(229,173,173)"/>
+<rect x="939" y="308.0" width="18" height="15.7" fill="rgb(233,184,184)"/>
+<rect x="939" y="323.2" width="18" height="15.7" fill="rgb(236,194,194)"/>
+<rect x="939" y="338.4" width="18" height="15.7" fill="rgb(239,204,204)"/>
+<rect x="939" y="353.59999999999997" width="18" height="15.7" fill="rgb(242,215,215)"/>
+<rect x="939" y="368.8" width="18" height="15.7" fill="rgb(245,225,225)"/>
+<rect x="939" y="384.0" width="18" height="15.7" fill="rgb(249,236,236)"/>
+<rect x="939" y="399.2" width="18" height="15.7" fill="rgb(252,246,246)"/>
+<rect x="939" y="414.4" width="18" height="15.7" fill="rgb(252,253,253)"/>
+<rect x="939" y="429.59999999999997" width="18" height="15.7" fill="rgb(240,242,247)"/>
+<rect x="939" y="444.79999999999995" width="18" height="15.7" fill="rgb(227,231,240)"/>
+<rect x="939" y="460.0" width="18" height="15.7" fill="rgb(215,220,234)"/>
+<rect x="939" y="475.2" width="18" height="15.7" fill="rgb(203,209,228)"/>
+<rect x="939" y="490.4" width="18" height="15.7" fill="rgb(190,198,221)"/>
+<rect x="939" y="505.59999999999997" width="18" height="15.7" fill="rgb(178,188,215)"/>
+<rect x="939" y="520.8" width="18" height="15.7" fill="rgb(166,177,208)"/>
+<rect x="939" y="536.0" width="18" height="15.7" fill="rgb(153,166,202)"/>
+<rect x="939" y="551.2" width="18" height="15.7" fill="rgb(141,155,195)"/>
+<rect x="939" y="566.4" width="18" height="15.7" fill="rgb(128,144,189)"/>
+<rect x="939" y="581.5999999999999" width="18" height="15.7" fill="rgb(116,133,183)"/>
+<rect x="939" y="596.8" width="18" height="15.7" fill="rgb(104,123,176)"/>
+<rect x="939" y="612.0" width="18" height="15.7" fill="rgb(91,112,170)"/>
+<rect x="939" y="627.1999999999999" width="18" height="15.7" fill="rgb(79,101,163)"/>
+<rect x="939" y="642.4" width="18" height="15.7" fill="rgb(67,90,157)"/>
+<rect x="939" y="657.6" width="18" height="15.7" fill="rgb(54,79,150)"/>
+<rect x="939" y="672.8" width="18" height="15.7" fill="rgb(42,68,144)"/>
+<rect x="939" y="80" width="18" height="608" fill="none" stroke="#1b2d42" stroke-width="1"/>
+<text x="965" y="90" font-family="-apple-system, sans-serif" font-size="11" fill="#57606a">+0.60</text>
+<text x="965" y="415.6363636363636" font-family="-apple-system, sans-serif" font-size="11" fill="#57606a">0.00</text>
+<text x="965" y="688" font-family="-apple-system, sans-serif" font-size="11" fill="#57606a">-0.50</text>
+<text x="948.0" y="66" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">r</text>
+<text x="512.0" y="750" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">Pearson Correlation Matrix (Values range from -0.20 to +0.56 across key indicators)</text>
+</svg>
