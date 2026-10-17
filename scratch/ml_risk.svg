@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="640" viewBox="0 0 1024 640">
+<rect width="1024" height="640" fill="#ffffff"/>
+<text x="512.0" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Academic Risk Threshold Analysis &amp; Classifier Performance</text>
+<rect x="80" y="70" width="432.0" height="490" fill="#f8fafc" stroke="#cbd5e1" rx="8"/>
+<text x="296.0" y="102" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1b2d42">Zero-Inflation in Academic Risk Score</text>
+<text x="296.0" y="122" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Dataset Distribution (N = 500,000)</text>
+<text x="104" y="171" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1b2d42">Score = 0.0 (No Risk)</text>
+<rect x="104" y="179" width="384.0" height="28" fill="#e2e8f0" rx="4"/>
+<rect x="104" y="179" width="371.05920000000003" height="28" fill="#2e7d32" rx="4"/>
+<text x="480.0" y="198" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#ffffff">483,134 (96.63%)</text>
+<text x="104" y="246" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1b2d42">Score &gt; 0.0 (Elevated Risk)</text>
+<rect x="104" y="254" width="384.0" height="28" fill="#e2e8f0" rx="4"/>
+<rect x="104" y="254" width="103.5264" height="28" fill="#dc2626" rx="4"/>
+<text x="217.5264" y="273" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#dc2626">16,866 (3.37%)</text>
+<rect x="100" y="300" width="392.0" height="100" fill="#ffffff" stroke="#e2e8f0" rx="6"/>
+<text x="112" y="322" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">Hurdle Model Insights:</text>
+<text x="112" y="340" font-family="-apple-system, sans-serif" font-size="11" fill="#57606a">• Risk score only activates after protective</text>
+<text x="112" y="356" font-family="-apple-system, sans-serif" font-size="11" fill="#57606a">  buffers (study hours, attendance) fail.</text>
+<text x="112" y="374" font-family="-apple-system, sans-serif" font-size="11" fill="#57606a">• At-risk students report 44% more social media.</text>
+<rect x="552.0" y="70" width="432.0" height="490" fill="#f8fafc" stroke="#cbd5e1" rx="8"/>
+<text x="768.0" y="102" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1b2d42">Random Forest Risk Classification</text>
+<text x="768.0" y="122" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Holdout Test Evaluation (N = 4000)</text>
+<rect x="582.0" y="150" width="181.0" height="70" fill="#dcfce7" stroke="#86efac" rx="4"/>
+<text x="672.5" y="180" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#166534">3845</text>
+<text x="672.5" y="200" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#166534">True Negative</text>
+<rect x="773.0" y="150" width="181.0" height="70" fill="#fee2e2" stroke="#fca5a5" rx="4"/>
+<text x="863.5" y="180" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#991b1b">27</text>
+<text x="863.5" y="200" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#991b1b">False Positive</text>
+<rect x="582.0" y="230" width="181.0" height="70" fill="#fee2e2" stroke="#fca5a5" rx="4"/>
+<text x="672.5" y="260" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#991b1b">100</text>
+<text x="672.5" y="280" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#991b1b">False Negative</text>
+<rect x="773.0" y="230" width="181.0" height="70" fill="#dcfce7" stroke="#86efac" rx="4"/>
+<text x="863.5" y="260" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#166534">28</text>
+<text x="863.5" y="280" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#166534">True Positive</text>
+<rect x="572.0" y="320" width="392.0" height="80" fill="#ffffff" stroke="#e2e8f0" rx="6"/>
+<text x="584.0" y="345" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">Classifier Test Metrics:</text>
+<text x="584.0" y="366" font-family="-apple-system, sans-serif" font-size="12" fill="#24292f">• Overall Accuracy: <strong>96.8%</strong></text>
+<text x="584.0" y="386" font-family="-apple-system, sans-serif" font-size="12" fill="#57606a">• Precision: 50.9% | Recall: 21.9% | F1: 0.306</text>
+</svg>

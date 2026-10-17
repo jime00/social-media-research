@@ -1,0 +1,110 @@
+{
+  "linear_regression": {
+    "r2": 0.4629,
+    "rmse": 0.9261,
+    "mae": 0.7078,
+    "coefficients": [
+      {
+        "feature": "brain_rot_index",
+        "weight": -0.4834
+      },
+      {
+        "feature": "attention_span_minutes",
+        "weight": 0.3756
+      },
+      {
+        "feature": "academic_motivation",
+        "weight": 0.1577
+      },
+      {
+        "feature": "social_media_hours",
+        "weight": 0.0432
+      },
+      {
+        "feature": "short_video_hours",
+        "weight": -0.0371
+      },
+      {
+        "feature": "sessions_per_day",
+        "weight": -0.0211
+      },
+      {
+        "feature": "digital_addiction_score",
+        "weight": -0.0162
+      },
+      {
+        "feature": "sleep_hours",
+        "weight": -0.016
+      },
+      {
+        "feature": "late_night_score",
+        "weight": -0.0104
+      },
+      {
+        "feature": "stress_level",
+        "weight": -0.0075
+      }
+    ]
+  },
+  "random_forest": {
+    "r2": 0.4468,
+    "rmse": 0.9399,
+    "mae": 0.7285,
+    "n_trees": 12,
+    "max_depth": 5
+  },
+  "risk_classifier": {
+    "accuracy": 96.83,
+    "precision": 50.91,
+    "recall": 21.88,
+    "f1": 0.306,
+    "confusion_matrix": {
+      "tp": 28,
+      "fp": 27,
+      "fn": 100,
+      "tn": 3845
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "Brain Rot Index",
+      "importance": 0.324
+    },
+    {
+      "feature": "Attention Span (Mins)",
+      "importance": 0.286
+    },
+    {
+      "feature": "Academic Motivation",
+      "importance": 0.142
+    },
+    {
+      "feature": "Digital Addiction Score",
+      "importance": 0.088
+    },
+    {
+      "feature": "Social Media Hours",
+      "importance": 0.054
+    },
+    {
+      "feature": "Short Video Hours",
+      "importance": 0.042
+    },
+    {
+      "feature": "Stress Level",
+      "importance": 0.026
+    },
+    {
+      "feature": "Sleep Hours",
+      "importance": 0.018
+    },
+    {
+      "feature": "Sessions Per Day",
+      "importance": 0.012
+    },
+    {
+      "feature": "Late Night Score",
+      "importance": 0.008
+    }
+  ]
+}

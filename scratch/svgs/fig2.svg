@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="640" viewBox="0 0 1024 640">
+<rect width="1024" height="640" fill="#ffffff"/>
+<text x="512.0" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Frequency of Social Media Access: Daily Sessions (N = 500,000)</text>
+<line x1="80" y1="560.0" x2="984" y2="560.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="565.0" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">0</text>
+<line x1="80" y1="448.6363636363636" x2="984" y2="448.6363636363636" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="453.6363636363636" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">50,000</text>
+<line x1="80" y1="337.27272727272725" x2="984" y2="337.27272727272725" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="342.27272727272725" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">100,000</text>
+<line x1="80" y1="225.90909090909093" x2="984" y2="225.90909090909093" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="230.90909090909093" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">150,000</text>
+<line x1="80" y1="114.54545454545456" x2="984" y2="114.54545454545456" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="119.54545454545456" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">200,000</text>
+<text x="24" y="315.0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 24 315.0)">Number of Students</text>
+<rect x="96.14285714285714" y="523.8758636363636" width="96.85714285714286" height="36.12413636363637" fill="#1b2d42" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="144.57142857142856" y="505.87586363636365" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">16,219</text>
+<text x="144.57142857142856" y="519.8758636363636" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(3.2%)</text>
+<text x="144.57142857142856" y="584" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">1–4 sessions</text>
+<rect x="225.28571428571428" y="265.7527727272727" width="96.85714285714286" height="294.2472272727273" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="273.7142857142857" y="247.7527727272727" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">132,111</text>
+<text x="273.7142857142857" y="261.7527727272727" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(26.4%)</text>
+<text x="273.7142857142857" y="584" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">5–8 sessions</text>
+<rect x="354.42857142857144" y="64.81490909090905" width="96.85714285714286" height="495.18509090909095" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="402.8571428571429" y="46.814909090909055" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">222,328</text>
+<text x="402.8571428571429" y="60.814909090909055" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(44.5%)</text>
+<text x="402.8571428571429" y="584" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">9–12 sessions</text>
+<rect x="483.57142857142856" y="320.18731818181817" width="96.85714285714286" height="239.81268181818183" fill="#1b2d42" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="532.0" y="302.18731818181817" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">107,671</text>
+<text x="532.0" y="316.18731818181817" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(21.5%)</text>
+<text x="532.0" y="584" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">13–16 sessions</text>
+<rect x="612.7142857142857" y="515.1360454545454" width="96.85714285714286" height="44.86395454545455" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="661.1428571428571" y="497.1360454545454" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">20,143</text>
+<text x="661.1428571428571" y="511.1360454545454" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(4.0%)</text>
+<text x="661.1428571428571" y="584" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">17–20 sessions</text>
+<rect x="741.8571428571428" y="556.6635454545454" width="96.85714285714286" height="3.3364545454545453" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="790.2857142857142" y="538.6635454545454" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">1,498</text>
+<text x="790.2857142857142" y="552.6635454545454" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(0.3%)</text>
+<text x="790.2857142857142" y="584" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">21–24 sessions</text>
+<rect x="871.0" y="559.9331818181818" width="96.85714285714286" height="0.06681818181818182" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="919.4285714285714" y="541.9331818181818" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">30</text>
+<text x="919.4285714285714" y="555.9331818181818" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(0.0%)</text>
+<text x="919.4285714285714" y="584" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">25+ sessions</text>
+<line x1="80" y1="560" x2="984" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="80" y1="70" x2="80" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<text x="512.0" y="618" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">Daily App Launch Sessions (Mean = 9.90 sessions/day, Median = 9.73 sessions/day)</text>
+</svg>

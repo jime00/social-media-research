@@ -1,0 +1,341 @@
+{
+  "total_rows": 500000,
+  "duplicates": 0,
+  "null_counts": {
+    "brain_rot_level": 6262
+  },
+  "academic_risk_score": {
+    "zeros": 483134,
+    "zeros_pct": 96.6268,
+    "positives": 16866,
+    "positives_pct": 3.3731999999999998,
+    "pos_min": 0.0007878064803108487,
+    "pos_max": 23.593199527277545,
+    "pos_mean": 3.2707741352695594
+  },
+  "categorical_distributions": {
+    "genders": {
+      "Male": 244803,
+      "Female": 245241,
+      "Other": 9956
+    },
+    "devices": {
+      "Smartphone": 302885,
+      "Laptop": 55344,
+      "Shared Device": 67162,
+      "Both": 74609
+    },
+    "development_levels": {
+      "Developing": 210346,
+      "Developed": 149548,
+      "Underdeveloped": 140106
+    },
+    "family_income_levels": {
+      "High": 90022,
+      "Middle": 229618,
+      "Low": 180360
+    },
+    "urban_rural": {
+      "Rural": 223136,
+      "Urban": 276864
+    },
+    "education_levels": {
+      "Graduate": 104759,
+      "Diploma": 116634,
+      "Dropout": 60828,
+      "PhD": 3433,
+      "School": 186521,
+      "Postgraduate": 27825
+    },
+    "top_countries": {
+      "Cambodia": 10190,
+      "Malaysia": 10189,
+      "India": 10188,
+      "China": 10180,
+      "Kazakhstan": 10168,
+      "Bangladesh": 10138,
+      "Canada": 10109,
+      "Kenya": 10109,
+      "Saudi Arabia": 10105,
+      "France": 10104
+    },
+    "total_countries": 50,
+    "brain_rot_levels": {
+      "Low": 432156,
+      "Moderate": 61582,
+      "None": 6262
+    }
+  },
+  "numeric_metrics": {
+    "age": {
+      "mean": 19.996,
+      "min": 15.0,
+      "max": 25.0,
+      "q1": 17.0,
+      "median": 20.0,
+      "q3": 23.0,
+      "iqr": 6.0,
+      "upper_bound": 32.0
+    },
+    "social_media_hours": {
+      "mean": 3.361,
+      "min": 0.0,
+      "max": 9.0,
+      "q1": 2.457,
+      "median": 3.282,
+      "q3": 4.19,
+      "iqr": 1.733,
+      "upper_bound": 6.791
+    },
+    "study_hours_per_week": {
+      "mean": 22.982,
+      "min": 2.0,
+      "max": 43.322,
+      "q1": 19.457,
+      "median": 23.106,
+      "q3": 26.598,
+      "iqr": 7.141,
+      "upper_bound": 37.309
+    },
+    "class_attendance_rate": {
+      "mean": 90.771,
+      "min": 63.028,
+      "max": 100.0,
+      "q1": 86.649,
+      "median": 91.085,
+      "q3": 95.484,
+      "iqr": 8.835,
+      "upper_bound": 108.736
+    },
+    "productivity_score": {
+      "mean": 8.826,
+      "min": 1.0,
+      "max": 10.0,
+      "q1": 8.027,
+      "median": 9.182,
+      "q3": 10.0,
+      "iqr": 1.973,
+      "upper_bound": 12.96
+    },
+    "sleep_hours": {
+      "mean": 5.991,
+      "min": 4.0,
+      "max": 9.0,
+      "q1": 5.321,
+      "median": 6.025,
+      "q3": 6.667,
+      "iqr": 1.346,
+      "upper_bound": 8.686
+    },
+    "brain_rot_index": {
+      "mean": 19.028,
+      "min": 0.0,
+      "max": 59.004,
+      "q1": 12.625,
+      "median": 18.58,
+      "q3": 25.051,
+      "iqr": 12.426,
+      "upper_bound": 43.689
+    },
+    "digital_addiction_score": {
+      "mean": 14.074,
+      "min": 0.0,
+      "max": 40.223,
+      "q1": 9.921,
+      "median": 13.59,
+      "q3": 17.997,
+      "iqr": 8.076,
+      "upper_bound": 30.111
+    },
+    "academic_risk_score": {
+      "mean": 0.111,
+      "min": 0.0,
+      "max": 24.07,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 0.0,
+      "iqr": 0.0,
+      "upper_bound": 0.0
+    },
+    "financial_risk_score": {
+      "mean": 41.659,
+      "min": 0.0,
+      "max": 100.0,
+      "q1": 32.235,
+      "median": 40.986,
+      "q3": 50.485,
+      "iqr": 18.25,
+      "upper_bound": 77.86
+    },
+    "attention_span_minutes": {
+      "mean": 53.701,
+      "min": 27.427,
+      "max": 60.0,
+      "q1": 50.278,
+      "median": 54.169,
+      "q3": 57.941,
+      "iqr": 7.663,
+      "upper_bound": 69.435
+    },
+    "stress_level": {
+      "mean": 4.851,
+      "min": 1.0,
+      "max": 10.0,
+      "q1": 3.832,
+      "median": 4.829,
+      "q3": 5.852,
+      "iqr": 2.02,
+      "upper_bound": 8.883
+    },
+    "anxiety_score": {
+      "mean": 4.861,
+      "min": 1.0,
+      "max": 10.0,
+      "q1": 3.617,
+      "median": 4.834,
+      "q3": 6.056,
+      "iqr": 2.438,
+      "upper_bound": 9.713
+    },
+    "depression_score": {
+      "mean": 5.086,
+      "min": 1.0,
+      "max": 10.0,
+      "q1": 3.609,
+      "median": 5.04,
+      "q3": 6.517,
+      "iqr": 2.908,
+      "upper_bound": 10.878
+    },
+    "wellbeing_index": {
+      "mean": 57.259,
+      "min": 13.755,
+      "max": 99.385,
+      "q1": 50.091,
+      "median": 57.425,
+      "q3": 64.586,
+      "iqr": 14.495,
+      "upper_bound": 86.327
+    },
+    "sessions_per_day": {
+      "mean": 9.902,
+      "min": 1.0,
+      "max": 26.032,
+      "q1": 7.557,
+      "median": 9.733,
+      "q3": 12.067,
+      "iqr": 4.51,
+      "upper_bound": 18.833
+    },
+    "average_session_length_minutes": {
+      "mean": 38.615,
+      "min": 3.0,
+      "max": 90.0,
+      "q1": 29.216,
+      "median": 37.946,
+      "q3": 47.31,
+      "iqr": 18.094,
+      "upper_bound": 74.452
+    },
+    "late_night_score": {
+      "mean": 1.129,
+      "min": 0.0,
+      "max": 3.0,
+      "q1": 1.0,
+      "median": 1.0,
+      "q3": 2.0,
+      "iqr": 1.0,
+      "upper_bound": 3.5
+    },
+    "short_video_hours": {
+      "mean": 1.513,
+      "min": 0.0,
+      "max": 5.255,
+      "q1": 1.04,
+      "median": 1.434,
+      "q3": 1.909,
+      "iqr": 0.869,
+      "upper_bound": 3.212
+    },
+    "entertainment_content_hours": {
+      "mean": 1.301,
+      "min": -0.522,
+      "max": 5.505,
+      "q1": 0.802,
+      "median": 1.218,
+      "q3": 1.711,
+      "iqr": 0.909,
+      "upper_bound": 3.074
+    },
+    "education_content_hours": {
+      "mean": 0.547,
+      "min": 0.0,
+      "max": 3.516,
+      "q1": 0.298,
+      "median": 0.476,
+      "q3": 0.715,
+      "iqr": 0.417,
+      "upper_bound": 1.34
+    },
+    "news_content_hours": {
+      "mean": 0.523,
+      "min": 0.0,
+      "max": 2.064,
+      "q1": 0.362,
+      "median": 0.509,
+      "q3": 0.657,
+      "iqr": 0.296,
+      "upper_bound": 1.101
+    },
+    "likes_given_per_day": {
+      "mean": 69.306,
+      "min": 4.014,
+      "max": 239.875,
+      "q1": 47.461,
+      "median": 65.221,
+      "q3": 87.163,
+      "iqr": 39.702,
+      "upper_bound": 146.715
+    },
+    "comments_written_per_day": {
+      "mean": 6.925,
+      "min": 0.201,
+      "max": 29.008,
+      "q1": 3.865,
+      "median": 6.305,
+      "q3": 9.309,
+      "iqr": 5.444,
+      "upper_bound": 17.476
+    },
+    "posts_created_per_week": {
+      "mean": 4.203,
+      "min": 0.0,
+      "max": 17.021,
+      "q1": 2.505,
+      "median": 3.804,
+      "q3": 5.502,
+      "iqr": 2.997,
+      "upper_bound": 9.998
+    },
+    "internet_access_hours": {
+      "mean": 5.013,
+      "min": 0.5,
+      "max": 11.273,
+      "q1": 3.914,
+      "median": 4.997,
+      "q3": 6.111,
+      "iqr": 2.197,
+      "upper_bound": 9.406
+    },
+    "academic_motivation": {
+      "mean": 5.391,
+      "min": 1.0,
+      "max": 10.0,
+      "q1": 4.243,
+      "median": 5.45,
+      "q3": 6.608,
+      "iqr": 2.365,
+      "upper_bound": 10.156
+    }
+  }
+}

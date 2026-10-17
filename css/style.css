@@ -1839,3 +1839,69 @@ footer {
         justify-content: center;
     }
 }
+
+/* --------------------------------------------------------------------------
+   18. Machine Learning & Enhanced Analysis Components
+   -------------------------------------------------------------------------- */
+.hypothesis-status.validated {
+    color: #166534;
+    background-color: #dcfce7;
+    border: 1px solid #86efac;
+}
+
+.chart-breakdown {
+    padding: 14px 16px;
+    background-color: #f8fafc;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--text-main);
+}
+
+.chart-breakdown p {
+    margin-bottom: 8px;
+}
+
+.chart-breakdown p:last-child {
+    margin-bottom: 0;
+}
+
+.ml-metric-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.ml-metric-pill.success {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.ml-metric-pill.info {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.ml-feature-bar-row {
+    display: grid;
+    grid-template-columns: 180px 1fr 60px;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ml-feature-bar-track {
+    height: 12px;
+    background-color: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.ml-feature-bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+}
+

@@ -1,69 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="640" viewBox="0 0 1024 640">
 <rect width="1024" height="640" fill="#ffffff"/>
-<text x="512.0" y="42" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Distribution of Student Respondents by Age (N = 405)</text>
-<line x1="90" y1="560.0" x2="984" y2="560.0" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="565.0" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">0</text>
-<line x1="90" y1="462.0" x2="984" y2="462.0" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="467.0" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">20</text>
-<line x1="90" y1="364.0" x2="984" y2="364.0" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="369.0" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">40</text>
-<line x1="90" y1="266.0" x2="984" y2="266.0" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="271.0" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">60</text>
-<line x1="90" y1="168.0" x2="984" y2="168.0" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="173.0" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">80</text>
-<line x1="90" y1="70.0" x2="984" y2="70.0" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="75.0" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">100</text>
-<text x="28" y="315.0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 28 315.0)">Number of Respondents</text>
-<rect x="97.45" y="555.1" width="44.7" height="4.9" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="119.80000000000001" y="548.1" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">1</text>
-<text x="119.80000000000001" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">17</text>
-<rect x="157.04999999999998" y="520.8" width="44.7" height="39.2" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="179.39999999999998" y="513.8" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">8</text>
-<text x="179.39999999999998" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">18</text>
-<rect x="216.64999999999998" y="231.7" width="44.7" height="328.3" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="238.99999999999997" y="224.7" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">67</text>
-<text x="238.99999999999997" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">19</text>
-<rect x="276.25" y="114.09999999999997" width="44.7" height="445.90000000000003" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="298.6" y="107.09999999999997" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">91</text>
-<text x="298.6" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">20</text>
-<rect x="335.84999999999997" y="177.8" width="44.7" height="382.2" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="358.2" y="170.8" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">78</text>
-<text x="358.2" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">21</text>
-<rect x="395.45" y="217.0" width="44.7" height="343.0" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="417.8" y="210.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">70</text>
-<text x="417.8" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">22</text>
-<rect x="455.05" y="300.3" width="44.7" height="259.7" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="477.40000000000003" y="293.3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">53</text>
-<text x="477.40000000000003" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">23</text>
-<rect x="514.65" y="471.8" width="44.7" height="88.2" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="537.0" y="464.8" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">18</text>
-<text x="537.0" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">24</text>
-<rect x="574.25" y="535.5" width="44.7" height="24.5" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="596.6" y="528.5" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">5</text>
-<text x="596.6" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">25</text>
-<rect x="633.85" y="545.3" width="44.7" height="14.7" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="656.2" y="538.3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">3</text>
-<text x="656.2" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">26</text>
-<rect x="693.45" y="540.4" width="44.7" height="19.6" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="715.8000000000001" y="533.4" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">4</text>
-<text x="715.8000000000001" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">27</text>
-<rect x="753.0500000000001" y="555.1" width="44.7" height="4.9" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="775.4000000000001" y="548.1" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">1</text>
-<text x="775.4000000000001" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">28</text>
-<rect x="812.6500000000001" y="540.4" width="44.7" height="19.6" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="835.0000000000001" y="533.4" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">4</text>
-<text x="835.0000000000001" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">29</text>
-<rect x="872.2500000000001" y="555.1" width="44.7" height="4.9" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="894.6000000000001" y="548.1" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">1</text>
-<text x="894.6000000000001" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">30</text>
-<rect x="931.85" y="555.1" width="44.7" height="4.9" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
-<text x="954.2" y="548.1" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1b2d42">1</text>
-<text x="954.2" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">37</text>
-<line x1="90" y1="560" x2="984" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="90" y1="70" x2="90" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
-<text x="512.0" y="618" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">Age in Years (Undergraduate Concentration: Ages 19–23 = 88.6%)</text>
-<rect x="724" y="80" width="16" height="16" fill="#bc5689" rx="2" stroke="#1b2d42" stroke-width="1"/>
-<text x="746" y="93" font-family="-apple-system, sans-serif" font-size="12" fill="#24292f">Core Undergraduate Cohort (19–23)</text>
-<rect x="724" y="104" width="16" height="16" fill="#2a4365" rx="2" stroke="#1b2d42" stroke-width="1"/>
-<text x="746" y="117" font-family="-apple-system, sans-serif" font-size="12" fill="#24292f">Other Age Groups</text>
+<text x="512.0" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Student Age Distribution (N = 500,000, Ages 15 to 25)</text>
+<line x1="80" y1="560.0" x2="984" y2="560.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="565.0" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">0</text>
+<line x1="80" y1="470.9090909090909" x2="984" y2="470.9090909090909" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="475.9090909090909" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">10,000</text>
+<line x1="80" y1="381.8181818181818" x2="984" y2="381.8181818181818" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="386.8181818181818" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">20,000</text>
+<line x1="80" y1="292.72727272727275" x2="984" y2="292.72727272727275" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="297.72727272727275" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">30,000</text>
+<line x1="80" y1="203.63636363636363" x2="984" y2="203.63636363636363" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="208.63636363636363" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">40,000</text>
+<line x1="80" y1="114.54545454545456" x2="984" y2="114.54545454545456" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="119.54545454545456" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">50,000</text>
+<text x="24" y="315.0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 24 315.0)">Number of Students</text>
+<rect x="90.27272727272728" y="155.26890909090912" width="61.63636363636364" height="404.7310909090909" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="121.0909090909091" y="148.26890909090912" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,429</text>
+<text x="121.0909090909091" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">15</text>
+<rect x="172.45454545454547" y="156.142" width="61.63636363636364" height="403.858" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="203.27272727272728" y="149.142" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,331</text>
+<text x="203.27272727272728" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">16</text>
+<rect x="254.63636363636365" y="153.34454545454543" width="61.63636363636364" height="406.6554545454546" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="285.4545454545455" y="146.34454545454543" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,645</text>
+<text x="285.4545454545455" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">17</text>
+<rect x="336.8181818181818" y="152.4358181818182" width="61.63636363636364" height="407.5641818181818" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="367.6363636363636" y="145.4358181818182" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,747</text>
+<text x="367.6363636363636" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">18</text>
+<rect x="419.0" y="153.95036363636365" width="61.63636363636364" height="406.04963636363635" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="449.8181818181818" y="146.95036363636365" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,577</text>
+<text x="449.8181818181818" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">19</text>
+<rect x="501.1818181818182" y="155.5807272727273" width="61.63636363636364" height="404.4192727272727" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="532.0" y="148.5807272727273" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,394</text>
+<text x="532.0" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">20</text>
+<rect x="583.3636363636364" y="156.15090909090912" width="61.63636363636364" height="403.8490909090909" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="614.1818181818182" y="149.15090909090912" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,330</text>
+<text x="614.1818181818182" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">21</text>
+<rect x="665.5454545454545" y="156.54290909090906" width="61.63636363636364" height="403.45709090909094" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="696.3636363636364" y="149.54290909090906" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,286</text>
+<text x="696.3636363636364" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">22</text>
+<rect x="747.7272727272727" y="154.24436363636363" width="61.63636363636364" height="405.75563636363637" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="778.5454545454546" y="147.24436363636363" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,544</text>
+<text x="778.5454545454546" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">23</text>
+<rect x="829.909090909091" y="155.4649090909091" width="61.63636363636364" height="404.5350909090909" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="860.7272727272729" y="148.4649090909091" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,407</text>
+<text x="860.7272727272729" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">24</text>
+<rect x="912.0909090909091" y="156.32909090909095" width="61.63636363636364" height="403.67090909090905" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="942.909090909091" y="149.32909090909095" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#1b2d42">45,310</text>
+<text x="942.909090909091" y="582" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle" fill="#24292f">25</text>
+<line x1="80" y1="560" x2="984" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="80" y1="70" x2="80" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<text x="512.0" y="618" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">Age in Years (Mean = 20.0 yrs, Median = 20.0 yrs, Uniform Sampling Across Tertiary &amp; Secondary Cohorts)</text>
 </svg>

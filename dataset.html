@@ -174,20 +174,20 @@
             <!-- Cleaned Dataset Summary Cards -->
             <div class="stat-grid">
                 <div class="stat-card">
-                    <div class="stat-number">405</div>
+                    <div class="stat-number">500,000</div>
                     <div class="stat-label">Total Valid Respondents</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">21 yrs</div>
-                    <div class="stat-label">Median Age (17–37)</div>
+                    <div class="stat-number">20 yrs</div>
+                    <div class="stat-label">Median Age (15–25)</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">3.5 hrs</div>
-                    <div class="stat-label">Median Screen Time</div>
+                    <div class="stat-number">3.28 hrs</div>
+                    <div class="stat-label">Median Daily Screen Time</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">3.0 hrs</div>
-                    <div class="stat-label">Median Study Time</div>
+                    <div class="stat-number">23.1 hrs</div>
+                    <div class="stat-label">Median Weekly Study Time</div>
                 </div>
             </div>
 
@@ -196,31 +196,29 @@
                 <div class="sub-card">
                     <h3>📋 Cleaned Dataset Summary</h3>
                     <ul class="resume-list">
-                        <li><strong>Total valid respondents:</strong> 405 students</li>
-                        <li><strong>Male:</strong> 219 (54.1%)</li>
-                        <li><strong>Female:</strong> 186 (45.9%)</li>
-                        <li><strong>Median age:</strong> 21 years</li>
-                        <li><strong>Age range:</strong> 17–37 years</li>
-                        <li><strong>Median daily screen time:</strong> 3.5 hours</li>
-                        <li><strong>Q1 screen time:</strong> 2.0 hours</li>
-                        <li><strong>Q3 screen time:</strong> 5.0 hours</li>
-                        <li><strong>IQR upper capping bound:</strong> 9.5 hours/day</li>
-                        <li><strong>Median daily study time:</strong> 3.0 hours/day</li>
-                        <li><strong>Mean daily study time:</strong> 3.49 hours/day</li>
+                        <li><strong>Total valid respondents:</strong> 500,000 students (50 countries)</li>
+                        <li><strong>Gender distribution:</strong> Female: 245,241 (49.0%) | Male: 244,803 (49.0%) | Other: 9,956 (2.0%)</li>
+                        <li><strong>Median age:</strong> 20.0 years (Mean: 20.00 yrs, Range: 15–25 years)</li>
+                        <li><strong>Median daily screen time:</strong> 3.28 hours (Mean: 3.36 hrs)</li>
+                        <li><strong>Screen time quartiles:</strong> Q1: 2.46 hrs | Q3: 4.19 hrs (IQR: 1.73 hrs)</li>
+                        <li><strong>IQR upper capping bound:</strong> 6.79 hours/day (Max observed: 9.00 hrs)</li>
+                        <li><strong>Median weekly study time:</strong> 23.11 hours/week (Mean: 22.98 hrs/week)</li>
+                        <li><strong>Class attendance rate:</strong> Mean: 90.77% | Median: 91.09%</li>
+                        <li><strong>Geographic breadth:</strong> 50 nations across Developing (42.1%), Developed (29.9%), and Underdeveloped (28.0%)</li>
                     </ul>
                 </div>
 
                 <div class="sub-card">
-                    <h3>📱 Social Media Platforms</h3>
+                    <h3>📱 Device Access & Geographic Reach</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">
-                        Distribution of primary networking platforms reported by participants (<em>N</em> = 405):
+                        Primary access hardware and national distributions across 500,000 global student respondents:
                     </p>
                     <ul class="resume-list">
-                        <li><strong>Facebook:</strong> 137 (33.8%)</li>
-                        <li><strong>Instagram:</strong> 125 (30.9%)</li>
-                        <li><strong>YouTube:</strong> 121 (29.9%)</li>
-                        <li><strong>Other:</strong> 18 (4.4%)</li>
-                        <li><strong>TikTok:</strong> 4 (1.0%)</li>
+                        <li><strong>Smartphone:</strong> 302,885 students (60.6%)</li>
+                        <li><strong>Both (Phone &amp; Laptop):</strong> 74,609 students (14.9%)</li>
+                        <li><strong>Shared Family Device:</strong> 67,162 students (13.4%)</li>
+                        <li><strong>Laptop Only:</strong> 55,344 students (11.1%)</li>
+                        <li><strong>Top Country Cohorts:</strong> Cambodia (10,190), Malaysia (10,189), India (10,188), China (10,180), Kazakhstan (10,168), Bangladesh (10,138), Canada (10,109), Kenya (10,109), USA (10,029), UK (10,011)</li>
                     </ul>
                 </div>
             </div>
@@ -229,42 +227,42 @@
             <div class="sub-card" style="margin-top: 24px;">
                 <h3>📊 Usage Level Transformation</h3>
                 <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 14px;">
-                    Daily screen time was transformed into three standardized usage categories: <strong>Low</strong>, <strong>Moderate</strong>, and <strong>High</strong>.
+                    Daily social media screen time was transformed into three standardized usage categories: <strong>Low</strong> (&le; 3.0 hrs), <strong>Moderate</strong> (3.0–5.0 hrs), and <strong>High</strong> (&gt; 5.0 hrs).
                 </p>
 
                 <!-- Visual Bar Chart for the Three Usage Categories -->
                 <div class="usage-chart-box">
                     <div class="usage-bar-row">
                         <div class="usage-bar-label">
-                            <span class="usage-dot low"></span>
-                            <strong>Low (&le; 3 hours)</strong>
+                            <span class="usage-dot moderate"></span>
+                            <strong>Moderate (3.0–5.0 hrs)</strong>
                         </div>
-                        <div class="usage-bar-track" aria-label="Low usage: 46.2%">
-                            <div class="usage-bar-fill low" style="width: 46.2%;"></div>
+                        <div class="usage-bar-track" aria-label="Moderate usage: 48.2%">
+                            <div class="usage-bar-fill moderate" style="width: 48.2%;"></div>
                         </div>
-                        <div class="usage-bar-value">187 students (46.2%)</div>
+                        <div class="usage-bar-value">241,219 students (48.2%)</div>
                     </div>
 
                     <div class="usage-bar-row">
                         <div class="usage-bar-label">
-                            <span class="usage-dot moderate"></span>
-                            <strong>Moderate (3–7 hours)</strong>
+                            <span class="usage-dot low"></span>
+                            <strong>Low (&le; 3.0 hrs)</strong>
                         </div>
-                        <div class="usage-bar-track" aria-label="Moderate usage: 43.5%">
-                            <div class="usage-bar-fill moderate" style="width: 43.5%;"></div>
+                        <div class="usage-bar-track" aria-label="Low usage: 40.9%">
+                            <div class="usage-bar-fill low" style="width: 40.9%;"></div>
                         </div>
-                        <div class="usage-bar-value">176 students (43.5%)</div>
+                        <div class="usage-bar-value">204,663 students (40.9%)</div>
                     </div>
 
                     <div class="usage-bar-row">
                         <div class="usage-bar-label">
                             <span class="usage-dot high"></span>
-                            <strong>High (&gt; 7 hours)</strong>
+                            <strong>High (&gt; 5.0 hrs)</strong>
                         </div>
-                        <div class="usage-bar-track" aria-label="High usage: 10.4%">
-                            <div class="usage-bar-fill high" style="width: 10.4%;"></div>
+                        <div class="usage-bar-track" aria-label="High usage: 10.8%">
+                            <div class="usage-bar-fill high" style="width: 10.8%;"></div>
                         </div>
-                        <div class="usage-bar-value">42 students (10.4%)</div>
+                        <div class="usage-bar-value">54,118 students (10.8%)</div>
                     </div>
                 </div>
             </div>
@@ -273,7 +271,7 @@
             <div style="margin-top: 32px;">
                 <h3>🧹 Eight Core Data Cleaning & Validation Areas</h3>
                 <p class="section-intro" style="margin-bottom: 8px;">
-                    The dataset was audited and processed across eight primary data quality dimensions:
+                    The 500,000-record dataset was systematically audited and processed across eight primary data quality dimensions:
                 </p>
 
                 <div class="cleaning-areas-grid">
@@ -284,7 +282,7 @@
                             <h4 class="cleaning-area-title">Missing Values</h4>
                         </div>
                         <p class="cleaning-area-desc">
-                            Missing numeric entries across survey responses (such as study hours and screen time) were identified during data inspection and addressed using median imputation. This preserves overall record completeness without distorting statistical distributions.
+                            An exhaustive audit across all 48 columns confirmed that 47 columns have <strong>0 missing values</strong>. Exactly one variable (<code>brain_rot_level</code>) contained 6,262 null entries (1.25%). Verification confirmed these correspond strictly to records where <code>brain_rot_index == 0.0</code>; these were cleanly imputed as <code>'None'</code> to preserve complete data integrity without distortion.
                         </p>
                     </div>
 
@@ -295,7 +293,7 @@
                             <h4 class="cleaning-area-title">Duplicate Records</h4>
                         </div>
                         <p class="cleaning-area-desc">
-                            Duplicate records and redundant submissions were checked during the cleaning process to verify that each survey respondent represents a distinct, individual participant record.
+                            Checked 500,000 rows across primary keys (<code>student_id</code>) and full-row tuples. Exactly <strong>0 duplicate records</strong> were found, verifying that every survey entry represents an independent, unique participant.
                         </p>
                     </div>
 
@@ -306,7 +304,7 @@
                             <h4 class="cleaning-area-title">Incorrect Data Types</h4>
                         </div>
                         <p class="cleaning-area-desc">
-                            Variables initially recorded as strings or object types—including screen time, study duration, and GPA values with descriptive text or units—were parsed and coerced into standardized numeric types (<code>float</code> and <code>int</code>) for statistical computation.
+                            All 48 attributes were parsed and validated for type fidelity. Numeric indicators (including screen time, weekly study duration, attendance rates, and productivity scores) are strictly formatted as 64-bit floating point numbers (<code>float</code>) or integers (<code>int</code>), eliminating formatting string conflicts.
                         </p>
                     </div>
 
@@ -317,7 +315,7 @@
                             <h4 class="cleaning-area-title">Inconsistent Formats</h4>
                         </div>
                         <p class="cleaning-area-desc">
-                            Text fields and free-response strings were cleaned by stripping irregular leading and trailing whitespace, standardizing letter casing, and establishing uniform formatting across all survey responses.
+                            String columns (such as <code>country</code>, <code>development_level</code>, <code>device_access</code>, and <code>gender</code>) were audited for inconsistent whitespace, improper casing, and non-ASCII character artifacts, ensuring standardized text normalization across all 50 surveyed nations.
                         </p>
                     </div>
 
@@ -328,7 +326,7 @@
                             <h4 class="cleaning-area-title">Invalid Values</h4>
                         </div>
                         <p class="cleaning-area-desc">
-                            Logic checks were performed to filter out impossible logic and invalid values, such as reported daily activity hours exceeding the 24-hour limit in a single day, or non-numeric percentage values placed in time fields.
+                            Domain logic checks verified that all numeric measures fall within biologically and mathematically plausible bounds: daily screen time (0.0 to 9.0 hrs), sleep duration (4.0 to 9.0 hrs), class attendance rate (63.0% to 100.0%), and respondent age (15 to 25 years). No impossible values or negative activity hours were present.
                         </p>
                     </div>
 
@@ -339,7 +337,7 @@
                             <h4 class="cleaning-area-title">Outliers</h4>
                         </div>
                         <p class="cleaning-area-desc">
-                            Daily screen time was evaluated using the IQR method (Q1 = 2.0 hours, Q3 = 5.0 hours). The upper capping bound was determined to be <strong>9.5 hours/day</strong>. Values exceeding this threshold were capped (Winsorized) at 9.5 hours to mitigate the distortive effects of extreme outliers while retaining valid respondent participation.
+                            Screen time distribution was evaluated using the Interquartile Range method (Q1 = 2.46 hrs, Q3 = 4.19 hrs, IQR = 1.73 hrs). The upper fence was calculated as <strong>6.79 hours/day</strong>. While 14,103 students (2.82%) report screen times between 6.0 and 9.0 hours, these were confirmed as legitimate high-intensity digital usage rather than sensor errors, and were retained for empirical modeling.
                         </p>
                     </div>
 
@@ -350,7 +348,7 @@
                             <h4 class="cleaning-area-title">Inconsistent Categorical Values</h4>
                         </div>
                         <p class="cleaning-area-desc">
-                            Categorical fields (including social media platform names, residence areas, and symptom classifications) were checked for typos, abbreviations, and variation (such as mapping informal app names to standardized platform identities) to maintain uniform groupings.
+                            Categorical variables across all 50 countries, 3 economic development tiers (Developing: 210,346; Developed: 149,548; Underdeveloped: 140,106), 4 device types, and 3 family income tiers were cross-tabulated, confirming zero spelling variants or inconsistent classifications.
                         </p>
                     </div>
 
@@ -361,17 +359,28 @@
                             <h4 class="cleaning-area-title">Data Transformations</h4>
                         </div>
                         <p class="cleaning-area-desc">
-                            Daily screen time was transformed into three usage categories for comparative analysis: <strong>Low</strong> (&le; 3 hours), <strong>Moderate</strong> (3–7 hours), and <strong>High</strong> (&gt; 7 hours), facilitating subgroup comparisons and categorical analysis.
+                            Daily screen time was converted into standardized behavioral tiers: <strong>Low</strong> (&le; 3.0 hrs, 40.9%), <strong>Moderate</strong> (3.0–5.0 hrs, 48.2%), and <strong>High</strong> (&gt; 5.0 hrs, 10.8%). Additionally, a binary risk indicator (<code>at_risk = 1</code> if <code>academic_risk_score &gt; 0</code>) was engineered for machine learning classification.
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Deep-Dive Box: Zero-Inflation in Academic Risk Score -->
+            <div class="sub-card" style="margin-top: 24px; border-left: 4px solid var(--navy-dark); background-color: #f8fafc;">
+                <h3 style="margin-top: 0; color: var(--navy-dark);">🔍 Deep-Dive Investigation: Zero-Inflation in Academic Risk Score</h3>
+                <p style="font-size: 0.92rem; color: var(--text-main); line-height: 1.6;">
+                    During exploratory data quality auditing, a prominent distributional anomaly was detected in <code>academic_risk_score</code>: exactly <strong>483,134 records (96.63%)</strong> have a value of <code>0.0</code>, while only <strong>16,866 records (3.37%)</strong> possess positive risk values (ranging from 0.001 to 24.07, mean = 3.27).
+                </p>
+                <p style="font-size: 0.90rem; color: var(--text-main); line-height: 1.6;">
+                    <strong>Investigation &amp; Resolution:</strong> Bivariate conditioning reveals that <code>academic_risk_score</code> operates as a <em>hurdle / threshold penalty function</em>. Healthy students with standard attendance (&ge; 90%), adequate sleep (&ge; 6 hrs), and moderate screen time have zero academic risk. A positive score triggers exclusively when digital addiction and screen time exceed critical resilience thresholds, eroding protective academic buffers. Therefore, rather than treating the zeros as missing data or imputing them, we model academic outcomes using two complementary strategies: continuous regression on academic productivity (<code>productivity_score</code>) and weekly study hours, paired with binary classification for identifying high-risk students (<code>academic_risk_score &gt; 0</code>).
+                </p>
             </div>
 
             <!-- Research Connection Subsection -->
             <div class="research-connection-card">
                 <h3>🔬 Research Connection</h3>
                 <p>
-                    Cleaning and validating the dataset helps make the analysis more reliable by reducing the effect of missing, duplicate, inconsistent, or invalid data. The cleaned dataset was then used for the analysis of student social media usage and academic performance.
+                    Systematic data cleaning and validation across all 500,000 records establishes rigorous empirical reliability. By verifying variable types, resolving zero-inflation mechanics, and categorizing usage tiers, we ensure that subsequent exploratory data analysis (EDA), relational SQL queries, and predictive machine learning models reflect genuine behavioral relationships rather than data artifacts.
                 </p>
             </div>
 

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="640" viewBox="0 0 1024 640">
+<rect width="1024" height="640" fill="#ffffff"/>
+<text x="512.0" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Random Forest Feature Importance: Predicting Productivity</text>
+<line x1="220.0" y1="70" x2="220.0" y2="570" stroke="#e2e8f0" stroke-width="1"/>
+<text x="220.0" y="592" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">0%</text>
+<line x1="327.7142857142857" y1="70" x2="327.7142857142857" y2="570" stroke="#e2e8f0" stroke-width="1"/>
+<text x="327.7142857142857" y="592" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">5%</text>
+<line x1="435.42857142857144" y1="70" x2="435.42857142857144" y2="570" stroke="#e2e8f0" stroke-width="1"/>
+<text x="435.42857142857144" y="592" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">10%</text>
+<line x1="543.1428571428571" y1="70" x2="543.1428571428571" y2="570" stroke="#e2e8f0" stroke-width="1"/>
+<text x="543.1428571428571" y="592" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">15%</text>
+<line x1="650.8571428571429" y1="70" x2="650.8571428571429" y2="570" stroke="#e2e8f0" stroke-width="1"/>
+<text x="650.8571428571429" y="592" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">20%</text>
+<line x1="758.5714285714286" y1="70" x2="758.5714285714286" y2="570" stroke="#e2e8f0" stroke-width="1"/>
+<text x="758.5714285714286" y="592" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">25%</text>
+<line x1="866.2857142857143" y1="70" x2="866.2857142857143" y2="570" stroke="#e2e8f0" stroke-width="1"/>
+<text x="866.2857142857143" y="592" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">30%</text>
+<line x1="974.0" y1="70" x2="974.0" y2="570" stroke="#e2e8f0" stroke-width="1"/>
+<text x="974.0" y="592" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">35%</text>
+<text x="206" y="100.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Brain Rot Index</text>
+<rect x="220" y="78.75" width="697.9885714285715" height="32.5" fill="#1b2d42" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="925.9885714285715" y="99.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">32.4%</text>
+<text x="206" y="150.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Attention Span (Mins)</text>
+<rect x="220" y="128.75" width="616.1257142857143" height="32.5" fill="#1b2d42" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="844.1257142857143" y="149.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">28.6%</text>
+<text x="206" y="200.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Academic Motivation</text>
+<rect x="220" y="178.75" width="305.9085714285714" height="32.5" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="533.9085714285713" y="199.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">14.2%</text>
+<text x="206" y="250.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Digital Addiction Score</text>
+<rect x="220" y="228.75" width="189.57714285714286" height="32.5" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="417.57714285714286" y="249.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">8.8%</text>
+<text x="206" y="300.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Social Media Hours</text>
+<rect x="220" y="278.75" width="116.33142857142859" height="32.5" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="344.3314285714286" y="299.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">5.4%</text>
+<text x="206" y="350.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Short Video Hours</text>
+<rect x="220" y="328.75" width="90.48" height="32.5" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="318.48" y="349.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">4.2%</text>
+<text x="206" y="400.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Stress Level</text>
+<rect x="220" y="378.75" width="56.011428571428574" height="32.5" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="284.01142857142855" y="399.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">2.6%</text>
+<text x="206" y="450.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Sleep Hours</text>
+<rect x="220" y="428.75" width="38.777142857142856" height="32.5" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="266.77714285714285" y="449.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">1.8%</text>
+<text x="206" y="500.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Sessions Per Day</text>
+<rect x="220" y="478.75" width="25.851428571428574" height="32.5" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="253.85142857142858" y="499.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">1.2%</text>
+<text x="206" y="550.0" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="end" fill="#1b2d42">Late Night Score</text>
+<rect x="220" y="528.75" width="17.23428571428572" height="32.5" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="245.2342857142857" y="549.0" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">0.8%</text>
+<line x1="220" y1="70" x2="220" y2="570" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="220" y1="570" x2="974" y2="570" stroke="#1b2d42" stroke-width="1.5"/>
+<text x="597.0" y="622" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">Relative Feature Importance Score (Gini Variance Reduction)</text>
+</svg>

@@ -15,3 +15,6 @@ Thumbs.db
 
 # Local Log Files
 *.log
+data/global_student_digital_behavior_dataset.csv
+data/global_student_digital_behavior_dataset.csv
+global_student_digital_behavior_dataset.csv

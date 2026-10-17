@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="640" viewBox="0 0 1024 640">
+<rect width="1024" height="640" fill="#ffffff"/>
+<text x="512.0" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Academic Productivity Score by Social Media Usage Level (N = 500,000)</text>
+<line x1="80" y1="560.0" x2="984" y2="560.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="564.0" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">1.0</text>
+<line x1="80" y1="505.55555555555554" x2="984" y2="505.55555555555554" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="509.55555555555554" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">2.0</text>
+<line x1="80" y1="451.1111111111111" x2="984" y2="451.1111111111111" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="455.1111111111111" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">3.0</text>
+<line x1="80" y1="396.6666666666667" x2="984" y2="396.6666666666667" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="400.6666666666667" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">4.0</text>
+<line x1="80" y1="342.22222222222223" x2="984" y2="342.22222222222223" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="346.22222222222223" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">5.0</text>
+<line x1="80" y1="287.77777777777777" x2="984" y2="287.77777777777777" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="291.77777777777777" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">6.0</text>
+<line x1="80" y1="233.33333333333337" x2="984" y2="233.33333333333337" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="237.33333333333337" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">7.0</text>
+<line x1="80" y1="178.88888888888886" x2="984" y2="178.88888888888886" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="182.88888888888886" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">8.0</text>
+<line x1="80" y1="124.44444444444446" x2="984" y2="124.44444444444446" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="128.44444444444446" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">9.0</text>
+<line x1="80" y1="70.0" x2="984" y2="70.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="74.0" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">10.0</text>
+<text x="24" y="315.0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 24 315.0)">Productivity Score (1.0 to 10.0)</text>
+<line x1="230.66666666666666" y1="136.1273583437121" x2="230.66666666666666" y2="235.31839585928026" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="230.66666666666666" y1="70.0" x2="230.66666666666666" y2="70.0" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="206.66666666666666" y1="235.31839585928026" x2="254.66666666666666" y2="235.31839585928026" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="206.66666666666666" y1="70.0" x2="254.66666666666666" y2="70.0" stroke="#1b2d42" stroke-width="1.5"/>
+<rect x="170.66666666666666" y="70.0" width="120" height="66.1273583437121" fill="#ffffff" stroke="#1b2d42" stroke-width="2"/>
+<line x1="170.66666666666666" y1="79.89860809833573" x2="290.66666666666663" y2="79.89860809833573" stroke="#d97706" stroke-width="3"/>
+<polygon points="230.66666666666666,103.49426298686888 235.66666666666666,108.49426298686888 230.66666666666666,113.49426298686888 225.66666666666666,108.49426298686888" fill="#2e7d32" stroke="#1b2d42" stroke-width="1"/>
+<text x="230.66666666666666" y="584" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1b2d42">Low Usage (≤ 3.0 hrs)</text>
+<text x="230.66666666666666" y="602" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Mean: 9.29 | Med: 9.82</text>
+<line x1="532.0" y1="187.16680448357937" x2="532.0" y2="361.92173584539216" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="532.0" y1="70.66351690903753" x2="532.0" y2="70.0" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="508.0" y1="361.92173584539216" x2="556.0" y2="361.92173584539216" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="508.0" y1="70.0" x2="556.0" y2="70.0" stroke="#1b2d42" stroke-width="1.5"/>
+<rect x="472.0" y="70.66351690903753" width="120" height="116.50328757454184" fill="#ffffff" stroke="#1b2d42" stroke-width="2"/>
+<line x1="472.0" y1="130.12267701177308" x2="592.0" y2="130.12267701177308" stroke="#d97706" stroke-width="3"/>
+<polygon points="532.0,136.6739805661241 537.0,141.6739805661241 532.0,146.6739805661241 527.0,141.6739805661241" fill="#d97706" stroke="#1b2d42" stroke-width="1"/>
+<text x="532.0" y="584" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1b2d42">Moderate Usage (3.0–5.0 hrs)</text>
+<text x="532.0" y="602" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Mean: 8.68 | Med: 8.90</text>
+<line x1="833.3333333333333" y1="246.17064902081694" x2="833.3333333333333" y2="411.0396066164872" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="833.3333333333333" y1="136.2580106237034" x2="833.3333333333333" y2="70.0" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="809.3333333333333" y1="411.0396066164872" x2="857.3333333333333" y2="411.0396066164872" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="809.3333333333333" y1="70.0" x2="857.3333333333333" y2="70.0" stroke="#1b2d42" stroke-width="1.5"/>
+<rect x="773.3333333333333" y="136.2580106237034" width="120" height="109.91263839711354" fill="#ffffff" stroke="#1b2d42" stroke-width="2"/>
+<line x1="773.3333333333333" y1="192.11538195592385" x2="893.3333333333333" y2="192.11538195592385" stroke="#d97706" stroke-width="3"/>
+<polygon points="833.3333333333333,190.0516826023943 838.3333333333333,195.0516826023943 833.3333333333333,200.0516826023943 828.3333333333333,195.0516826023943" fill="#dc2626" stroke="#1b2d42" stroke-width="1"/>
+<text x="833.3333333333333" y="584" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1b2d42">High Usage (> 5.0 hrs)</text>
+<text x="833.3333333333333" y="602" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Mean: 7.70 | Med: 7.76</text>
+<line x1="80" y1="560" x2="984" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="80" y1="70" x2="80" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<text x="512.0" y="624" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">Usage Tiers (Mean Productivity Decreases by -1.03 points from Low to High Usage)</text>
+</svg>

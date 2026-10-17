@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="640" viewBox="0 0 1024 640">
+<rect width="1024" height="640" fill="#ffffff"/>
+<text x="512.0" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Distribution of Daily Social Media Screen Time (N = 500,000)</text>
+<line x1="80" y1="560.0" x2="984" y2="560.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="565.0" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">0</text>
+<line x1="80" y1="437.5" x2="984" y2="437.5" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="442.5" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">40,000</text>
+<line x1="80" y1="315.0" x2="984" y2="315.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="320.0" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">80,000</text>
+<line x1="80" y1="192.5" x2="984" y2="192.5" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="197.5" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">120,000</text>
+<line x1="80" y1="70.0" x2="984" y2="70.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="75.0" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">160,000</text>
+<text x="24" y="315.0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 24 315.0)">Number of Students</text>
+<rect x="90.04444444444445" y="522.28225" width="80.35555555555555" height="37.71775" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="130.22222222222223" y="504.28225" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">12,316</text>
+<text x="130.22222222222223" y="518.28225" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(2.5%)</text>
+<text x="130.22222222222223" y="584" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#24292f">0–1 h</text>
+<rect x="190.4888888888889" y="378.06606250000004" width="80.35555555555555" height="181.93393749999998" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="230.66666666666669" y="360.06606250000004" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">59,407</text>
+<text x="230.66666666666669" y="374.06606250000004" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(11.9%)</text>
+<text x="230.66666666666669" y="584" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#24292f">1–2 h</text>
+<rect x="290.93333333333334" y="152.87124999999997" width="80.35555555555555" height="407.12875" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="331.1111111111111" y="134.87124999999997" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">132,940</text>
+<text x="331.1111111111111" y="148.87124999999997" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(26.6%)</text>
+<text x="331.1111111111111" y="584" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#24292f">2–3 h</text>
+<rect x="391.37777777777774" y="110.5628125" width="80.35555555555555" height="449.4371875" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="431.55555555555554" y="92.5628125" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">146,755</text>
+<text x="431.55555555555554" y="106.5628125" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(29.4%)</text>
+<text x="431.55555555555554" y="584" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#24292f">3–4 h</text>
+<rect x="491.8222222222222" y="270.704" width="80.35555555555555" height="289.296" fill="#bc5689" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="532.0" y="252.704" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">94,464</text>
+<text x="532.0" y="266.704" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(18.9%)</text>
+<text x="532.0" y="584" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#24292f">4–5 h</text>
+<rect x="592.2666666666667" y="437.45406249999996" width="80.35555555555555" height="122.54593750000001" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="632.4444444444445" y="419.45406249999996" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">40,015</text>
+<text x="632.4444444444445" y="433.45406249999996" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(8.0%)</text>
+<text x="632.4444444444445" y="584" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#24292f">5–6 h</text>
+<rect x="692.7111111111111" y="524.4719375" width="80.35555555555555" height="35.5280625" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="732.8888888888889" y="506.47193749999997" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">11,601</text>
+<text x="732.8888888888889" y="520.4719375" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(2.3%)</text>
+<text x="732.8888888888889" y="584" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#24292f">6–7 h</text>
+<rect x="793.1555555555556" y="553.2900625" width="80.35555555555555" height="6.7099375" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="833.3333333333334" y="535.2900625" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">2,191</text>
+<text x="833.3333333333334" y="549.2900625" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(0.4%)</text>
+<text x="833.3333333333334" y="584" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#24292f">7–8 h</text>
+<rect x="893.6" y="559.0475625" width="80.35555555555555" height="0.9524374999999999" fill="#2a4365" rx="3" stroke="#1b2d42" stroke-width="1"/>
+<text x="933.7777777777778" y="541.0475625" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b2d42">311</text>
+<text x="933.7777777777778" y="555.0475625" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#57606a">(0.1%)</text>
+<text x="933.7777777777778" y="584" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#24292f">8–9 h</text>
+<line x1="80" y1="560" x2="984" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="80" y1="70" x2="80" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<text x="512.0" y="618" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">Daily Screen Time in Hours (Mean = 3.36 hrs, Median = 3.28 hrs, IQR = 1.73 hrs)</text>
+<rect x="724" y="85" width="240" height="60" fill="#f8fafc" stroke="#cbd5e1" rx="6"/>
+<rect x="739" y="96" width="14" height="14" fill="#bc5689" stroke="#1b2d42"/>
+<text x="762" y="108" font-family="-apple-system, sans-serif" font-size="12" fill="#1b2d42">Core Usage Range (2–5 hrs: 72.8%)</text>
+<rect x="739" y="118" width="14" height="14" fill="#2a4365" stroke="#1b2d42"/>
+<text x="762" y="130" font-family="-apple-system, sans-serif" font-size="12" fill="#57606a">Lower &amp; Upper Usage Tiers</text>
+</svg>

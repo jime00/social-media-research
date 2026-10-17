@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="640" viewBox="0 0 1024 640">
+<rect width="1024" height="640" fill="#ffffff"/>
+<text x="512.0" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Random Forest Regression Residual Distribution</text>
+<line x1="80" y1="560.0" x2="984" y2="560.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="564.0" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">0</text>
+<line x1="80" y1="472.7586084107823" x2="984" y2="472.7586084107823" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="476.7586084107823" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">250</text>
+<line x1="80" y1="385.5172168215646" x2="984" y2="385.5172168215646" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="389.5172168215646" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">500</text>
+<line x1="80" y1="298.2758252323469" x2="984" y2="298.2758252323469" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="302.2758252323469" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">750</text>
+<line x1="80" y1="211.03443364312926" x2="984" y2="211.03443364312926" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="215.03443364312926" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">1000</text>
+<line x1="80" y1="123.79304205391162" x2="984" y2="123.79304205391162" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="127.79304205391162" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">1250</text>
+<rect x="87.53333333333333" y="550.9268952747213" width="60.266666666666666" height="9.073104725278638" fill="#bc5689" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="117.66666666666666" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">-2.8</text>
+<rect x="162.86666666666665" y="532.0827546914503" width="60.266666666666666" height="27.91724530854966" fill="#bc5689" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="192.99999999999997" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">-2.2</text>
+<rect x="238.2" y="501.02481928568886" width="60.266666666666666" height="58.97518071431115" fill="#bc5689" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="268.3333333333333" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">-1.8</text>
+<rect x="313.5333333333333" y="447.6330876330876" width="60.266666666666666" height="112.36691236691237" fill="#bc5689" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="343.66666666666663" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">-1.2</text>
+<rect x="388.8666666666667" y="401.5696328739807" width="60.266666666666666" height="158.4303671260193" fill="#2a4365" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="419.0" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">-0.8</text>
+<rect x="464.19999999999993" y="362.834455008368" width="60.266666666666666" height="197.16554499163198" fill="#2a4365" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="494.33333333333326" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">-0.2</text>
+<rect x="539.5333333333333" y="133.91304347826082" width="60.266666666666666" height="426.0869565217392" fill="#2a4365" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="569.6666666666666" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">+0.2</text>
+<rect x="614.8666666666666" y="299.32272193141756" width="60.266666666666666" height="260.67727806858244" fill="#2a4365" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="644.9999999999999" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">+0.8</text>
+<rect x="690.1999999999999" y="468.222056048143" width="60.266666666666666" height="91.77794395185701" fill="#bc5689" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="720.3333333333333" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">+1.2</text>
+<rect x="765.5333333333333" y="523.3586155325286" width="60.266666666666666" height="36.641384467471426" fill="#bc5689" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="795.6666666666666" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">+1.8</text>
+<rect x="840.8666666666666" y="554.0675853719332" width="60.266666666666666" height="5.932414628066803" fill="#bc5689" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="870.9999999999999" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">+2.2</text>
+<rect x="916.1999999999999" y="558.2551721682156" width="60.266666666666666" height="1.7448278317843537" fill="#bc5689" rx="2" stroke="#1b2d42" stroke-width="1"/>
+<text x="946.3333333333333" y="582" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">+2.8</text>
+<line x1="532.0" y1="70" x2="532.0" y2="560" stroke="#d97706" stroke-width="2.5" stroke-dasharray="4,3"/>
+<line x1="80" y1="560" x2="984" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="80" y1="70" x2="80" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<text x="512.0" y="618" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">Residual Error (Actual - Predicted Score; Symmetrically Centered near 0.0)</text>
+<text x="26" y="315.0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 26 315.0)">Count of Test Records</text>
+<rect x="744" y="85" width="220" height="55" fill="#f8fafc" stroke="#cbd5e1" rx="6"/>
+<line x1="759" y1="112" x2="789" y2="112" stroke="#d97706" stroke-width="2.5" stroke-dasharray="4,3"/>
+<text x="796" y="116" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#1b2d42">Mean Error: ~0.00</text>
+</svg>

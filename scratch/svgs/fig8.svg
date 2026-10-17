@@ -1,61 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="640" viewBox="0 0 1024 640">
 <rect width="1024" height="640" fill="#ffffff"/>
-<text x="512.0" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Daily Study Time Across Social Media Usage Levels (N = 405)</text>
-<line x1="90" y1="560.0" x2="984" y2="560.0" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="565.0" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">0 h</text>
-<line x1="90" y1="484.61538461538464" x2="984" y2="484.61538461538464" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="489.61538461538464" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">2 h</text>
-<line x1="90" y1="409.2307692307692" x2="984" y2="409.2307692307692" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="414.2307692307692" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">4 h</text>
-<line x1="90" y1="333.8461538461538" x2="984" y2="333.8461538461538" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="338.8461538461538" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">6 h</text>
-<line x1="90" y1="258.46153846153845" x2="984" y2="258.46153846153845" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="263.46153846153845" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">8 h</text>
-<line x1="90" y1="183.07692307692304" x2="984" y2="183.07692307692304" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="188.07692307692304" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">10 h</text>
-<line x1="90" y1="107.69230769230768" x2="984" y2="107.69230769230768" stroke="#e2e8f0" stroke-width="1"/>
-<text x="78" y="112.69230769230768" font-family="-apple-system, sans-serif" font-size="13" text-anchor="end" fill="#57606a">12 h</text>
-<text x="28" y="315.0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 28 315.0)">Daily Study Duration (Hours)</text>
-<line x1="239.0" y1="484.61538461538464" x2="239.0" y2="560.0" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="239.0" y1="371.53846153846155" x2="239.0" y2="258.46153846153845" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="219.0" y1="560.0" x2="259.0" y2="560.0" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="219.0" y1="258.46153846153845" x2="259.0" y2="258.46153846153845" stroke="#1b2d42" stroke-width="1.5"/>
-<rect x="184.0" y="371.53846153846155" width="110" height="113.0769230769231" fill="#ffffff" stroke="#1b2d42" stroke-width="2"/>
-<line x1="184.0" y1="428.0769230769231" x2="294.0" y2="428.0769230769231" stroke="#d97706" stroke-width="2.5"/>
-<polygon points="239.0,410.26153846153846 244.0,415.26153846153846 239.0,420.26153846153846 234.0,415.26153846153846" fill="#2e7d32" stroke="#1b2d42" stroke-width="1"/>
-<circle cx="239.0" cy="220.76923076923077" r="3.5" fill="#ffffff" stroke="#1b2d42" stroke-width="1.5"/>
-<circle cx="239.0" cy="183.07692307692304" r="3.5" fill="#ffffff" stroke="#1b2d42" stroke-width="1.5"/>
-<circle cx="239.0" cy="183.07692307692304" r="3.5" fill="#ffffff" stroke="#1b2d42" stroke-width="1.5"/>
-<circle cx="239.0" cy="107.69230769230768" r="3.5" fill="#ffffff" stroke="#1b2d42" stroke-width="1.5"/>
-<text x="239.0" y="582" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1b2d42">Low Usage (≤ 3 hrs)</text>
-<text x="239.0" y="600" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">n = 187 | Mean: 3.84 h | Med: 3.5 h</text>
-<line x1="537.0" y1="484.61538461538464" x2="537.0" y2="560.0" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="537.0" y1="390.38461538461536" x2="537.0" y2="258.46153846153845" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="517.0" y1="560.0" x2="557.0" y2="560.0" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="517.0" y1="258.46153846153845" x2="557.0" y2="258.46153846153845" stroke="#1b2d42" stroke-width="1.5"/>
-<rect x="482.0" y="390.38461538461536" width="110" height="94.23076923076928" fill="#ffffff" stroke="#1b2d42" stroke-width="2"/>
-<line x1="482.0" y1="446.9230769230769" x2="592.0" y2="446.9230769230769" stroke="#d97706" stroke-width="2.5"/>
-<polygon points="537.0,431.3692307692308 542.0,436.3692307692308 537.0,441.3692307692308 532.0,436.3692307692308" fill="#d97706" stroke="#1b2d42" stroke-width="1"/>
-<circle cx="537.0" cy="183.07692307692304" r="3.5" fill="#ffffff" stroke="#1b2d42" stroke-width="1.5"/>
-<circle cx="537.0" cy="183.07692307692304" r="3.5" fill="#ffffff" stroke="#1b2d42" stroke-width="1.5"/>
-<text x="537.0" y="582" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1b2d42">Moderate (3–7 hrs)</text>
-<text x="537.0" y="600" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">n = 176 | Mean: 3.28 h | Med: 3.0 h</text>
-<line x1="835.0" y1="522.3076923076923" x2="835.0" y2="560.0" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="835.0" y1="428.0769230769231" x2="835.0" y2="333.8461538461538" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="815.0" y1="560.0" x2="855.0" y2="560.0" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="815.0" y1="333.8461538461538" x2="855.0" y2="333.8461538461538" stroke="#1b2d42" stroke-width="1.5"/>
-<rect x="780.0" y="428.0769230769231" width="110" height="94.23076923076917" fill="#ffffff" stroke="#1b2d42" stroke-width="2"/>
-<line x1="780.0" y1="484.61538461538464" x2="890.0" y2="484.61538461538464" stroke="#d97706" stroke-width="2.5"/>
-<polygon points="835.0,452.4769230769231 840.0,457.4769230769231 835.0,462.4769230769231 830.0,457.4769230769231" fill="#dc2626" stroke="#1b2d42" stroke-width="1"/>
-<circle cx="835.0" cy="201.92307692307696" r="3.5" fill="#ffffff" stroke="#1b2d42" stroke-width="1.5"/>
-<circle cx="835.0" cy="183.07692307692304" r="3.5" fill="#ffffff" stroke="#1b2d42" stroke-width="1.5"/>
-<text x="835.0" y="582" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1b2d42">High Usage (> 7 hrs)</text>
-<text x="835.0" y="600" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">n = 42 | Mean: 2.72 h | Med: 2.0 h</text>
-<line x1="90" y1="560" x2="984" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
-<line x1="90" y1="70" x2="90" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
-<text x="512.0" y="628" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">Usage Tiers (Mean Study Time Drops from 3.84 hrs → 3.28 hrs → 2.72 hrs; 1.12 h Displacement)</text>
-<line x1="784" y1="85" x2="804" y2="85" stroke="#d97706" stroke-width="2.5"/>
-<text x="812" y="89" font-family="-apple-system, sans-serif" font-size="12" fill="#24292f">Median Line</text>
-<polygon points="794,102 799,107 794,112 789,107" fill="#2e7d32" stroke="#1b2d42" stroke-width="1"/>
-<text x="812" y="111" font-family="-apple-system, sans-serif" font-size="12" fill="#24292f">Group Mean (◆)</text>
+<text x="512.0" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Weekly Study Time Across Social Media Usage Levels (N = 500,000)</text>
+<line x1="80" y1="560.0" x2="984" y2="560.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="564.0" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">0 h</text>
+<line x1="80" y1="451.1111111111111" x2="984" y2="451.1111111111111" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="455.1111111111111" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">10 h</text>
+<line x1="80" y1="342.22222222222223" x2="984" y2="342.22222222222223" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="346.22222222222223" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">20 h</text>
+<line x1="80" y1="233.33333333333337" x2="984" y2="233.33333333333337" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="237.33333333333337" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">30 h</text>
+<line x1="80" y1="124.44444444444446" x2="984" y2="124.44444444444446" stroke="#e2e8f0" stroke-width="1"/>
+<text x="68" y="128.44444444444446" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" fill="#57606a">40 h</text>
+<text x="24" y="315.0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 24 315.0)">Weekly Study Duration (Hours)</text>
+<line x1="230.66666666666666" y1="338.3738982103172" x2="230.66666666666666" y2="457.2614459083814" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="230.66666666666666" y1="259.1155330782744" x2="230.66666666666666" y2="140.2279853802101" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="206.66666666666666" y1="457.2614459083814" x2="254.66666666666666" y2="457.2614459083814" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="206.66666666666666" y1="140.2279853802101" x2="254.66666666666666" y2="140.2279853802101" stroke="#1b2d42" stroke-width="1.5"/>
+<rect x="170.66666666666666" y="259.1155330782744" width="120" height="79.2583651320428" fill="#ffffff" stroke="#1b2d42" stroke-width="2"/>
+<line x1="170.66666666666666" y1="297.734016758737" x2="290.66666666666663" y2="297.734016758737" stroke="#d97706" stroke-width="3"/>
+<polygon points="230.66666666666666,295.15041144609506 235.66666666666666,300.15041144609506 230.66666666666666,305.15041144609506 225.66666666666666,300.15041144609506" fill="#2e7d32" stroke="#1b2d42" stroke-width="1"/>
+<text x="230.66666666666666" y="584" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1b2d42">Low Usage (≤ 3.0 hrs)</text>
+<text x="230.66666666666666" y="602" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Mean: 23.86 h | Med: 24.09 h</text>
+<line x1="532.0" y1="348.7701122225487" x2="532.0" y2="459.86020208055993" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="532.0" y1="274.71005231720784" x2="532.0" y2="163.61996245919659" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="508.0" y1="459.86020208055993" x2="556.0" y2="459.86020208055993" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="508.0" y1="163.61996245919659" x2="556.0" y2="163.61996245919659" stroke="#1b2d42" stroke-width="1.5"/>
+<rect x="472.0" y="274.71005231720784" width="120" height="74.06005990534084" fill="#ffffff" stroke="#1b2d42" stroke-width="2"/>
+<line x1="472.0" y1="311.1380316978873" x2="592.0" y2="311.1380316978873" stroke="#d97706" stroke-width="3"/>
+<polygon points="532.0,307.3162692963122 537.0,312.3162692963122 532.0,317.3162692963122 527.0,312.3162692963122" fill="#d97706" stroke="#1b2d42" stroke-width="1"/>
+<text x="532.0" y="584" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1b2d42">Moderate Usage (3.0–5.0 hrs)</text>
+<text x="532.0" y="602" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Mean: 22.75 h | Med: 22.85 h</text>
+<line x1="833.3333333333333" y1="364.78584473904857" x2="833.3333333333333" y2="472.1420346247283" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="833.3333333333333" y1="293.2150514819288" x2="833.3333333333333" y2="185.85886159624908" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="809.3333333333333" y1="472.1420346247283" x2="857.3333333333333" y2="472.1420346247283" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="809.3333333333333" y1="185.85886159624908" x2="857.3333333333333" y2="185.85886159624908" stroke="#1b2d42" stroke-width="1.5"/>
+<rect x="773.3333333333333" y="293.2150514819288" width="120" height="71.57079325711976" fill="#ffffff" stroke="#1b2d42" stroke-width="2"/>
+<line x1="773.3333333333333" y1="328.3119336056467" x2="893.3333333333333" y2="328.3119336056467" stroke="#d97706" stroke-width="3"/>
+<polygon points="833.3333333333333,323.85773384762206 838.3333333333333,328.85773384762206 833.3333333333333,333.85773384762206 828.3333333333333,328.85773384762206" fill="#dc2626" stroke="#1b2d42" stroke-width="1"/>
+<text x="833.3333333333333" y="584" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1b2d42">High Usage (> 5.0 hrs)</text>
+<text x="833.3333333333333" y="602" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Mean: 21.23 h | Med: 21.28 h</text>
+<line x1="80" y1="560" x2="984" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<line x1="80" y1="70" x2="80" y2="560" stroke="#1b2d42" stroke-width="1.5"/>
+<text x="512.0" y="624" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#24292f">Usage Tiers (Mean Study Time Drops by -3.20 hrs/week from Low to High Usage; Time Displacement)</text>
 </svg>
