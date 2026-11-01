@@ -6,8 +6,8 @@ A semester-long academic research project investigating how social media usage a
 
 - **Topic**: The impact of social media usage on students.
 - **Core Research Question**: *How is social media usage associated with students' mental and physical health and daily habits?*
-- **Primary Data Source**: Secondary student survey dataset from Kaggle.
-- **Current Milestone**: Phase 2 — Dataset Selection & Local Architecture.
+- **Primary Data Source**: [Nitika Chandel: Social Media Impact on Students' Behavior & Outcome](https://www.kaggle.com/code/nitikachandel95/social-media-impact-on-students-behavior-outcome) (*Global Student Digital Behavior Dataset*, $N = 500,000$ records across 50 countries).
+- **Current Milestone**: Phase 4 — Relational SQL Modeling & Machine Learning Evaluation.
 
 ---
 
@@ -31,8 +31,8 @@ A semester-long academic research project investigating how social media usage a
 - Stress and pressure
 
 ### Hypotheses
-- **H1**: Students who spend more time on social media may be more likely to use it as a distraction from personal problems, which could interfere with their ability to focus on schoolwork and daily responsibilities.
-- **H2**: Students who are easily distracted by social media may experience negative effects on their academic performance and sleep.
+- **H1**: Students who spend more time on social media experience reduced weekly study hours due to direct time competition with academic responsibilities (Supported by empirical regression & SQL analysis).
+- **H2**: Frequent social media interruptions and elevated digital addiction degrade sustained attention stamina, sleep quality, and academic productivity (Supported by empirical clustering & ML feature importance).
 
 ---
 
@@ -71,20 +71,24 @@ Because this website uses pure HTML, CSS, and JavaScript, you can run a local pr
 social-media-research/
 ├── index.html        # Home page (Executive Summary, Core Question, Portal Cards, About)
 ├── research.html     # Research Framework (Topic Pillars, 5 Sub-Questions, 8 Variables, Hypotheses)
-├── dataset.html      # Kaggle Dataset details, sample summary (N=405), and cleaning pipeline
-├── analysis.html     # Exploratory Data Analysis visualizations (histograms, bar charts, box plots, heatmaps)
-├── findings.html     # Hypotheses evaluation status (H1 & H2) and study phase
-├── resources.html    # Presentation video embed, proposal documents, and references
+├── dataset.html      # Kaggle Dataset details, sample summary (N=500,000), and cleaning pipeline
+├── analysis.html     # Exploratory Data Analysis (10 charts) & SQL relational analysis (8 queries)
+├── findings.html     # Hypothesis validation status, Machine Learning models (OLS & Random Forest), Limitations
+├── resources.html    # Presentation video embed, proposal documents, and Kaggle references
 ├── resume.html       # Standalone printable resume page for Jimena Bello
 ├── data/
-│   ├── social_media_data.csv         # Raw survey dataset (N=405 records)
-│   └── cleaned_social_media_data.csv # Standardized & cleaned dataset
+│   └── global_student_digital_behavior_dataset.csv # Global dataset (N=500,000, 304 MB, local only / gitignored)
 ├── scripts/
-│   └── clean_data.py # 9-step Python data cleaning and feature engineering pipeline
+│   ├── clean_global_dataset.py         # Comprehensive data audit & quality checks (48 columns)
+│   ├── generate_eda_visualizations_v2.py # 10 empirical EDA visualization generator
+│   ├── train_ml_models.py              # Dual-target ML pipeline (OLS & Random Forest Regressor/Classifier)
+│   ├── calculate_sql_results.py        # Verification script for 8 core SQL queries
+│   └── analysis_queries.sql            # SQL schema & analytical query definitions
+├── images/           # High-resolution PNG figures (10 EDA charts + 4 ML evaluation plots)
 ├── css/
 │   └── style.css     # CSS design tokens, responsive layout, and visual styles
 ├── js/
 │   └── main.js       # Vanilla JS for multi-page active links, mobile menu, & topic filters
-├── .gitignore        # Ignores macOS system files and IDE caches
+├── .gitignore        # Ignores macOS system files, IDE caches, and 304 MB CSV dataset
 └── README.md         # Academic documentation and local setup instructions
 ```
