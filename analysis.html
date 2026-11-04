@@ -48,8 +48,19 @@
     <div class="page-header">
         <h1>Exploratory Data Analysis</h1>
         <p>
-            Statistical visualization framework and planned exploratory analysis on our Kaggle student dataset.
+            Statistical visualization framework, interactive Plotly exploration, and relational SQL queries on our 500,000-student dataset.
         </p>
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 14px; flex-wrap: wrap;">
+            <a href="#eda-static" class="btn btn-outline" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.4); font-size: 0.86rem; padding: 6px 14px;">
+                📊 Static EDA Charts (Figures 1–10)
+            </a>
+            <a href="#interactive-visualizations" class="btn btn-primary" style="background: var(--primary-color); color: #ffffff; font-size: 0.86rem; padding: 6px 14px;">
+                ✨ Interactive Visualizations (Plotly)
+            </a>
+            <a href="#sql-analysis" class="btn btn-outline" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.4); font-size: 0.86rem; padding: 6px 14px;">
+                🗄️ SQL Relational Analysis
+            </a>
+        </div>
     </div>
 
     <!-- ====================================================================
@@ -60,7 +71,7 @@
         <!-- ================================================================
              3. EXPLORATORY DATA ANALYSIS CHARTS
              ================================================================ -->
-        <section class="card">
+        <section class="card" id="eda-static">
             <h2>Exploratory Data Analysis Visualizations</h2>
             
             <!-- Dataset exploratory analysis context banner -->
@@ -310,7 +321,92 @@
         </section>
 
         <!-- ================================================================
-             4. SQL RELATIONAL DATA ANALYSIS (ASSIGNMENT 4)
+             4. INTERACTIVE VISUALIZATIONS (POWERED BY PLOTLY.JS)
+             ================================================================ -->
+        <section class="card" id="interactive-visualizations">
+            <h2>Interactive Data Visualizations (Powered by Plotly)</h2>
+
+            <!-- Interactive Visualizations context banner -->
+            <div class="eda-banner" style="background: linear-gradient(135deg, #fbeff5 0%, #ebf2fa 100%); border-left-color: var(--primary-color);">
+                <span class="eda-banner-icon">✨</span>
+                <div class="eda-banner-text">
+                    <strong>Dynamic Exploratory Visualizations (N = 500,000)</strong>
+                    <p>
+                        Interact directly with the global student dataset using responsive client-side Plotly.js charts.
+                        Explore bivariate relationships, compare demographic student cohorts, and inspect five-number quartile distributions 
+                        using custom dropdown selectors, dynamic hover cards, zoom/pan tools, and group filters.
+                    </p>
+                    <div style="margin-top: 8px; font-size: 0.85rem; color: var(--navy-dark); font-weight: 600;">
+                        💡 Interaction Tip: Use the dropdown menus at the top of each chart to switch cohorts and metrics. Hover over any point, bar, or box to view exact figures.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Charts Stack -->
+            <div style="display: flex; flex-direction: column; gap: 32px; margin-top: 24px;">
+
+                <!-- Interactive Chart 1: Scatter Plot -->
+                <figure class="chart-card" style="box-shadow: var(--shadow-md);">
+                    <div class="chart-card-header">
+                        <span class="chart-figure-label" style="background-color: var(--primary-color); color: white;">Interactive Figure 1</span>
+                        <h3 class="chart-card-title">Social Media Hours vs. Sustained Attention Span (Interactive Bivariate Scatter)</h3>
+                    </div>
+                    <div style="padding: 12px 16px; background: #ffffff; border-radius: var(--radius-sm);">
+                        <div id="interactive-scatter" style="width: 100%; min-height: 520px;"></div>
+                    </div>
+                    <figcaption class="chart-caption">
+                        <strong>Caption:</strong> Stratified empirical sample (<em>N</em> = 1,500 students) across all 6 education levels, depicting daily social media screen time against sustained attention span with interactive cohort filtering.
+                    </figcaption>
+                    <div class="chart-breakdown">
+                        <p><strong>Observation:</strong> Daily screen time exhibits a pronounced inverse association with attention span across all educational tiers. Students reporting under 2.0 hours of social media maintain median attention spans of 53–58 minutes, whereas heavy users exceeding 6.0 hours daily drop to 28–35 minutes.</p>
+                        <p><strong>Interpretation:</strong> Prolonged digital immersion conditions attentional circuits to expect rapid, algorithmically delivered micro-stimuli (short-form videos, push notifications). This high frequency of task-switching reduces the cognitive stamina required for deep academic concentration.</p>
+                        <p><strong>Research Implication:</strong> Directly substantiates <strong>Hypothesis 2</strong> (Attentional Fragmentation). The consistency of the downward slope across secondary, diploma, and graduate cohorts proves that attentional depletion is a ubiquitous digital media effect rather than an artifact of grade level.</p>
+                    </div>
+                </figure>
+
+                <!-- Interactive Chart 2: Comparative Bar Chart -->
+                <figure class="chart-card" style="box-shadow: var(--shadow-md);">
+                    <div class="chart-card-header">
+                        <span class="chart-figure-label" style="background-color: var(--navy-dark); color: white;">Interactive Figure 2</span>
+                        <h3 class="chart-card-title">Cross-Group Behavioral & Academic Analysis (Interactive Multi-Metric Bar Chart)</h3>
+                    </div>
+                    <div style="padding: 12px 16px; background: #ffffff; border-radius: var(--radius-sm);">
+                        <div id="interactive-barchart" style="width: 100%; min-height: 500px;"></div>
+                    </div>
+                    <figcaption class="chart-caption">
+                        <strong>Caption:</strong> Cross-group comparison across School, Diploma, Graduate, Postgraduate, Dropout, and PhD cohorts across 6 selectable empirical metrics.
+                    </figcaption>
+                    <div class="chart-breakdown">
+                        <p><strong>Observation:</strong> Toggling between metrics reveals that Dropout students register the highest average daily social media hours (3.82 hrs/day) and the highest academic risk rate (5.14%), whereas Postgraduate and PhD students sustain the highest weekly study hours (26.4 hrs/week) and lowest risk rates (&lt; 1.8%).</p>
+                        <p><strong>Interpretation:</strong> Academic progress and institutional engagement serve as protective buffers. Advanced students exhibit greater metacognitive self-regulation and dedicated study time, buffering them against the time-displacement effects of digital platforms.</p>
+                        <p><strong>Research Implication:</strong> Demonstrates that academic vulnerability to digital media is unequally distributed. Early-stage secondary and diploma students, as well as disengaged students, require the most proactive digital wellness coaching.</p>
+                    </div>
+                </figure>
+
+                <!-- Interactive Chart 3: Five-Number Summary Box Plot -->
+                <figure class="chart-card" style="box-shadow: var(--shadow-md);">
+                    <div class="chart-card-header">
+                        <span class="chart-figure-label" style="background-color: var(--primary-color); color: white;">Interactive Figure 3</span>
+                        <h3 class="chart-card-title">Student Lifestyle Distributions: Sleep & Study Hours (Interactive Box & Whisker Plot)</h3>
+                    </div>
+                    <div style="padding: 12px 16px; background: #ffffff; border-radius: var(--radius-sm);">
+                        <div id="interactive-boxplot" style="width: 100%; min-height: 500px;"></div>
+                    </div>
+                    <figcaption class="chart-caption">
+                        <strong>Caption:</strong> Full Five-Number Summary distributions (Minimum, Q1, Median, Q3, Maximum) for Sleep Duration and Weekly Study Duration across student cohorts.
+                    </figcaption>
+                    <div class="chart-breakdown">
+                        <p><strong>Observation:</strong> While nightly sleep duration shows modest variance across cohorts (median ranges from 6.8 to 7.1 hours/night), weekly study duration exhibits substantial dispersion (IQR = 7.14 hours), with top-quartile students investing over 26.6 hours/week compared to under 19.5 hours for bottom-quartile students.</p>
+                        <p><strong>Interpretation:</strong> Sleep requirements have a strong biological floor that limits compression, whereas study time is highly elastic and discretionary. Consequently, when social media screen time expands, it primarily displaces independent study hours rather than total sleep.</p>
+                        <p><strong>Research Implication:</strong> Confirms <strong>Hypothesis 1</strong> (Time Displacement Mechanism). Discretionary academic preparation time is the primary casualty of high daily digital immersion, explaining why productivity scores drop sharply even when sleep duration appears superficially adequate.</p>
+                    </div>
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- ================================================================
+             5. SQL RELATIONAL DATA ANALYSIS (ASSIGNMENT 4)
              ================================================================ -->
         <section class="card" id="sql-analysis">
             <h2>SQL Relational Data Analysis</h2>
@@ -997,6 +1093,12 @@ ORDER BY total_students DESC;</code>
         </div>
     </footer>
 
+    <!-- Plotly.js CDN for Interactive Visualizations -->
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <!-- Empirical Dataset Pre-Aggregated Payload -->
+    <script src="js/interactive_data.js"></script>
+    <!-- Interactive Plotly Visualizations Script -->
+    <script src="js/interactive-charts.js"></script>
     <!-- Vanilla JavaScript File -->
     <script src="js/main.js"></script>
 </body>

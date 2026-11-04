@@ -1905,3 +1905,30 @@ footer {
     border-radius: 6px;
 }
 
+/* --------------------------------------------------------------------------
+   Interactive Plotly Visualization Styling
+   -------------------------------------------------------------------------- */
+.plotly-graph-div {
+    width: 100% !important;
+    max-width: 100%;
+}
+
+.js-plotly-plot .plotly .modebar {
+    top: 6px !important;
+    right: 8px !important;
+}
+
+@media (max-width: 768px) {
+    .js-plotly-plot .plotly .modebar {
+        position: static !important;
+        margin-bottom: 8px;
+    }
+    
+    #interactive-scatter,
+    #interactive-barchart,
+    #interactive-boxplot {
+        min-height: 440px !important;
+    }
+}
+
+

@@ -1,3 +1,19 @@
+#!/usr/bin/env python3
+"""
+Machine Learning Training & Evaluation Pipeline for Global Student Digital Behavior Dataset.
+Trains and compares 4 distinct predictive architectures:
+  1. Ordinary Least Squares (OLS) Linear Regression
+  2. Decision Tree Regressor
+  3. Random Forest Regressor (Bagging Ensemble)
+  4. Gradient Boosting Regressor (Boosting Ensemble)
+Plus Hurdle Academic Risk Classifier for zero-inflated academic risk detection.
+
+Target: productivity_score (1.0 to 10.0 scale)
+Risk Target: academic_risk_score > 0 (Hurdle threshold)
+Holdout: 80% Train / 20% Test (N_train = 16,000, N_test = 4,000 from 20,000 stratified rows)
+Zero Data Leakage: Predictors strictly exclude academic_risk_score and target derivatives.
+"""
+
 import csv
 import math
 import random
@@ -7,7 +23,7 @@ import json
 
 random.seed(42)
 
-print("Starting Machine Learning pipeline for Global Student Dataset...")
+print("Starting Expanded Machine Learning pipeline for Global Student Dataset...")
 path = 'data/global_student_digital_behavior_dataset.csv'
 
 feature_names = [
@@ -23,12 +39,12 @@ feature_names = [
     'late_night_score'
 ]
 
-# Read sample of 20,000 records for fast, reliable tree training & OLS
+# Read representative sample of 20,000 records (evenly spaced across 500,000)
 data = []
 with open(path, 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
     for i, r in enumerate(reader):
-        if i % 25 == 0:  # 20,000 evenly spaced rows across 500,000
+        if i % 25 == 0:  # 20,000 evenly spaced rows
             d = {feat: float(r[feat]) for feat in feature_names}
             d['productivity_score'] = float(r['productivity_score'])
             d['study_hours_per_week'] = float(r['study_hours_per_week'])
@@ -48,34 +64,46 @@ test_set = data[split_idx:]
 n_train, n_test = len(train_set), len(test_set)
 print(f"Train set: {n_train} | Test set: {n_test}")
 
-# ==============================================================================
-# 1. LINEAR REGRESSION (OLS)
-# ==============================================================================
-# Feature normalization
-means = {f: sum(d[f] for d in train_set)/n_train for f in feature_names}
-stds = {f: math.sqrt(sum((d[f]-means[f])**2 for d in train_set)/n_train) for f in feature_names}
-for f in feature_names:
-    if stds[f] == 0: stds[f] = 1.0
-
-# Target: productivity_score
 y_train = [d['productivity_score'] for d in train_set]
 y_test = [d['productivity_score'] for d in test_set]
-my_train = sum(y_train)/n_train
+my_train = sum(y_train) / n_train
+my_test = sum(y_test) / n_test
+ss_tot = sum((y - my_test)**2 for y in y_test)
+
+# Metric calculation helper
+def eval_regression(preds, actuals):
+    n = len(actuals)
+    mse = sum((p - a)**2 for p, a in zip(preds, actuals)) / n
+    rmse = math.sqrt(mse)
+    mae = sum(abs(p - a) for p, a in zip(preds, actuals)) / n
+    ss_res = sum((a - p)**2 for a, p in zip(actuals, preds))
+    r2 = 1.0 - (ss_res / ss_tot)
+    return round(r2, 4), round(rmse, 4), round(mae, 4)
+
+# ==============================================================================
+# 1. LINEAR REGRESSION (OLS via Normalized Gradient Descent)
+# ==============================================================================
+means = {f: sum(d[f] for d in train_set) / n_train for f in feature_names}
+stds = {f: math.sqrt(sum((d[f] - means[f])**2 for d in train_set) / n_train) for f in feature_names}
+for f in feature_names:
+    if stds[f] == 0:
+        stds[f] = 1.0
 
 weights = [0.0] * len(feature_names)
 bias = my_train
 lr = 0.08
-epochs = 250
+epochs = 300
 
 for _ in range(epochs):
     gw = [0.0] * len(feature_names)
     gb = 0.0
     for d in train_set:
-        pred = bias + sum(weights[j] * (d[feature_names[j]] - means[feature_names[j]]) / stds[feature_names[j]] for j in range(len(feature_names)))
+        norm_x = [(d[feature_names[j]] - means[feature_names[j]]) / stds[feature_names[j]] for j in range(len(feature_names))]
+        pred = bias + sum(weights[j] * norm_x[j] for j in range(len(feature_names)))
         err = pred - d['productivity_score']
         gb += err
         for j in range(len(feature_names)):
-            gw[j] += err * (d[feature_names[j]] - means[feature_names[j]]) / stds[feature_names[j]]
+            gw[j] += err * norm_x[j]
     bias -= lr * (gb / n_train)
     for j in range(len(feature_names)):
         weights[j] -= lr * (gw[j] / n_train)
@@ -83,25 +111,15 @@ for _ in range(epochs):
 lr_test_preds = []
 for d in test_set:
     p = bias + sum(weights[j] * (d[feature_names[j]] - means[feature_names[j]]) / stds[feature_names[j]] for j in range(len(feature_names)))
-    # clamp 1 to 10
     p = max(1.0, min(10.0, p))
     lr_test_preds.append(p)
 
-lr_mse = sum((p - y)**2 for p, y in zip(lr_test_preds, y_test)) / n_test
-lr_rmse = math.sqrt(lr_mse)
-lr_mae = sum(abs(p - y) for p, y in zip(lr_test_preds, y_test)) / n_test
-my_test = sum(y_test)/n_test
-ss_tot = sum((y - my_test)**2 for y in y_test)
-ss_res_lr = sum((y - p)**2 for y, p in zip(y_test, lr_test_preds))
-lr_r2 = 1.0 - (ss_res_lr / ss_tot)
-
-print(f"Linear Regression Results (Target: Productivity Score):")
-print(f"  R2: {lr_r2:.4f} | RMSE: {lr_rmse:.4f} | MAE: {lr_mae:.4f}")
+lr_r2, lr_rmse, lr_mae = eval_regression(lr_test_preds, y_test)
+print(f"1. Linear Regression:      R2 = {lr_r2:.4f} | RMSE = {lr_rmse:.4f} | MAE = {lr_mae:.4f}")
 
 # ==============================================================================
-# 2. RANDOM FOREST REGRESSOR
+# 2. DECISION TREE REGRESSOR
 # ==============================================================================
-# Decision Tree Node for regression
 class DecisionNode:
     def __init__(self, feature=None, threshold=None, left=None, right=None, value=None):
         self.feature = feature
@@ -110,30 +128,30 @@ class DecisionNode:
         self.right = right
         self.value = value
 
-def build_tree(dataset, depth=0, max_depth=5, min_samples=20, m_features=4):
-    vals = [d['productivity_score'] for d in dataset]
+def build_tree(dataset, target_key='productivity_score', depth=0, max_depth=5, min_samples=25, m_features=None):
+    vals = [d[target_key] for d in dataset]
     if depth >= max_depth or len(dataset) <= min_samples or len(set(vals)) == 1:
-        return DecisionNode(value=sum(vals)/len(vals))
+        return DecisionNode(value=sum(vals) / len(vals))
     
-    sub_feats = random.sample(feature_names, min(m_features, len(feature_names)))
+    feats = feature_names if m_features is None else random.sample(feature_names, min(m_features, len(feature_names)))
     best_feat, best_thresh, best_var_red = None, None, 0.0
-    current_mean = sum(vals)/len(vals)
+    current_mean = sum(vals) / len(vals)
     current_var = sum((v - current_mean)**2 for v in vals)
     
-    for f in sub_feats:
+    for f in feats:
         f_vals = sorted(set(d[f] for d in dataset))
         if len(f_vals) <= 1:
             continue
-        step = max(1, len(f_vals) // 5)
-        candidate_thresh = [f_vals[k] for k in range(step, len(f_vals), step)]
+        step = max(1, len(f_vals) // 6)
+        candidates = [f_vals[k] for k in range(step, len(f_vals), step)]
         
-        for t in candidate_thresh:
-            left_v = [d['productivity_score'] for d in dataset if d[f] <= t]
-            right_v = [d['productivity_score'] for d in dataset if d[f] > t]
+        for t in candidates:
+            left_v = [d[target_key] for d in dataset if d[f] <= t]
+            right_v = [d[target_key] for d in dataset if d[f] > t]
             if len(left_v) < 10 or len(right_v) < 10:
                 continue
-            v_l = sum((v - sum(left_v)/len(left_v))**2 for v in left_v)
-            v_r = sum((v - sum(right_v)/len(right_v))**2 for v in right_v)
+            v_l = sum((v - sum(left_v) / len(left_v))**2 for v in left_v)
+            v_r = sum((v - sum(right_v) / len(right_v))**2 for v in right_v)
             red = current_var - (v_l + v_r)
             if red > best_var_red:
                 best_var_red = red
@@ -141,12 +159,12 @@ def build_tree(dataset, depth=0, max_depth=5, min_samples=20, m_features=4):
                 best_thresh = t
                 
     if best_feat is None:
-        return DecisionNode(value=sum(vals)/len(vals))
+        return DecisionNode(value=sum(vals) / len(vals))
         
     left_sub = [d for d in dataset if d[best_feat] <= best_thresh]
     right_sub = [d for d in dataset if d[best_feat] > best_thresh]
-    left_node = build_tree(left_sub, depth+1, max_depth, min_samples, m_features)
-    right_node = build_tree(right_sub, depth+1, max_depth, min_samples, m_features)
+    left_node = build_tree(left_sub, target_key, depth + 1, max_depth, min_samples, m_features)
+    right_node = build_tree(right_sub, target_key, depth + 1, max_depth, min_samples, m_features)
     return DecisionNode(feature=best_feat, threshold=best_thresh, left=left_node, right=right_node)
 
 def predict_tree(node, sample):
@@ -157,12 +175,22 @@ def predict_tree(node, sample):
     else:
         return predict_tree(node.right, sample)
 
-print("Training Random Forest Regressor (12 trees, max_depth=5, subsample=1200)...")
+print("Training Decision Tree Regressor (max_depth=5, min_samples=30)...")
+single_tree_sample = train_set[:6000]
+dt_tree = build_tree(single_tree_sample, target_key='productivity_score', depth=0, max_depth=5, min_samples=30)
+dt_test_preds = [max(1.0, min(10.0, predict_tree(dt_tree, d))) for d in test_set]
+dt_r2, dt_rmse, dt_mae = eval_regression(dt_test_preds, y_test)
+print(f"2. Decision Tree:          R2 = {dt_r2:.4f} | RMSE = {dt_rmse:.4f} | MAE = {dt_mae:.4f}")
+
+# ==============================================================================
+# 3. RANDOM FOREST REGRESSOR (Bagging Ensemble)
+# ==============================================================================
+print("Training Random Forest Regressor (15 trees, max_depth=5, m_features=4)...")
 rf_trees = []
-n_trees = 12
+n_trees = 15
 for t in range(n_trees):
-    boot = [random.choice(train_set) for _ in range(1200)]
-    tree = build_tree(boot, max_depth=5, min_samples=20, m_features=4)
+    boot = [random.choice(train_set) for _ in range(1500)]
+    tree = build_tree(boot, target_key='productivity_score', max_depth=5, min_samples=20, m_features=4)
     rf_trees.append(tree)
 
 rf_test_preds = []
@@ -171,20 +199,72 @@ for d in test_set:
     p = max(1.0, min(10.0, p))
     rf_test_preds.append(p)
 
-rf_mse = sum((p - y)**2 for p, y in zip(rf_test_preds, y_test)) / n_test
-rf_rmse = math.sqrt(rf_mse)
-rf_mae = sum(abs(p - y) for p, y in zip(rf_test_preds, y_test)) / n_test
-ss_res_rf = sum((y - p)**2 for y, p in zip(y_test, rf_test_preds))
-rf_r2 = 1.0 - (ss_res_rf / ss_tot)
-
-
-print(f"Random Forest Results (Target: Productivity Score):")
-print(f"  R2: {rf_r2:.4f} | RMSE: {rf_rmse:.4f} | MAE: {rf_mae:.4f}")
+rf_r2, rf_rmse, rf_mae = eval_regression(rf_test_preds, y_test)
+print(f"3. Random Forest:          R2 = {rf_r2:.4f} | RMSE = {rf_rmse:.4f} | MAE = {rf_mae:.4f}")
 
 # ==============================================================================
-# 3. FEATURE IMPORTANCES
+# 4. GRADIENT BOOSTING REGRESSOR (Residual Boosting Ensemble)
 # ==============================================================================
-# Feature importance calculated via tree splits and OLS standardized weights
+print("Training Gradient Boosting Regressor (10 boosting stages, lr=0.15, depth=3)...")
+# Train on 4,000 representative training records for fast iterative boosting
+gb_sample = [dict(d) for d in train_set[:4000]]
+gb_base_pred = sum(d['productivity_score'] for d in gb_sample) / len(gb_sample)
+
+gb_trees = []
+gb_lr = 0.15
+n_boost_rounds = 10
+
+# Initialize current predictions
+curr_preds = [gb_base_pred] * len(gb_sample)
+
+for round_num in range(n_boost_rounds):
+    # Compute pseudo-residuals
+    for i, d in enumerate(gb_sample):
+        d['residual'] = d['productivity_score'] - curr_preds[i]
+        
+    # Fit shallow tree to residuals
+    tree = build_tree(gb_sample, target_key='residual', max_depth=3, min_samples=30, m_features=5)
+    gb_trees.append(tree)
+    
+    # Update predictions
+    for i, d in enumerate(gb_sample):
+        curr_preds[i] += gb_lr * predict_tree(tree, d)
+
+# Evaluate Gradient Boosting on test set
+gb_test_preds = []
+for d in test_set:
+    p = gb_base_pred + sum(gb_lr * predict_tree(t, d) for t in gb_trees)
+    p = max(1.0, min(10.0, p))
+    gb_test_preds.append(p)
+
+gb_r2, gb_rmse, gb_mae = eval_regression(gb_test_preds, y_test)
+print(f"4. Gradient Boosting:      R2 = {gb_r2:.4f} | RMSE = {gb_rmse:.4f} | MAE = {gb_mae:.4f}")
+
+# ==============================================================================
+# 5. ACADEMIC RISK HURDLE CLASSIFIER (Predicting academic_risk_score > 0)
+# ==============================================================================
+risk_actual = [d['at_risk'] for d in test_set]
+risk_pred = [
+    1 if (d['brain_rot_index'] > 34 and d['digital_addiction_score'] > 22 and d['academic_motivation'] < 4.5)
+    else 0
+    for d in test_set
+]
+
+tp = sum(1 for a, p in zip(risk_actual, risk_pred) if a == 1 and p == 1)
+fp = sum(1 for a, p in zip(risk_actual, risk_pred) if a == 0 and p == 1)
+fn = sum(1 for a, p in zip(risk_actual, risk_pred) if a == 1 and p == 0)
+tn = sum(1 for a, p in zip(risk_actual, risk_pred) if a == 0 and p == 0)
+
+acc = (tp + tn) / len(test_set)
+prec = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+rec = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0.0
+
+print(f"5. Hurdle Risk Classifier: Accuracy = {acc*100:.2f}% | Precision = {prec*100:.2f}% | Recall = {rec*100:.2f}% | F1 = {f1:.4f}")
+
+# ==============================================================================
+# 6. FEATURE IMPORTANCES
+# ==============================================================================
 feature_importance = [
     ("Brain Rot Index", 0.324),
     ("Attention Span (Mins)", 0.286),
@@ -198,47 +278,48 @@ feature_importance = [
     ("Late Night Score", 0.008)
 ]
 
-# Risk classification evaluation metrics
-risk_actual = [d['at_risk'] for d in test_set]
-risk_pred = [1 if (d['brain_rot_index'] > 34 and d['digital_addiction_score'] > 22 and d['academic_motivation'] < 4.5) else 0 for d in test_set]
-
-tp = sum(1 for a, p in zip(risk_actual, risk_pred) if a == 1 and p == 1)
-fp = sum(1 for a, p in zip(risk_actual, risk_pred) if a == 0 and p == 1)
-fn = sum(1 for a, p in zip(risk_actual, risk_pred) if a == 1 and p == 0)
-tn = sum(1 for a, p in zip(risk_actual, risk_pred) if a == 0 and p == 0)
-
-acc = (tp + tn) / len(test_set)
-prec = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-rec = tp / (tp + fn) if (tp + fn) > 0 else 0.0
-f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0.0
-
-print(f"Risk Classification Evaluation (Positive: academic_risk_score > 0):")
-print(f"  Accuracy: {acc*100:.2f}% | Precision: {prec*100:.2f}% | Recall: {rec*100:.2f}% | F1: {f1:.3f}")
-
-# Save JSON metrics
+# Write ml_results.json
 ml_metrics = {
     'linear_regression': {
-        'r2': round(lr_r2, 4),
-        'rmse': round(lr_rmse, 4),
-        'mae': round(lr_mae, 4),
+        'r2': lr_r2,
+        'rmse': lr_rmse,
+        'mae': lr_mae,
+        'description': 'Fits a linear hyperplane; provides interpretable baseline coefficients.',
         'coefficients': [
             {'feature': f, 'weight': round(w, 4)}
             for f, w in sorted(zip(feature_names, weights), key=lambda x: abs(x[1]), reverse=True)
         ]
     },
+    'decision_tree': {
+        'r2': dt_r2,
+        'rmse': dt_rmse,
+        'mae': dt_mae,
+        'max_depth': 5,
+        'description': 'Partitions student space into recursive if/else decision boxes based on variance reduction.'
+    },
     'random_forest': {
-        'r2': round(rf_r2, 4),
-        'rmse': round(rf_rmse, 4),
-        'mae': round(rf_mae, 4),
+        'r2': rf_r2,
+        'rmse': rf_rmse,
+        'mae': rf_mae,
         'n_trees': n_trees,
-        'max_depth': 5
+        'max_depth': 5,
+        'description': 'Ensemble of randomized decision trees averaged together to minimize variance.'
+    },
+    'gradient_boosting': {
+        'r2': gb_r2,
+        'rmse': gb_rmse,
+        'mae': gb_mae,
+        'n_boost_rounds': n_boost_rounds,
+        'learning_rate': gb_lr,
+        'description': 'Sequential ensemble fitting successive trees to predict and eliminate earlier residual errors.'
     },
     'risk_classifier': {
         'accuracy': round(acc * 100, 2),
         'precision': round(prec * 100, 2),
         'recall': round(rec * 100, 2),
         'f1': round(f1, 4),
-        'confusion_matrix': {'tp': tp, 'fp': fp, 'fn': fn, 'tn': tn}
+        'confusion_matrix': {'tp': tp, 'fp': fp, 'fn': fn, 'tn': tn},
+        'description': 'Hurdle classification threshold identifying vulnerable students whose protective buffers fail.'
     },
     'feature_importances': [
         {'feature': f, 'importance': round(imp, 4)} for f, imp in feature_importance
@@ -249,8 +330,10 @@ os.makedirs('scratch', exist_ok=True)
 with open('scratch/ml_results.json', 'w') as f:
     json.dump(ml_metrics, f, indent=2)
 
+print("Saved scratch/ml_results.json.")
+
 # ==============================================================================
-# 4. GENERATE EVALUATION CHARTS (SVG -> PNG via sips)
+# 7. GENERATE EVALUATION CHARTS (SVG -> PNG via sips)
 # ==============================================================================
 def convert_svg(svg_path, png_path, w=1024, h=640):
     subprocess.run(["sips", "-s", "format", "png", svg_path, "--out", png_path], capture_output=True)
@@ -267,7 +350,6 @@ def make_actual_vs_predicted():
     svg.append(f'<rect width="{w}" height="{h}" fill="#ffffff"/>')
     svg.append(f'<text x="{w/2}" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Model Evaluation: Actual vs. Predicted Productivity Score</text>')
     
-    # 1 to 10 axes
     def to_x(v): return ml + ((v - 1.0)/9.0) * pw
     def to_y(v): return mt + ph - ((v - 1.0)/9.0) * ph
     
@@ -294,11 +376,11 @@ def make_actual_vs_predicted():
     svg.append(f'<text x="26" y="{mt + ph/2}" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 26 {mt + ph/2})">Random Forest Predicted Score</text>')
     
     # Summary Box
-    svg.append(f'<rect x="{ml + 20}" y="{mt + 15}" width="280" height="90" fill="#f8fafc" stroke="#cbd5e1" rx="6"/>')
-    svg.append(f'<text x="{ml + 35}" y="{mt + 38}" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1b2d42">Performance Metrics (Test Set):</text>')
-    svg.append(f'<text x="{ml + 35}" y="{mt + 58}" font-family="-apple-system, sans-serif" font-size="12" fill="#24292f">• Random Forest: R² = {rf_r2:.3f} | RMSE = {rf_rmse:.3f}</text>')
-    svg.append(f'<text x="{ml + 35}" y="{mt + 76}" font-family="-apple-system, sans-serif" font-size="12" fill="#57606a">• Linear Reg: R² = {lr_r2:.3f} | RMSE = {lr_rmse:.3f}</text>')
-    svg.append(f'<text x="{ml + 35}" y="{mt + 94}" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#bc5689">RF explains +7.7% more variance than OLS</text>')
+    svg.append(f'<rect x="{ml + 20}" y="{mt + 15}" width="290" height="100" fill="#f8fafc" stroke="#cbd5e1" rx="6"/>')
+    svg.append(f'<text x="{ml + 35}" y="{mt + 36}" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1b2d42">Performance Metrics (Test Set):</text>')
+    svg.append(f'<text x="{ml + 35}" y="{mt + 55}" font-family="-apple-system, sans-serif" font-size="11.5" fill="#24292f">• Random Forest: R² = {rf_r2:.3f} | RMSE = {rf_rmse:.3f}</text>')
+    svg.append(f'<text x="{ml + 35}" y="{mt + 72}" font-family="-apple-system, sans-serif" font-size="11.5" fill="#57606a">• Linear Reg (OLS): R² = {lr_r2:.3f} | RMSE = {lr_rmse:.3f}</text>')
+    svg.append(f'<text x="{ml + 35}" y="{mt + 89}" font-family="-apple-system, sans-serif" font-size="11.5" fill="#57606a">• Decision Tree: R² = {dt_r2:.3f} | Gradient Boost: R² = {gb_r2:.3f}</text>')
     
     svg.append('</svg>')
     svg_p = 'scratch/ml_pred.svg'
@@ -348,10 +430,8 @@ def make_residual_plot():
     ml, mr, mt, mb = 80, 40, 70, 80
     pw, ph = w - ml - mr, h - mt - mb
     
-    # Residuals = actual - predicted
     resids = [y - p for y, p in zip(y_test, rf_test_preds)]
     
-    # Bins from -3.0 to +3.0
     bin_ranges = [(-3.0, -2.5), (-2.5, -2.0), (-2.0, -1.5), (-1.5, -1.0), (-1.0, -0.5), (-0.5, 0.0),
                   (0.0, 0.5), (0.5, 1.0), (1.0, 1.5), (1.5, 2.0), (2.0, 2.5), (2.5, 3.0)]
     counts = [sum(1 for r in resids if b0 <= r < b1) for b0, b1 in bin_ranges]
@@ -381,7 +461,6 @@ def make_residual_plot():
         lbl = f"{mid:+.1f}"
         svg.append(f'<text x="{bx + bar_w/2}" y="{mt + ph + 22}" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">{lbl}</text>')
         
-    # Zero line
     zero_x = ml + 6 * gap
     svg.append(f'<line x1="{zero_x}" y1="{mt}" x2="{zero_x}" y2="{mt + ph}" stroke="#d97706" stroke-width="2.5" stroke-dasharray="4,3"/>')
     svg.append(f'<line x1="{ml}" y1="{mt + ph}" x2="{w - mr}" y2="{mt + ph}" stroke="#1b2d42" stroke-width="1.5"/>')
@@ -390,7 +469,6 @@ def make_residual_plot():
     svg.append(f'<text x="{w/2}" y="{h - 22}" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">Residual Error (Actual - Predicted Score; Symmetrically Centered near 0.0)</text>')
     svg.append(f'<text x="26" y="{mt + ph/2}" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f" transform="rotate(-90 26 {mt + ph/2})">Count of Test Records</text>')
     
-    # Legend
     svg.append(f'<rect x="{w - mr - 240}" y="{mt + 15}" width="220" height="55" fill="#f8fafc" stroke="#cbd5e1" rx="6"/>')
     svg.append(f'<line x1="{w - mr - 225}" y1="{mt + 42}" x2="{w - mr - 195}" y2="{mt + 42}" stroke="#d97706" stroke-width="2.5" stroke-dasharray="4,3"/>')
     svg.append(f'<text x="{w - mr - 188}" y="{mt + 46}" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#1b2d42">Mean Error: ~0.00</text>')
@@ -410,7 +488,6 @@ def make_risk_distribution():
     svg.append(f'<rect width="{w}" height="{h}" fill="#ffffff"/>')
     svg.append(f'<text x="{w/2}" y="42" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#1b2d42">Academic Risk Threshold Analysis &amp; Classifier Performance</text>')
     
-    # Split view: Left = Zero vs Positive Breakdown, Right = Confusion Matrix
     half_w = (pw - 40) / 2
     
     # Left Box: Zero-Inflation Risk Breakdown
@@ -418,9 +495,8 @@ def make_risk_distribution():
     svg.append(f'<text x="{ml + half_w/2}" y="{mt + 32}" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1b2d42">Zero-Inflation in Academic Risk Score</text>')
     svg.append(f'<text x="{ml + half_w/2}" y="{mt + 52}" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Dataset Distribution (N = 500,000)</text>')
     
-    # Bars for 96.63% vs 3.37%
     bar_y1 = mt + 85
-    svg.append(f'<text x="{ml + 24}" y="{bar_y1 + 16}" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1b2d42">Score = 0.0 (No Risk)</text>')
+    svg.append(f'<text x="{ml + 24}" y="{bar_y1 + 16}" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1b2d42">Score = 0.0 (No Risk / Baseline)</text>')
     svg.append(f'<rect x="{ml + 24}" y="{bar_y1 + 24}" width="{half_w - 48}" height="28" fill="#e2e8f0" rx="4"/>')
     svg.append(f'<rect x="{ml + 24}" y="{bar_y1 + 24}" width="{(half_w - 48) * 0.9663}" height="28" fill="#2e7d32" rx="4"/>')
     svg.append(f'<text x="{ml + half_w - 32}" y="{bar_y1 + 43}" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="end" fill="#ffffff">483,134 (96.63%)</text>')
@@ -440,14 +516,12 @@ def make_risk_distribution():
     # Right Box: Classifier Performance (Confusion Matrix)
     rx = ml + half_w + 40
     svg.append(f'<rect x="{rx}" y="{mt}" width="{half_w}" height="{ph}" fill="#f8fafc" stroke="#cbd5e1" rx="8"/>')
-    svg.append(f'<text x="{rx + half_w/2}" y="{mt + 32}" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1b2d42">Random Forest Risk Classification</text>')
+    svg.append(f'<text x="{rx + half_w/2}" y="{mt + 32}" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" text-anchor="middle" fill="#1b2d42">Academic Risk Hurdle Classification</text>')
     svg.append(f'<text x="{rx + half_w/2}" y="{mt + 52}" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#57606a">Holdout Test Evaluation (N = {n_test})</text>')
     
-    # 2x2 Matrix
     mw = (half_w - 70) / 2
     my0 = mt + 80
     
-    # Row 1: True Negative, False Positive
     svg.append(f'<rect x="{rx + 30}" y="{my0}" width="{mw}" height="70" fill="#dcfce7" stroke="#86efac" rx="4"/>')
     svg.append(f'<text x="{rx + 30 + mw/2}" y="{my0 + 30}" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#166534">{tn}</text>')
     svg.append(f'<text x="{rx + 30 + mw/2}" y="{my0 + 50}" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#166534">True Negative</text>')
@@ -456,7 +530,6 @@ def make_risk_distribution():
     svg.append(f'<text x="{rx + 40 + mw + mw/2}" y="{my0 + 30}" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#991b1b">{fp}</text>')
     svg.append(f'<text x="{rx + 40 + mw + mw/2}" y="{my0 + 50}" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#991b1b">False Positive</text>')
     
-    # Row 2: False Negative, True Positive
     my1 = my0 + 80
     svg.append(f'<rect x="{rx + 30}" y="{my1}" width="{mw}" height="70" fill="#fee2e2" stroke="#fca5a5" rx="4"/>')
     svg.append(f'<text x="{rx + 30 + mw/2}" y="{my1 + 30}" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#991b1b">{fn}</text>')
@@ -466,7 +539,6 @@ def make_risk_distribution():
     svg.append(f'<text x="{rx + 40 + mw + mw/2}" y="{my1 + 30}" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#166534">{tp}</text>')
     svg.append(f'<text x="{rx + 40 + mw + mw/2}" y="{my1 + 50}" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle" fill="#166534">True Positive</text>')
     
-    # Stats Pills
     svg.append(f'<rect x="{rx + 20}" y="{mt + 250}" width="{half_w - 40}" height="80" fill="#ffffff" stroke="#e2e8f0" rx="6"/>')
     svg.append(f'<text x="{rx + 32}" y="{mt + 275}" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1b2d42">Classifier Test Metrics:</text>')
     svg.append(f'<text x="{rx + 32}" y="{mt + 296}" font-family="-apple-system, sans-serif" font-size="12" fill="#24292f">• Overall Accuracy: <strong>{acc*100:.1f}%</strong></text>')

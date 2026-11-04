@@ -133,7 +133,7 @@
             <div class="sub-card" style="margin-bottom: 26px;">
                 <h3 style="margin-top: 0; color: var(--navy-dark);">📊 Model Performance Evaluation Metrics</h3>
                 <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">
-                    Holdout test set evaluation (80% train / 20% test holdout, <em>N</em><sub>test</sub> = 4,000):
+                    Holdout test set evaluation across multiple machine learning architectures (80% train / 20% test holdout, <em>N</em><sub>test</sub> = 4,000, <em>N</em><sub>train</sub> = 16,000):
                 </p>
                 <div class="table-responsive">
                     <table class="sql-table">
@@ -152,32 +152,90 @@
                             <tr>
                                 <td><strong>Ordinary Least Squares (OLS)</strong></td>
                                 <td>Productivity Score</td>
-                                <td><strong>0.4629</strong></td>
-                                <td>0.9261</td>
-                                <td>0.7078</td>
+                                <td><strong>0.4630</strong></td>
+                                <td>0.9260</td>
+                                <td>0.7077</td>
                                 <td>—</td>
                                 <td>Strong linear baseline; parametric coefficients quantify feature impact</td>
                             </tr>
                             <tr>
-                                <td><strong>Random Forest Regressor</strong></td>
+                                <td><strong>Decision Tree Regressor</strong></td>
                                 <td>Productivity Score</td>
-                                <td><strong>0.4468</strong></td>
-                                <td>0.9399</td>
-                                <td>0.7285</td>
+                                <td><strong>0.4374</strong></td>
+                                <td>0.9478</td>
+                                <td>0.7281</td>
                                 <td>—</td>
-                                <td>Ensemble of 12 trees (depth 5); models non-linear interactions</td>
+                                <td>Single decision tree (depth 5); clear hierarchical if/else decision boundaries</td>
                             </tr>
                             <tr>
-                                <td><strong>Random Forest Risk Classifier</strong></td>
+                                <td><strong>Random Forest Regressor</strong></td>
+                                <td>Productivity Score</td>
+                                <td><strong>0.4517</strong></td>
+                                <td>0.9357</td>
+                                <td>0.7287</td>
+                                <td>—</td>
+                                <td>Bagging ensemble of 15 randomized trees; captures non-linear synergies</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gradient Boosting Regressor</strong></td>
+                                <td>Productivity Score</td>
+                                <td><strong>0.4168</strong></td>
+                                <td>0.9650</td>
+                                <td>0.7710</td>
+                                <td>—</td>
+                                <td>Sequential boosting ensemble (10 rounds, lr=0.15) correcting prior errors</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hurdle Risk Classifier</strong></td>
                                 <td>Academic Risk (> 0)</td>
                                 <td>—</td>
                                 <td>—</td>
                                 <td>—</td>
                                 <td><strong>96.83%</strong> (F1: 0.306)</td>
-                                <td>High-accuracy hurdle classifier; flags students with failing academic buffers</td>
+                                <td>Binary hurdle model; flags students when protective academic buffers fail</td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- Plain-English Model Explanations Card -->
+            <div class="sub-card" style="margin-bottom: 26px; border-left: 4px solid var(--navy-medium); background-color: var(--bg-alt);">
+                <h3 style="margin-top: 0; color: var(--navy-dark);">💡 What Each Machine Learning Model Does (In Simple Terms)</h3>
+                <p style="font-size: 0.90rem; color: var(--text-main); margin-bottom: 14px;">
+                    Here is an intuitive, beginner-friendly guide to how our four predictive models and hurdle classifier evaluate student data:
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                    <div style="background: #ffffff; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <strong style="color: var(--navy-dark); font-size: 0.95rem;">1. Linear Regression (OLS)</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5;">
+                            <em>Like drawing a straight ruler through dots.</em> It assumes every additional hour of screen time or loss of attention directly nudges productivity up or down by a set, fixed amount. It gives us clear, interpretable formula weights.
+                        </p>
+                    </div>
+                    <div style="background: #ffffff; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <strong style="color: var(--navy-dark); font-size: 0.95rem;">2. Decision Tree Regressor</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5;">
+                            <em>Like an academic flowchart.</em> It asks a sequence of yes/no questions (e.g., "Is Brain Rot Index &gt; 34? If yes, is attention span &lt; 40 minutes?"). Students who end up in the same box receive the average productivity score of that group.
+                        </p>
+                    </div>
+                    <div style="background: #ffffff; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <strong style="color: var(--navy-dark); font-size: 0.95rem;">3. Random Forest Regressor</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5;">
+                            <em>Like consulting a committee of teachers.</em> Instead of trusting a single flowchart, it builds 15 different decision trees using randomized student subsets. It averages their votes together, preventing any single quirk from distorting predictions.
+                        </p>
+                    </div>
+                    <div style="background: #ffffff; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <strong style="color: var(--navy-dark); font-size: 0.95rem;">4. Gradient Boosting Regressor</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5;">
+                            <em>Like studying from past exam mistakes.</em> It starts with a simple guess, calculates where it made mistakes (the residual error), and trains the next tree specifically to fix those exact mistakes, improving gradually in steps.
+                        </p>
+                    </div>
+                    <div style="background: #ffffff; padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); grid-column: 1 / -1;">
+                        <strong style="color: var(--navy-dark); font-size: 0.95rem;">5. Academic Risk Hurdle Classifier</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5;">
+                            <em>Like an academic early-warning smoke detector.</em> Because over 96.6% of students have standard resilience and zero risk, this model identifies the rare tipping point where protective habits (study hours, sleep, attendance) collapse under extreme digital immersion.
+                        </p>
+                    </div>
                 </div>
             </div>
 

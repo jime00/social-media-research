@@ -1,57 +1,74 @@
 {
   "linear_regression": {
-    "r2": 0.4629,
-    "rmse": 0.9261,
-    "mae": 0.7078,
+    "r2": 0.463,
+    "rmse": 0.926,
+    "mae": 0.7077,
+    "description": "Fits a linear hyperplane; provides interpretable baseline coefficients.",
     "coefficients": [
       {
         "feature": "brain_rot_index",
-        "weight": -0.4834
+        "weight": -0.49
       },
       {
         "feature": "attention_span_minutes",
-        "weight": 0.3756
+        "weight": 0.373
       },
       {
         "feature": "academic_motivation",
-        "weight": 0.1577
+        "weight": 0.1595
       },
       {
         "feature": "social_media_hours",
-        "weight": 0.0432
+        "weight": 0.0465
       },
       {
         "feature": "short_video_hours",
-        "weight": -0.0371
+        "weight": -0.037
       },
       {
         "feature": "sessions_per_day",
-        "weight": -0.0211
-      },
-      {
-        "feature": "digital_addiction_score",
-        "weight": -0.0162
+        "weight": -0.0253
       },
       {
         "feature": "sleep_hours",
-        "weight": -0.016
+        "weight": -0.0144
       },
       {
         "feature": "late_night_score",
-        "weight": -0.0104
+        "weight": -0.0107
+      },
+      {
+        "feature": "digital_addiction_score",
+        "weight": -0.0101
       },
       {
         "feature": "stress_level",
-        "weight": -0.0075
+        "weight": -0.0061
       }
     ]
   },
+  "decision_tree": {
+    "r2": 0.4374,
+    "rmse": 0.9478,
+    "mae": 0.7281,
+    "max_depth": 5,
+    "description": "Partitions student space into recursive if/else decision boxes based on variance reduction."
+  },
   "random_forest": {
-    "r2": 0.4468,
-    "rmse": 0.9399,
-    "mae": 0.7285,
-    "n_trees": 12,
-    "max_depth": 5
+    "r2": 0.4517,
+    "rmse": 0.9357,
+    "mae": 0.7287,
+    "n_trees": 15,
+    "max_depth": 5,
+    "description": "Ensemble of randomized decision trees averaged together to minimize variance."
+  },
+  "gradient_boosting": {
+    "r2": 0.4168,
+    "rmse": 0.965,
+    "mae": 0.771,
+    "n_boost_rounds": 10,
+    "learning_rate": 0.15,
+    "description": "Sequential ensemble fitting successive trees to predict and eliminate earlier residual errors."
   },
   "risk_classifier": {
     "accuracy": 96.83,
@@ -63,7 +80,8 @@
       "fp": 27,
       "fn": 100,
       "tn": 3845
-    }
+    },
+    "description": "Hurdle classification threshold identifying vulnerable students whose protective buffers fail."
   },
   "feature_importances": [
     {
