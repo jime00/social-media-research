@@ -50,6 +50,20 @@
         <p>
             Evaluation status of formulated hypotheses, theoretical expectations, and empirical validation tracking.
         </p>
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 14px; flex-wrap: wrap;">
+            <a href="#hypotheses" class="btn btn-outline" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.4); font-size: 0.86rem; padding: 6px 14px;">
+                🧪 Hypotheses (H1 &amp; H2)
+            </a>
+            <a href="#machine-learning-models" class="btn btn-primary" style="background: var(--primary-color); color: #ffffff; font-size: 0.86rem; padding: 6px 14px;">
+                🤖 Machine Learning Models
+            </a>
+            <a href="#machine-learning" class="btn btn-outline" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.4); font-size: 0.86rem; padding: 6px 14px;">
+                📊 Predictive Modeling &amp; Figures
+            </a>
+            <a href="#limitations" class="btn btn-outline" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.4); font-size: 0.86rem; padding: 6px 14px;">
+                ⚠️ Limitations
+            </a>
+        </div>
     </div>
 
     <!-- ====================================================================
@@ -60,7 +74,7 @@
         <!-- ================================================================
              3. HYPOTHESIS EVALUATION STATUS
              ================================================================ -->
-        <section class="card">
+        <section class="card" id="hypotheses">
             <h2>Hypothesis Evaluation Status</h2>
             <p class="section-intro">
                 Empirical evaluation status for our primary research hypotheses based on parametric regression, SQL relational modeling, and machine learning across 500,000 student records:
@@ -108,7 +122,171 @@
         </section>
 
         <!-- ================================================================
-             4. MACHINE LEARNING PREDICTIVE MODELING
+             4. MACHINE LEARNING MODELS
+             ================================================================ -->
+        <section class="card" id="machine-learning-models">
+            <h2>Machine Learning Models</h2>
+            <p class="section-intro">
+                Analysis of the machine learning models developed in our research notebook, evaluating how digital media consumption, cognitive indicators, and lifestyle factors predict student academic risk and segment behavioral cohorts.
+            </p>
+
+            <!-- Overview Context Banner -->
+            <div class="eda-banner" style="background: linear-gradient(135deg, #fbeff5 0%, #ebf2fa 100%); border-left-color: var(--primary-color); margin-bottom: 24px;">
+                <span class="eda-banner-icon">🤖</span>
+                <div class="eda-banner-text">
+                    <strong>Research Notebook Machine Learning Architecture</strong>
+                    <p>
+                        Our empirical investigation leverages two complementary machine learning paradigms:
+                        a <strong>supervised Linear Regression model</strong> as the primary predictive architecture to estimate continuous academic risk scores, and an <strong>unsupervised K-Means Clustering model</strong> as the secondary architecture to discover natural behavioral groupings among students based on digital immersion and study habits.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Two-Column Cards Grid for Models -->
+            <div class="split-grid" style="gap: 24px; margin-bottom: 24px;">
+
+                <!-- 1. Linear Regression (Main Model) Card -->
+                <div class="sub-card" style="border-top: 4px solid var(--primary-color); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+                            <span class="badge" style="background-color: var(--primary-light); color: var(--primary-color); border: 1px solid var(--primary-border); font-weight: 700;">Main Model • Supervised</span>
+                            <span class="badge" style="background-color: var(--badge-completed-bg); color: var(--badge-completed-text); font-weight: 700;">R² = 0.0847</span>
+                        </div>
+                        <h3 style="margin-top: 0; color: var(--navy-dark); font-size: 1.2rem;">1. Linear Regression (Main Model)</h3>
+                        
+                        <p style="font-size: 0.90rem; color: var(--text-main); margin-bottom: 14px;">
+                            Predicts student <strong>academic risk scores</strong> (<code>academic_risk_score</code>) using a parametric linear combination of digital behavioral and lifestyle predictors.
+                        </p>
+
+                        <!-- Key Specifications List -->
+                        <div style="background: var(--bg-alt); padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); margin-bottom: 14px;">
+                            <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Key Model Specifications:</div>
+                            <ul style="font-size: 0.85rem; color: var(--text-main); margin-left: 18px; line-height: 1.6; margin-bottom: 0;">
+                                <li><strong>Target Variable:</strong> Academic Risk Score (<code>academic_risk_score</code>)</li>
+                                <li><strong>Features Used (5 Variables):</strong>
+                                    <ul style="margin-top: 4px; margin-left: 14px;">
+                                        <li>Social media hours (<code>social_media_hours</code>)</li>
+                                        <li>Brain Rot Index (<code>brain_rot_index</code>)</li>
+                                        <li>Attention span in minutes (<code>attention_span_minutes</code>)</li>
+                                        <li>Stress level (<code>stress_level</code>)</li>
+                                        <li>Sleep hours (<code>sleep_hours</code>)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Data Partition:</strong> 80% training set and 20% testing set</li>
+                                <li><strong>Model Performance:</strong> R² score = <strong>0.0847</strong></li>
+                            </ul>
+                        </div>
+
+                        <!-- Explanations -->
+                        <div style="margin-bottom: 12px;">
+                            <strong style="font-size: 0.90rem; color: var(--navy-dark);">What the Model Does:</strong>
+                            <p style="font-size: 0.86rem; color: var(--text-muted); margin-top: 4px; line-height: 1.55;">
+                                Linear Regression estimates the best-fitting straight line (linear hyperplane) between the five behavioral predictors and the academic risk score. It quantifies how much a student's risk increases or decreases with each additional hour of screen time, each point increase on the Brain Rot Index or stress scale, and each additional unit of sleep or sustained attention.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong style="font-size: 0.90rem; color: var(--navy-dark);">Why It Was Used:</strong>
+                            <p style="font-size: 0.86rem; color: var(--text-muted); margin-top: 4px; line-height: 1.55; margin-bottom: 0;">
+                                Linear Regression was chosen as the primary model to directly test whether academic vulnerability can be linearly predicted from observable digital habits and physical wellness indicators. The resulting R² of 0.0847 demonstrates that while these digital and wellness variables capture an empirical, statistically measurable signal, academic risk also exhibits significant zero-inflation and non-linear dynamics that require complementary exploratory perspectives.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. K-Means Clustering (Secondary Model) Card -->
+                <div class="sub-card" style="border-top: 4px solid var(--navy-dark); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+                            <span class="badge" style="background-color: var(--navy-light); color: var(--navy-dark); border: 1px solid var(--border-color); font-weight: 700;">Secondary Model • Unsupervised</span>
+                            <span class="badge" style="background-color: var(--badge-progress-bg); color: var(--badge-progress-text); font-weight: 700;">k = 3 Clusters</span>
+                        </div>
+                        <h3 style="margin-top: 0; color: var(--navy-dark); font-size: 1.2rem;">2. K-Means Clustering (Secondary Model)</h3>
+                        
+                        <p style="font-size: 0.90rem; color: var(--text-main); margin-bottom: 14px;">
+                            Segments students into <strong>three distinct behavioral clusters</strong> based on the intersection of daily screen consumption, cognitive fatigue, and academic study investment.
+                        </p>
+
+                        <!-- Key Specifications List -->
+                        <div style="background: var(--bg-alt); padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); margin-bottom: 14px;">
+                            <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Key Model Specifications:</div>
+                            <ul style="font-size: 0.85rem; color: var(--text-main); margin-left: 18px; line-height: 1.6; margin-bottom: 0;">
+                                <li><strong>Clustering Target:</strong> 3 distinct student behavioral profiles (k = 3)</li>
+                                <li><strong>Features Used (4 Variables):</strong>
+                                    <ul style="margin-top: 4px; margin-left: 14px;">
+                                        <li>Social media hours (<code>social_media_hours</code>)</li>
+                                        <li>Brain Rot Index (<code>brain_rot_index</code>)</li>
+                                        <li>Attention span in minutes (<code>attention_span_minutes</code>)</li>
+                                        <li>Weekly study hours (<code>study_hours_per_week</code>)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Learning Paradigm:</strong> Unsupervised geometric partitioning (centroid-based distance optimization)</li>
+                                <li><strong>Cluster Output:</strong> Three student segments grouped by digital lifestyle and academic investment</li>
+                            </ul>
+                        </div>
+
+                        <!-- Explanations -->
+                        <div style="margin-bottom: 12px;">
+                            <strong style="font-size: 0.90rem; color: var(--navy-dark);">What the Model Does:</strong>
+                            <p style="font-size: 0.86rem; color: var(--text-muted); margin-top: 4px; line-height: 1.55;">
+                                K-Means Clustering is an unsupervised algorithm that groups students based on mathematical geometric proximity in a 4-dimensional feature space. It iteratively positions three cluster centroids to minimize the distance between each student's data point and their assigned cluster center, discovering natural student archetypes without requiring pre-assigned outcome labels.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong style="font-size: 0.90rem; color: var(--navy-dark);">Why It Was Used:</strong>
+                            <p style="font-size: 0.86rem; color: var(--text-muted); margin-top: 4px; line-height: 1.55; margin-bottom: 0;">
+                                K-Means was used as a secondary exploratory architecture to discover whether students naturally divide into distinct digital behavioral cohorts. Rather than assuming all students follow a uniform linear pattern, clustering identifies real-world archetypes (e.g., highly focused studiers, balanced moderate users, and digitally fatigued students with shortened attention spans), providing valuable behavioral context that complements regression modeling.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Model Comparison & Synthesis Table -->
+            <div class="sub-card" style="margin-bottom: 8px;">
+                <h3 style="margin-top: 0; color: var(--navy-dark);">📋 Research Notebook Model Comparison</h3>
+                <div class="table-responsive">
+                    <table class="sql-table">
+                        <thead>
+                            <tr>
+                                <th>Model Architecture</th>
+                                <th>Role in Research</th>
+                                <th>Learning Type</th>
+                                <th>Target / Objective</th>
+                                <th>Input Variables</th>
+                                <th>Validation / Parameters</th>
+                                <th>Key Notebook Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Linear Regression</strong></td>
+                                <td><span class="badge" style="background-color: var(--primary-light); color: var(--primary-color); font-weight: 700;">Main Model</span></td>
+                                <td>Supervised Learning</td>
+                                <td>Predict Academic Risk Score</td>
+                                <td>Social Media Hours, Brain Rot Index, Attention Span, Stress Level, Sleep Hours (5 features)</td>
+                                <td>80% Train / 20% Test Split</td>
+                                <td><strong>R² = 0.0847</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>K-Means Clustering</strong></td>
+                                <td><span class="badge" style="background-color: var(--navy-light); color: var(--navy-dark); font-weight: 700;">Secondary Model</span></td>
+                                <td>Unsupervised Learning</td>
+                                <td>Group into 3 Behavioral Clusters</td>
+                                <td>Social Media Hours, Brain Rot Index, Attention Span, Weekly Study Hours (4 features)</td>
+                                <td>k = 3 Clusters</td>
+                                <td><strong>3 Distinct Behavioral Archetypes</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             5. MACHINE LEARNING PREDICTIVE MODELING & EVALUATION
              ================================================================ -->
         <section class="card" id="machine-learning">
             <h2>Machine Learning Predictive Modeling</h2>
