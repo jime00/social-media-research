@@ -30,7 +30,7 @@ A semester-long academic research project investigating how social media usage a
 - Overall well-being
 - Stress and pressure
 
-### Hypotheses
+### Hypothesis
 - **H1**: Students who spend more time on social media experience reduced weekly study hours due to direct time competition with academic responsibilities (Supported by empirical regression & SQL analysis).
 - **H2**: Frequent social media interruptions and elevated digital addiction degrade sustained attention stamina, sleep quality, and academic productivity (Supported by empirical clustering & ML feature importance).
 
@@ -70,11 +70,11 @@ Because this website uses pure HTML, CSS, and JavaScript, you can run a local pr
 ```
 social-media-research/
 ├── index.html        # Home page (Executive Summary, Core Question, Portal Cards, About)
-├── research.html     # Research Framework (Topic Pillars, 5 Sub-Questions, 8 Variables, Hypotheses)
+├── research.html     # Research Framework (Topic Pillars, 5 Sub-Questions, 8 Variables, Hypothesis)
 ├── dataset.html      # Kaggle Dataset details, sample summary (N=500,000), and cleaning pipeline
 ├── analysis.html     # Exploratory Data Analysis (10 charts) & SQL relational analysis (8 queries)
 ├── findings.html     # Hypothesis validation status, Machine Learning models (OLS & Random Forest), Limitations
-├── resources.html    # Presentation video embed, proposal documents, and Kaggle references
+├── resources.html    # Presentation video embed, proposal documents, Colab notebook, and references
 ├── resume.html       # Standalone printable resume page for Jimena Bello
 ├── data/
 │   └── global_student_digital_behavior_dataset.csv # Global dataset (N=500,000, 304 MB, local only / gitignored)
